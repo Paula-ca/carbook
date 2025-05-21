@@ -6,7 +6,6 @@ const mercadoApiKey = process.env.REACT_APP_MERCADO_PAGO_API_KEY
 
 const StatusScreenBrick = (_) => {
   const { reservaId, paymentId , amount} = useParams();
-  const [screenLoading,setScreenLoading] = useState(true)
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -38,7 +37,7 @@ const StatusScreenBrick = (_) => {
           },
           callbacks: {
             onReady: () => {
-             setScreenLoading(false)
+            
             },
             onError: (error) => {
               console.error('Error en StatusScreenBrick:', error);
@@ -59,14 +58,7 @@ const StatusScreenBrick = (_) => {
     document.body.appendChild(script);
   },[amount,paymentId,reservaId]);
 
-  return screenLoading ? (
-    <div id="contenedor">
-  <div class="contenedor-loader">
-    <div class="loader"></div>
-  </div>
-  <div class="cargando"></div>
-</div>
-  ) : ( 
+  return ( 
   <div>
   <div id="statusScreenBrick_container" style={{ marginTop: '20px', marginBottom:'20px',marginLeft:'100px', marginRight:'100px'}}></div>
 </div>
