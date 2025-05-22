@@ -412,6 +412,7 @@ const ProductAdministrationForm = (props) => {
       }
 
       const token = localStorage.getItem("token");
+   
 
       if (checkedLocation) {
         if (product) {

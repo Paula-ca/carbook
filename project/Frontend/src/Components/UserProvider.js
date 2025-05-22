@@ -18,10 +18,12 @@ const UserProvider = (props) => {
             if (loginResponse && loginResponse.data) {
                 const authenticatedUser = { id: loginResponse.data.id, email, name: loginResponse.data.nombre, surname: loginResponse.data.apellido, rol: loginResponse.data.rol ,city: loginResponse.data.ciudad}
                 await setUser(authenticatedUser) // TODO: add pronouns
-                console.log(authenticatedUser)
+               
                 localStorage.setItem('user', JSON.stringify(authenticatedUser))
                 localStorage.setItem('token', loginResponse.data.token)
+               
                 return authenticatedUser
+                
             }
         } catch (_) {
             return false

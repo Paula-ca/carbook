@@ -31,22 +31,27 @@ public class ProductoController {
     @PreAuthorize("hasAnyRole('ADMIN','SUPER_ADMIN')")
     @PostMapping("/add")
     public ResponseEntity<Producto> add(@RequestBody Producto producto){
-        ResponseEntity response = null;
-
         logger.debug("Agregando producto...");
-        if(producto != null) {
+
+        if (producto == null) {
+            logger.error("El producto es nulo");
+            return new ResponseEntity("Producto nulo", HttpStatus.BAD_REQUEST);
+        }
+
+        Producto productoGuardado = productoService.add(producto);
+        if (productoGuardado != null) {
             for (Imagen i : producto.getImagenes()) {
                 imagenService.add(i);
             }
-            response = new ResponseEntity(productoService.add(producto), HttpStatus.OK);
-            logger.info("Producto agregado con id: " + producto.getId());
-        } else {
-            response = new ResponseEntity("Producto no agregado",HttpStatus.NOT_FOUND);
-            logger.error("El producto es nulo");
-        }
 
-        return response;
+            logger.info("Producto agregado con id: " + productoGuardado.getId());
+            return new ResponseEntity<>(productoGuardado, HttpStatus.OK);
+        } else {
+            logger.error("El producto ya existe o no pudo guardarse");
+            return new ResponseEntity("Producto existente o error al guardar", HttpStatus.CONFLICT);
+        }
     }
+
 
     @GetMapping("/random-list")
     public ResponseEntity<List<Producto>> randomList() {

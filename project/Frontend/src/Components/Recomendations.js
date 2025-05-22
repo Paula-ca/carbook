@@ -151,13 +151,12 @@ const Recomendations = (props) => {
                         if (location) {
                             paramsConfig.params.ciudad = location
                         }
-                        console.log(from,to,location)
+                        
                     }
                     
 
                     if (dates) {
                         const productsData = await axios.get(getProductsUrl, paramsConfig)
-                        console.log(productsData.data)
                         setProducts(productsData.data)
                     } else {
                         const productsData = await axios.get(getProductsUrl)

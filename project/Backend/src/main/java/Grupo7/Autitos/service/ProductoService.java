@@ -6,10 +6,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class ProductoService {
@@ -19,22 +16,34 @@ public class ProductoService {
 
     public static final Logger logger = Logger.getLogger(ProductoService.class);
 
-    public Producto add(Producto p){
-        if(p.getTitulo() != null
-                && p.getDescripcion() != null
-                && p.getUbicacion() != null
-                && (p.getRating() > 0 && p.getRating() <= 5)
-                && p.getPrecio()>0
-                && p.getCiudad() != null
-                && p.getCategoria() != null
-                && p.getCaracteristicas() != null
-                && p.getPoliticas() != null
-                && p.getImagenes().size() > 0) {
-            return productoRepository.save(p);
-        } else {
+    public Producto add(Producto p) {
+        // Validação dos campos obrigatórios
+        if (p.getTitulo() == null ||
+                p.getDescripcion() == null ||
+                p.getUbicacion() == null ||
+                p.getRating() <= 0 || p.getRating() > 5 ||
+                p.getPrecio() <= 0 ||
+                p.getCiudad() == null ||
+                p.getCategoria() == null ||
+                p.getCaracteristicas() == null ||
+                p.getPoliticas() == null ||
+                p.getImagenes() == null || p.getImagenes().isEmpty()) {
             return null;
         }
+
+        // Verifica se já existe produto com mesmo título ou mesma localização
+        List<Producto> productos = productoRepository.findAll();
+        for (Producto producto : productos) {
+            if (p.getTitulo().equals(producto.getTitulo()) ||
+                    p.getUbicacion().equals(producto.getUbicacion())) {
+                return null;
+            }
+        }
+
+        // Se passou pelas validações, salva o produto
+        return productoRepository.save(p);
     }
+
 
     public List<Producto> list() {
         return productoRepository.findAll();

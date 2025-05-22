@@ -25,6 +25,7 @@ const UserHeader = _ => {
     const { user, logout } = React.useContext(UserContext)
     const navigate = useNavigate()
     const welcomeMessage = `Bienvenid${user.pronouns ? user.pronouns === 'm' ? 'o' : user.pronouns === 'f' ? 'a' : 'o/a' : 'o/a'} ${user.name || 'Unknown'}`
+   
 
     const logoutToLanding = _ => {
         navigate('/')

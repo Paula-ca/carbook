@@ -325,6 +325,7 @@ const ReservationDetail = (props) => {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
       }
+   
 
       try {
         const reservationResponse = await axios.post(makeReservationUrl, reservationPayload, reservationHeaders)
