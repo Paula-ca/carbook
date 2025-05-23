@@ -1,6 +1,7 @@
 package Grupo7.Autitos.controller;
 
 import Grupo7.Autitos.entity.Rol;
+import Grupo7.Autitos.entity.TipoRol;
 import Grupo7.Autitos.entity.Usuario;
 import Grupo7.Autitos.entity.UsuarioResponse;
 import Grupo7.Autitos.security.Jwt.JwtProvider;
@@ -58,7 +59,7 @@ public class AuthController {
                 registerRequest.getApellido(),
                 registerRequest.getEmail(),
                 passwordEncoder.encode(registerRequest.getContrasenia()),
-                registerRequest.getCiudad());
+                "");
 
         // rol por defecto: USER
         Rol rol = new Rol();

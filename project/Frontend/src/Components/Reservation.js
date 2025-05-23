@@ -166,7 +166,7 @@ const BookingCalendar = (props) => {
 };
 
 const UserData = (props) => {
-  const { user } = props;
+  const { user , city, setCity} = props;
 
   return (
     <div>
@@ -199,9 +199,9 @@ const UserData = (props) => {
           ></input>
           <label className="userData-label">Ciudad</label>
           <input
-            value={user && user.city}
-            type={"text"}
-            disabled
+            value={city}
+            type="text"
+            onChange={(e) => setCity(e.target.value)}
             className="userData-input"
           ></input>
         </div>
@@ -260,7 +260,7 @@ const Arrival = (props) => {
 };
 
 const ReservationDetail = (props) => {
-  const { product, fromDate, toDate, reservationTime } = props;
+  const { product, fromDate, toDate, city, reservationTime } = props;
   const { logout } = React.useContext(UserContext)
   const navigate = useNavigate()
   var count_days = 0
@@ -325,7 +325,6 @@ const ReservationDetail = (props) => {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
       }
-   
 
       try {
         const reservationResponse = await axios.post(makeReservationUrl, reservationPayload, reservationHeaders)
@@ -489,7 +488,7 @@ const Reservation = (_) => {
   const [fromDate, setFromDate] = React.useState();
   const [toDate, setToDate] = React.useState();
   const [reservationTime, setReservationTime] = React.useState()
-
+  const [city,setCity] = React.useState()
   const { user } = React.useContext(UserContext);
 
   React.useEffect(() => {
@@ -526,7 +525,7 @@ const Reservation = (_) => {
         <ProductDetailTop product={product} />
         <div className="reservation-container">
           <div className="reservation-data">
-            <UserData user={user} />
+            <UserData user={user} ciyi={city} setCity={setCity}/>
             <ReservationCalendar
               productId={productId}
               setFromDate={setFromDate}
@@ -538,7 +537,7 @@ const Reservation = (_) => {
             fromDate={fromDate}
             toDate={toDate}
             product={product}
-            
+            city={city}
             reservationTime={reservationTime}
           />
         </div>

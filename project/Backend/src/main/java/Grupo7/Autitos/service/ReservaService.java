@@ -5,9 +5,12 @@ import Grupo7.Autitos.repository.ReservaRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.persistence.EntityNotFoundException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ReservaService {
@@ -28,67 +31,38 @@ public class ReservaService {
         }
     }
 
-    public Reserva update(Reserva r){
-        Reserva reserva = this.find(r.getId());
+    public Reserva update(Reserva r) {
+        Reserva reserva = reservaRepository.findById(r.getId())
+                .orElseThrow(() -> new EntityNotFoundException("Reserva no encontrada con id: " + r.getId()));
+
         List<Reserva> lista = reservaRepository.findByProductoId(reserva.getProducto().getId());
-        List<Reserva> listaFinal = new ArrayList<>();
-        LocalDate inicio;
-        LocalDate fin;
-        Boolean cambiable = true;
+        List<Reserva> otrasReservas = lista.stream()
+                .filter(res -> !res.getId().equals(reserva.getId()))
+                .collect(Collectors.toList());
 
-        for(int i = 0; i < lista.size(); i++){
-            if(lista.get(i) != reserva){
-                listaFinal.add(lista.get(i));
-            }
+        LocalDate inicio = (r.getFecha_ingreso() != null) ? r.getFecha_ingreso() : reserva.getFecha_ingreso();
+        LocalDate fin = (r.getFecha_final() != null) ? r.getFecha_final() : reserva.getFecha_final();
+
+        boolean hayConflicto = otrasReservas.stream().anyMatch(resExistente ->
+                resExistente.getBorrado() == null &&
+                        resExistente.getFecha_ingreso().isBefore(fin) &&
+                        resExistente.getFecha_final().isAfter(inicio)
+        );
+
+        if (hayConflicto) {
+            throw new IllegalArgumentException("Ya hay reservas entre " + inicio + " y " + fin);
         }
 
-        if(r.getFecha_ingreso() != null) {
-            inicio = r.getFecha_ingreso();
-        } else {
-            inicio = reserva.getFecha_ingreso();
-        }
+        if (r.getHora_comienzo() != null) reserva.setHora_comienzo(r.getHora_comienzo());
+        reserva.setFecha_ingreso(inicio);
+        reserva.setFecha_final(fin);
+        if (r.getEstado() != null) reserva.setEstado(r.getEstado());
+        if (r.getEstado_pago() != null) reserva.setEstado_pago(r.getEstado_pago());
+        if (r.getPago_id() != null) reserva.setPago_id(r.getPago_id());
 
-        if(r.getFecha_final() != null){
-            fin = r.getFecha_final();
-        } else {
-            fin = reserva.getFecha_final();
-        }
-
-        for (Reserva reserva1 : listaFinal) {
-            if ((reserva1.getFecha_ingreso().isEqual(inicio) || reserva1.getFecha_ingreso().isEqual(fin)
-                    || (reserva1.getFecha_ingreso().isAfter(inicio)) && reserva1.getFecha_ingreso().isBefore(fin)) && reserva1.getBorrado() == null) {
-                cambiable = false;
-            } else if ((reserva1.getFecha_final().isEqual(inicio) || reserva1.getFecha_final().isEqual(fin)
-                    || (reserva1.getFecha_final().isAfter(inicio)) && reserva1.getFecha_final().isBefore(fin)) && reserva1.getBorrado() == null) {
-                cambiable = false;
-            }
-        }
-
-        if (cambiable) {
-            if(r.getHora_comienzo() != null){
-                reserva.setHora_comienzo(r.getHora_comienzo());
-            }
-            reserva.setFecha_ingreso(inicio);
-            reserva.setFecha_final(fin);
-
-            if (r.getEstado() != null) {
-                reserva.setEstado(r.getEstado());
-            }
-            if (r.getEstado_pago() != null){
-                reserva.setEstado_pago(r.getEstado_pago());
-            }
-            if (r.getPago_id() != null){
-                reserva.setPago_id(r.getPago_id());
-            }
-
-
-            reservaRepository.save(reserva);
-        } else {
-            System.out.println("Ya hay reservas entre " + inicio + " y " + fin);
-        }
-
-        return reserva;
+        return reservaRepository.save(reserva);
     }
+
 
     public List<Reserva> filterByProductId(Long id, Boolean borrada) {
         if (borrada){
@@ -103,21 +77,29 @@ public class ReservaService {
     }
 
     public Reserva find(Long id){
-        return reservaRepository.findById(id).get();
+        return reservaRepository.findById(id).orElse(null);
     }
 
-    public String cancel(Long id) throws Exception {
-        logger.debug("Cancelando reserva...");
-        Reserva r = this.find(id);
-        if(r != null){
-            logger.info("Reserva cancelada con id: " + id);
-            r.setBorrado(LocalDate.now());
-            this.update(r);
-            return "Reserva cancelada con id: " + id;
-        } else {
-            logger.error("Categoria con id " + id + " no encontrada");
-            throw new Exception("Categoria con id " + id + " no encontrada");
+    public String cancel(Long id) {
+        logger.debug("Cancelando reserva con id: {}"+ id);
+
+        Reserva r = reservaRepository.findById(id)
+                .orElseThrow(() -> {
+                    logger.error("Reserva con id {} no encontrada"+ id);
+                    return new EntityNotFoundException("Reserva con id " + id + " no encontrada");
+                });
+
+        if (r.getBorrado() != null) {
+            logger.warn("La reserva con id {} ya fue cancelada previamente"+ id);
+            throw new IllegalStateException("La reserva ya fue cancelada anteriormente.");
         }
+
+        r.setBorrado(LocalDate.now());
+        reservaRepository.save(r);
+
+        logger.info("Reserva cancelada con id: {}"+ id);
+        return "Reserva cancelada con id: " + id;
     }
+
 
 }

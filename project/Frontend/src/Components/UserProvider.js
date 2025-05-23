@@ -30,14 +30,14 @@ const UserProvider = (props) => {
         }
     }
 
-    const signup = async (nombre, apellido, email,ciudad, contrasenia) => {
+    const signup = async (nombre, apellido, email,contrasenia) => {
         const signupUrl = 'http://localhost:8080/auth/signup'
-        const userPayload = { nombre, apellido, email,ciudad, contrasenia }
+        const userPayload = { nombre, apellido, email, contrasenia }
 
         try {
             const signupResponse = await axios.post(signupUrl, userPayload)
             if (signupResponse && signupResponse.data) {
-                const authenticatedUser = { id: signupResponse.data.id, email, name: signupResponse.data.nombre, surname: signupResponse.data.apellido , city: signupResponse.data.ciudad}
+                const authenticatedUser = { id: signupResponse.data.id, email, name: signupResponse.data.nombre, surname: signupResponse.data.apellido }
                 await setUser(authenticatedUser) // TODO: add pronouns
                 localStorage.setItem('user', JSON.stringify(authenticatedUser))
                 localStorage.setItem('token', signupResponse.data.token) // TODO: agregar token al registro

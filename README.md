@@ -7,7 +7,7 @@ Como administrador es posible crear nuevos productos o editar productos existent
 >
 
 ## API
-[Link a la documentación](https://documenter.getpostman.com/view/18553460/2s8YekQEtp)
+[Link a la documentación](https://documenter.getpostman.com/view/18629048/2s8YekQEjs)
 
 
 ## Informe Testing

@@ -27,6 +27,13 @@ public class UsuarioResponse {
         this.rol = rol;
         this.token = token;
     }
+    public UsuarioResponse(Long id, String nombre, String apellido, String email, String rol) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.rol = rol;
+    }
 
     public UsuarioResponse() {
     }

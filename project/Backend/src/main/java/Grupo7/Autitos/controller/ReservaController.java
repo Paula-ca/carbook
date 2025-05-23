@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+
+import javax.persistence.EntityNotFoundException;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -29,7 +31,8 @@ public class ReservaController {
 
         logger.debug("Agregando reserva...");
         if(reserva != null) {
-            response = new ResponseEntity(reservaService.add(reserva), HttpStatus.CREATED);
+            Reserva savedReserva = reservaService.add(reserva);
+            response = new ResponseEntity(reservaService.find(savedReserva.getId()), HttpStatus.CREATED);
             logger.info("Reserva agregada con id: " + reserva.getId());
         } else {
             response = new ResponseEntity("Reserva no agregada",HttpStatus.BAD_REQUEST);
@@ -41,20 +44,25 @@ public class ReservaController {
 
     @PreAuthorize("hasAnyRole('USER','ADMIN','SUPER_ADMIN')")
     @GetMapping("/{id}")
-    public ResponseEntity<Reserva> bookingById(@PathVariable Long id) {
-        ResponseEntity response = null;
+    public ResponseEntity<?> bookingById(@PathVariable Long id) {
+        logger.debug("Buscando reserva con id: {}" + id);
 
-        logger.debug("Cargando reserva...");
-        if(id != null){
-            response = new ResponseEntity(reservaService.find(id),HttpStatus.OK);
-            logger.info("Reserva con id: "+ id);
-        }else{
-            response = new ResponseEntity("No se encontraron ninguna reserva con id " + id, HttpStatus.NOT_FOUND);
-            logger.error("No se encontraro reserva con id  " + id);
+        if (id == null) {
+            logger.error("ID es nulo");
+            return new ResponseEntity<>("El ID no puede ser nulo", HttpStatus.BAD_REQUEST);
         }
 
-        return response;
+        Reserva reserva = reservaService.find(id);
+
+        if (reserva != null) {
+            logger.info("Reserva encontrada con id: {}"+ id);
+            return new ResponseEntity<>(reserva, HttpStatus.OK);
+        } else {
+            logger.warn("No se encontró ninguna reserva con id: {}"+ id);
+            return new ResponseEntity<>("No se encontró ninguna reserva con id " + id, HttpStatus.NOT_FOUND);
+        }
     }
+
 
     @GetMapping("/product/{id}/{cancelada}")
     public ResponseEntity<List<?>> listBookingsByProductId(@PathVariable Long id, @PathVariable Boolean cancelada) {
@@ -95,25 +103,35 @@ public class ReservaController {
 
     @PreAuthorize("hasAnyRole('USER','ADMIN','SUPER_ADMIN')")
     @PutMapping("/update")
-    public ResponseEntity<Reserva> update(@RequestBody Reserva reserva){
-        ResponseEntity response = null;
-
-        logger.debug("Actualizando reserva...");
-        if(reserva != null){
-            response = new ResponseEntity(reservaService.update(reserva), HttpStatus.OK);
-            logger.info("Reserva actualizado con id: " + reserva.getId());
-        } else {
-            response = new ResponseEntity("Reserva null", HttpStatus.NOT_FOUND);
+    public ResponseEntity<?> updateReserva(@RequestBody Reserva r) {
+        try {
+            Reserva actualizada = reservaService.update(r);
+            logger.info("Reserva actualizado con id: " + r.getId());
+            return ResponseEntity.ok(actualizada);
+        } catch (EntityNotFoundException e) {
+            logger.error("Reserva no encontrada");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        } catch (IllegalArgumentException e) {
             logger.error("Error al actualizar la reserva");
-        }
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());
 
-        return response;
+        }
     }
 
     @PreAuthorize("hasAnyRole('USER','ADMIN','SUPER_ADMIN')")
     @DeleteMapping("cancel/{id}")
-    public ResponseEntity<String> cancel(@PathVariable Long id) throws Exception {
-        return ResponseEntity.ok(reservaService.cancel(id));
+    public ResponseEntity<String> cancel(@PathVariable Long id) {
+        try {
+            String mensaje = reservaService.cancel(id);
+            return ResponseEntity.ok(mensaje);
+        } catch (EntityNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        } catch (IllegalStateException e) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al cancelar la reserva.");
+        }
     }
+
 
 }

@@ -11,9 +11,6 @@ public class RegisterRequest {
     @NotBlank
     private String apellido;
 
-    @NotBlank
-    private String ciudad;
-
     @Email
     private String email;
 
@@ -52,11 +49,5 @@ public class RegisterRequest {
         this.contrasenia = contrasenia;
     }
 
-    public String getCiudad() {
-        return ciudad;
-    }
 
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
-    }
 }

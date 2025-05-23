@@ -20,7 +20,7 @@ const Login = _ => {
 
     const submitForm = async (event) => {
         event.preventDefault()
-        if (!name || !surname || !email || !city || !password || !repeatPassword) {
+        if (!name || !surname || !email || !password || !repeatPassword) {
             alert('Por favor, completá todos los campos')
         } else {
             if (!name.match(nameRegex)) {
@@ -34,7 +34,7 @@ const Login = _ => {
             } else if (password !== repeatPassword) {
                 alert('Las contraseñas no coinciden')
             } else {
-                const authenticationResponse = await signup(name, surname, email, city, password)
+                const authenticationResponse = await signup(name, surname, email, password)
                 if (authenticationResponse) {
                     if (authenticationResponse === 1) {
                         navigate('../')
@@ -64,8 +64,6 @@ const Login = _ => {
                 </div>
                 <label htmlFor="email">Correo electrónico</label>
                 <input onChange={e => setEmail(e.target.value)} id="email" type="email" />
-                <label htmlFor="city">Ciudad/Provincia</label>
-                <input onChange={e => setCity(e.target.value)} id="city" type="city" />
                 <label htmlFor="password">Contraseña</label>
                 <input onChange={e => setPassword(e.target.value)} id="password" type="password" />
                 <label htmlFor="repeatPassword">Confirmar contraseña</label>
