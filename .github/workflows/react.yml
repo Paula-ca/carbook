@@ -22,8 +22,11 @@ jobs:
         working-directory: project/Frontend
 
       - name: Build frontend
-        run: npm run build
-        working-directory: project/Frontend
+        run: |
+          export NODE_OPTIONS=--openssl-legacy-provider 
+          npm run build
+  working-directory: project/Frontend
+
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
