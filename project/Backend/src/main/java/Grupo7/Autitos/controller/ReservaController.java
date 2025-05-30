@@ -1,5 +1,7 @@
 package Grupo7.Autitos.controller;
 
+import Grupo7.Autitos.entity.Imagen;
+import Grupo7.Autitos.entity.Producto;
 import Grupo7.Autitos.entity.Reserva;
 import Grupo7.Autitos.service.ReservaService;
 import org.apache.log4j.Logger;
@@ -26,20 +28,23 @@ public class ReservaController {
     @PreAuthorize("hasAnyRole('ADMIN','USER','SUPER_ADMIN')")
     
     @PostMapping("/add")
-    public ResponseEntity<Reserva> add(@RequestBody @Valid Reserva reserva) {
-        ResponseEntity response = null;
-
+    public ResponseEntity<?> add(@RequestBody @Valid Reserva reserva) {
         logger.debug("Agregando reserva...");
-        if(reserva != null) {
-            Reserva savedReserva = reservaService.add(reserva);
-            response = new ResponseEntity(reservaService.find(savedReserva.getId()), HttpStatus.CREATED);
-            logger.info("Reserva agregada con id: " + reserva.getId());
-        } else {
-            response = new ResponseEntity("Reserva no agregada",HttpStatus.BAD_REQUEST);
-            logger.error("La reserva es nula");
-        }
 
-        return response;
+        if (reserva == null) {
+            logger.error("La reserva es nulo");
+            return new ResponseEntity("Reserva nulo", HttpStatus.BAD_REQUEST);
+        }
+        Reserva reserva1 = reservaService.add(reserva);
+
+        if (reserva1 != null) {
+
+            logger.info("Reserva agregada con id: " + reserva1.getId());
+            return new ResponseEntity<>(reserva1, HttpStatus.OK);
+        } else {
+            logger.error("La reserva ya existe o no pudo guardarse");
+            return new ResponseEntity("Reserva existente o error al guardar", HttpStatus.CONFLICT);
+        }
     }
 
     @PreAuthorize("hasAnyRole('USER','ADMIN','SUPER_ADMIN')")
@@ -66,39 +71,34 @@ public class ReservaController {
 
     @GetMapping("/product/{id}/{cancelada}")
     public ResponseEntity<List<?>> listBookingsByProductId(@PathVariable Long id, @PathVariable Boolean cancelada) {
-        ResponseEntity response = null;
+        logger.debug("Buscando reservas por producto id: "+id);
 
         List<Reserva> lista = reservaService.filterByProductId(id, cancelada);
 
-        logger.debug("Buscando reservas...");
-        if(lista != null){
-            response = new ResponseEntity(lista,HttpStatus.OK);
+        if(!lista.isEmpty()){
             logger.info("Reservas del producto con id: "+ id);
+            return new ResponseEntity(lista,HttpStatus.OK);
         }else{
-            response = new ResponseEntity("No se encontraron reservas para el producto con id " + id, HttpStatus.NOT_FOUND);
             logger.error("No se encontraron reservas para el producto con id  " + id);
+            return new ResponseEntity("No se encontraron reservas para el producto con id " + id, HttpStatus.NOT_FOUND);
         }
 
-        return response;
     }
 
     @PreAuthorize("hasAnyRole('USER','ADMIN','SUPER_ADMIN')")
     @GetMapping("/user/{id}/{borrada}")
     public ResponseEntity<List<?>> listBookingsByUserId(@PathVariable Long id, @PathVariable Boolean borrada) {
-        ResponseEntity response = null;
+        logger.debug("Buscando reservas por usuario id: "+id);
 
         List<Reserva> lista = reservaService.filterByUserId(id, borrada);
 
-        logger.debug("Buscando reservas...");
-        if(lista != null){
-            response = new ResponseEntity(lista,HttpStatus.OK);
-            logger.info("Reservas del usuario con id: " + id);
+        if(!lista.isEmpty()){
+            logger.info("Reservas del usuario con id: "+ id);
+            return new ResponseEntity(lista,HttpStatus.OK);
         }else{
-            response = new ResponseEntity("No se encontraron reservas para el usuario con id " + id, HttpStatus.NOT_FOUND);
             logger.error("No se encontraron reservas para el usuario con id  " + id);
+            return new ResponseEntity("No se encontraron reservas para el usuario con id " + id, HttpStatus.NOT_FOUND);
         }
-
-        return response;
     }
 
     @PreAuthorize("hasAnyRole('USER','ADMIN','SUPER_ADMIN')")

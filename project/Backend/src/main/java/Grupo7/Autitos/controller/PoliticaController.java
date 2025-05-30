@@ -1,9 +1,11 @@
 package Grupo7.Autitos.controller;
 
+import Grupo7.Autitos.entity.Ciudad;
 import Grupo7.Autitos.entity.Politica;
 import Grupo7.Autitos.service.PoliticaService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,18 +24,21 @@ public class PoliticaController {
 
     @PostMapping("/add")
     public ResponseEntity<Politica> add(@RequestBody Politica politica){
-        ResponseEntity response = null;
-
         logger.debug("Agregando politica...");
-        if(politica != null) {
-            response = new ResponseEntity(politicaService.add(politica), HttpStatus.OK);
-            logger.info("Politica agregada con id: " + politica.getId());
-        } else {
-            response = new ResponseEntity("Politica no agregada", HttpStatus.NOT_FOUND);
+        if (politica == null) {
             logger.error("La politica es nula");
+            return new ResponseEntity("Politica nula", HttpStatus.BAD_REQUEST);
         }
 
-        return response;
+        Politica politica1 = politicaService.add(politica);
+
+        if (politica1 != null) {
+            logger.info("Politica agregada con id: " + politica1.getId());
+            return new ResponseEntity<>(politica1, HttpStatus.OK);
+        } else {
+            logger.error("La politica ya existe o no pudo guardarse");
+            return new ResponseEntity("Politica existente o error al guardar", HttpStatus.CONFLICT);
+        }
     }
 
     @GetMapping("/list")
@@ -72,7 +77,19 @@ public class PoliticaController {
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> delete(@PathVariable Long id) throws Exception {
-        return ResponseEntity.ok(politicaService.delete(id));
+        try{
+            Politica politica = politicaService.find(id);
+            if (politica == null) {
+                logger.error("Politica con id " + id + " no encontrada");
+                return new ResponseEntity("Error al intentar eliminar, politica con id " +id+ " no encontrada", HttpStatus.NOT_FOUND);
+            }
+            return ResponseEntity.ok(politicaService.delete(id));
+    } catch (
+    DataIntegrityViolationException ex) {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body("No se puede eliminar la politica porque está relacionado con otros datos");
+    } catch (Exception ex) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error inesperado: " + ex.getMessage());
+    }
     }
 
     @GetMapping("/list-{titulo}")

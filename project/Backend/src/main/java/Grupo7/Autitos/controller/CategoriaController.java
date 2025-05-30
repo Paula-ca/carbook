@@ -1,9 +1,12 @@
 package Grupo7.Autitos.controller;
 
 import Grupo7.Autitos.entity.Categoria;
+import Grupo7.Autitos.entity.Imagen;
+import Grupo7.Autitos.entity.Producto;
 import Grupo7.Autitos.service.CategoriaService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,18 +25,21 @@ public class CategoriaController {
 
     @PostMapping("/add")
     public ResponseEntity<Categoria> add(@RequestBody Categoria categoria){
-        ResponseEntity response = null;
 
         logger.debug("Agregando categoria...");
-        if(categoria != null) {
-            response = new ResponseEntity(categoriaService.add(categoria), HttpStatus.OK);
-            logger.info("Categoria agregada con id: " + categoria.getId());
-        } else {
-            response = new ResponseEntity("Categoria no agregada",HttpStatus.NOT_FOUND);
+        if (categoria == null) {
             logger.error("La categoria es nula");
+            return new ResponseEntity("Categoria nula", HttpStatus.BAD_REQUEST);
         }
+        Categoria categoria1 = categoriaService.add(categoria);
 
-        return response;
+        if (categoria1 != null) {
+            logger.info("Categoria agregada con id: " + categoria1.getId());
+            return new ResponseEntity<>(categoria1, HttpStatus.OK);
+        } else {
+            logger.error("La categoria ya existe o no pudo guardarse");
+            return new ResponseEntity("Categoria existente o error al guardar", HttpStatus.CONFLICT);
+        }
     }
 
     @GetMapping("/list/{borrados}")
@@ -72,11 +78,28 @@ public class CategoriaController {
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> delete(@PathVariable Long id) throws Exception {
+    try{
+        Categoria categoria = categoriaService.find(id);
+        if (categoria == null) {
+            logger.error("Categoría con id " + id + " no encontrada");
+            return new ResponseEntity("Error al intentar eliminar, categoría con id " +id+ " no encontrada", HttpStatus.NOT_FOUND);
+        }
         return ResponseEntity.ok(categoriaService.delete(id));
+    } catch (
+    DataIntegrityViolationException ex) {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body("No se puede eliminar el producto porque está relacionado con otros datos");
+    } catch (Exception ex) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error inesperado: " + ex.getMessage());
+    }
     }
 
     @DeleteMapping("/strongDelete/{id}")
     public ResponseEntity<String> strongDelete(@PathVariable Long id) throws Exception {
+        Categoria categoria = categoriaService.find(id);
+        if (categoria == null) {
+            logger.error("Categoría con id " + id + " no encontrada");
+            return new ResponseEntity("Error al intentar eliminar, categoría con id " +id+ " no encontrada", HttpStatus.NOT_FOUND);
+        }
         return ResponseEntity.ok(categoriaService.hardDelete(id));
     }
 

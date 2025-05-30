@@ -7,6 +7,7 @@ import Grupo7.Autitos.service.ImagenService;
 import Grupo7.Autitos.service.ProductoService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -160,13 +161,32 @@ public class ProductoController {
     @PreAuthorize("hasAnyRole('ADMIN','SUPER_ADMIN')")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> delete(@PathVariable Long id) throws Exception {
-
-        for (Imagen i : productoService.find(id).getImagenes()) {
-            imagenService.delete(i.getId());
+        try{
+        logger.debug("Eliminando producto...");
+        Producto producto = productoService.find(id);
+        if (producto == null) {
+            logger.error("Producto con id " + id + " no encontrado");
+            return new ResponseEntity("Error al intentar eliminar, producto con id " +id+ " no encontrado", HttpStatus.NOT_FOUND);
         }
 
-        return ResponseEntity.ok(productoService.delete(id));
+        // Eliminar imágenes asociadas
+        for (Imagen imagen : producto.getImagenes()) {
+            imagenService.delete(imagen.getId());
+        }
+
+        // Eliminar el producto
+        productoService.delete(id);
+        logger.info("Producto eliminado con id: " + id);
+
+        return ResponseEntity.ok("Producto eliminado con id: " + id);
+    } catch (
+    DataIntegrityViolationException ex) {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body("No se puede eliminar la ciudad porque está relacionado con otros datos");
+    } catch (Exception ex) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error inesperado: " + ex.getMessage());
     }
+    }
+
 
     @GetMapping("/date-filter")
     public ResponseEntity<List<Reserva>> dateFilter(@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate inicio,

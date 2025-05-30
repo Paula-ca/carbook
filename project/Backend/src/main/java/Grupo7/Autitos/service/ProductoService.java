@@ -17,7 +17,6 @@ public class ProductoService {
     public static final Logger logger = Logger.getLogger(ProductoService.class);
 
     public Producto add(Producto p) {
-        // Validação dos campos obrigatórios
         if (p.getTitulo() == null ||
                 p.getDescripcion() == null ||
                 p.getUbicacion() == null ||
@@ -31,7 +30,6 @@ public class ProductoService {
             return null;
         }
 
-        // Verifica se já existe produto com mesmo título ou mesma localização
         List<Producto> productos = productoRepository.findAll();
         for (Producto producto : productos) {
             if (p.getTitulo().equals(producto.getTitulo()) ||
@@ -40,7 +38,6 @@ public class ProductoService {
             }
         }
 
-        // Se passou pelas validações, salva o produto
         return productoRepository.save(p);
     }
 
@@ -128,12 +125,14 @@ public class ProductoService {
             boolean agregable = true;
 
             for (Reserva r : producto.getReservas()) {
-                if ((r.getFecha_ingreso().isEqual(inicio) || r.getFecha_ingreso().isEqual(fin)
-                        || (r.getFecha_ingreso().isAfter(inicio)) && r.getFecha_ingreso().isBefore(fin)) && r.getBorrado() == null) {
+                boolean reservaActiva = r.getBorrado() == null;
+
+                // Condición de solapamiento: si hay superposición de rangos
+                boolean haySolapamiento = !(r.getFecha_final().isBefore(inicio) || r.getFecha_ingreso().isAfter(fin));
+
+                if (reservaActiva && haySolapamiento) {
                     agregable = false;
-                } else if ((r.getFecha_final().isEqual(inicio) || r.getFecha_final().isEqual(fin)
-                        || (r.getFecha_final().isAfter(inicio)) && r.getFecha_final().isBefore(fin)) && r.getBorrado() == null) {
-                    agregable = false;
+                    break; // Ya sabemos que no se puede agregar, salimos del loop
                 }
             }
 
@@ -144,23 +143,34 @@ public class ProductoService {
 
         return listaNueva;
     }
+
 
     public List<Producto> dateAndCityFilter(LocalDate inicio, LocalDate fin, Long id_ciudad) {
         List<Producto> lista = productoRepository.findProductosByDateAndCity(inicio, fin, id_ciudad);
         List<Producto> listaNueva = new ArrayList<>();
 
-        boolean agregable = true;
+        for (Producto producto : lista) {
+            boolean agregable = true;
 
-        for(Producto producto : lista) {
             for (Reserva r : producto.getReservas()) {
-                if ((r.getFecha_ingreso().isEqual(inicio) || r.getFecha_ingreso().isEqual(fin)
-                        || (r.getFecha_ingreso().isAfter(inicio)) && r.getFecha_ingreso().isBefore(fin)) && r.getBorrado() == null) {
+                boolean reservaActiva = (r.getBorrado() == null);
+
+                boolean fechaIngresoEnRango =
+                        r.getFecha_ingreso().isEqual(inicio) ||
+                                r.getFecha_ingreso().isEqual(fin) ||
+                                (r.getFecha_ingreso().isAfter(inicio) && r.getFecha_ingreso().isBefore(fin));
+
+                boolean fechaFinalEnRango =
+                        r.getFecha_final().isEqual(inicio) ||
+                                r.getFecha_final().isEqual(fin) ||
+                                (r.getFecha_final().isAfter(inicio) && r.getFecha_final().isBefore(fin));
+
+                if (reservaActiva && !(r.getFecha_final().isBefore(inicio) || r.getFecha_ingreso().isAfter(fin))) {
                     agregable = false;
-                } else if ((r.getFecha_final().isEqual(inicio) || r.getFecha_final().isEqual(fin)
-                        || (r.getFecha_final().isAfter(inicio)) && r.getFecha_final().isBefore(fin)) && r.getBorrado() == null) {
-                    agregable = false;
+                    break;
                 }
             }
+
             if (agregable) {
                 listaNueva.add(producto);
             }
@@ -168,5 +178,6 @@ public class ProductoService {
 
         return listaNueva;
     }
+
 
 }

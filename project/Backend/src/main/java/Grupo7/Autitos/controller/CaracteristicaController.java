@@ -1,9 +1,11 @@
 package Grupo7.Autitos.controller;
 
 import Grupo7.Autitos.entity.Caracteristica;
+import Grupo7.Autitos.entity.Ciudad;
 import Grupo7.Autitos.service.CaracteristicaService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,18 +24,21 @@ public class CaracteristicaController {
 
     @PostMapping("/add")
     public ResponseEntity<Caracteristica> add(@RequestBody Caracteristica caracteristica){
-        ResponseEntity response = null;
-
         logger.debug("Agregando caracteristica...");
-        if(caracteristica != null) {
-            response = new ResponseEntity(caracteristicaService.add(caracteristica), HttpStatus.OK);
-            logger.info("Caracteristica agregada con id: " + caracteristica.getId());
-        } else {
-            response = new ResponseEntity("Caracteristica no agregada",HttpStatus.NOT_FOUND);
+        if (caracteristica == null) {
             logger.error("La caracteristica es nula");
+            return new ResponseEntity("Caracteristica nula", HttpStatus.BAD_REQUEST);
         }
 
-        return response;
+        Caracteristica caracteristica1 = caracteristicaService.add(caracteristica);
+
+        if (caracteristica1 != null) {
+            logger.info("Caracteristica agregada con id: " + caracteristica1.getId());
+            return new ResponseEntity<>(caracteristica1, HttpStatus.OK);
+        } else {
+            logger.error("La caracteristica ya existe o no pudo guardarse");
+            return new ResponseEntity("Caracteristica existente o error al guardar", HttpStatus.CONFLICT);
+        }
     }
 
     @GetMapping("/list")
@@ -71,7 +76,18 @@ public class CaracteristicaController {
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> delete(@PathVariable Long id) throws Exception {
-
+    try{
+        Caracteristica caracteristica = caracteristicaService.find(id);
+        if (caracteristica == null) {
+            logger.error("Caracteristica con id " + id + " no encontrada");
+            return new ResponseEntity("Error al intentar eliminar, caracteristica con id " +id+ " no encontrada", HttpStatus.NOT_FOUND);
+        }
         return ResponseEntity.ok(caracteristicaService.delete(id));
+    } catch (
+    DataIntegrityViolationException ex) {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body("No se puede eliminar la caracteristica porque está relacionado con otros datos");
+    } catch (Exception ex) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error inesperado: " + ex.getMessage());
+    }
     }
 }

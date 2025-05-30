@@ -1,7 +1,10 @@
 package Grupo7.Autitos.service;
 
+import Grupo7.Autitos.entity.Producto;
 import Grupo7.Autitos.entity.Reserva;
+import Grupo7.Autitos.entity.Usuario;
 import Grupo7.Autitos.repository.ReservaRepository;
+import Grupo7.Autitos.repository.UsuarioRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,17 +21,45 @@ public class ReservaService {
     @Autowired
     private ReservaRepository reservaRepository;
 
+    @Autowired
+    private ProductoService productoService;
+
+    @Autowired
+    public UsuarioService usuarioService;
+
     public static final Logger logger = Logger.getLogger(ReservaService.class);
 
-    public Reserva add(Reserva reserva) {
-        if(reserva.getFecha_ingreso() != null
-                && reserva.getFecha_final() != null
-                && reserva.getProducto() != null
-                && reserva.getUsuario() != null) {
-            return reservaRepository.save(reserva);
-        } else {
-            return null;
+    public Reserva add(Reserva r) {
+        if (r.getEstado_pago() == null ||
+                r.getFecha_ingreso() == null ||
+                r.getFecha_final() == null ||
+                r.getEstado()== null ||
+                r.getPrecio() == 0 ||
+                r.getHora_comienzo() == null ||
+                r.getPago_id() == null ||
+                r.getProducto().getId() == null ||
+                r.getUsuario().getId() == null) {
+                 return null;
         }
+        // Cargar entidades completas
+        Producto productoCompleto = productoService.find(r.getProducto().getId());
+        Usuario usuarioCompleto = usuarioService.find(r.getUsuario().getId());
+        r.setProducto(productoCompleto);
+        r.setUsuario(usuarioCompleto);
+
+        List<Reserva> reservas = reservaRepository.findAll();
+        for (Reserva reserva : reservas) {
+            if (r.getFecha_ingreso().equals(reserva.getFecha_ingreso()) &&
+                    r.getFecha_final().equals(reserva.getFecha_final()) &&
+                    r.getProducto().getId().equals(reserva.getProducto().getId())&&
+                    r.getUsuario().getId().equals(reserva.getUsuario().getId())) {
+                return null;
+            }
+        }
+
+        Reserva reservaGuardada =  reservaRepository.save(r);
+
+        return find(reservaGuardada.getId());
     }
 
     public Reserva update(Reserva r) {

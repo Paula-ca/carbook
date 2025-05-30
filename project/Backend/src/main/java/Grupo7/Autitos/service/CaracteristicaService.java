@@ -2,11 +2,13 @@ package Grupo7.Autitos.service;
 
 
 import Grupo7.Autitos.entity.Caracteristica;
+import Grupo7.Autitos.entity.Ciudad;
 import Grupo7.Autitos.repository.CaracteristicaRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -18,12 +20,16 @@ public class CaracteristicaService {
     public static final Logger logger = Logger.getLogger(CaracteristicaService.class);
 
     public Caracteristica add(Caracteristica c){
-        if(c.getTitulo() != null
-                && c.getIcono()!= null) {
-            return caracteristicaRepository.save(c);
-        } else {
+        if(c.getTitulo() == null
+        ) {
             return null;
+        } List<Caracteristica> caracteristicas = caracteristicaRepository.findAll();
+        for (Caracteristica caracteristica : caracteristicas) {
+            if (c.getTitulo().equals(caracteristica.getTitulo()) && c.getIcono().equals(caracteristica.getIcono())) {
+                return null;
+            }
         }
+        return caracteristicaRepository.save(c);
     }
 
     public Set<Caracteristica> list() {

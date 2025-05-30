@@ -1,10 +1,12 @@
 package Grupo7.Autitos.repository;
 
 import Grupo7.Autitos.entity.Reserva;
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface ReservaRepository extends JpaRepository<Reserva, Long> {
@@ -22,5 +24,9 @@ public interface ReservaRepository extends JpaRepository<Reserva, Long> {
     List<Reserva> findBookingsForProduct(Long id);
 
     List<Reserva> findByProductoId(Long producto);
+
+    @EntityGraph(attributePaths = {"producto", "usuario"})
+    Optional<Reserva> findById(Long id);
+
 
 }

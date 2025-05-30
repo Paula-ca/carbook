@@ -1,10 +1,12 @@
 package Grupo7.Autitos.controller;
 
+import Grupo7.Autitos.entity.Categoria;
 import Grupo7.Autitos.entity.Ciudad;
 import Grupo7.Autitos.entity.Producto;
 import Grupo7.Autitos.service.CiudadService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,18 +25,22 @@ public class CiudadController {
 
     @PostMapping("/add")
     public ResponseEntity<Ciudad> add(@RequestBody Ciudad ciudad){
-        ResponseEntity response = null;
 
         logger.debug("Agregando ciudad...");
-        if(ciudad != null) {
-            response = new ResponseEntity(ciudadService.add(ciudad), HttpStatus.OK);
-            logger.info("Ciudad agregada con id: " + ciudad.getId());
-        } else {
-            response = new ResponseEntity("Ciudad no agregada",HttpStatus.NOT_FOUND);
+        if (ciudad == null) {
             logger.error("La ciudad es nula");
+            return new ResponseEntity("Ciudad nula", HttpStatus.BAD_REQUEST);
         }
 
-        return response;
+        Ciudad ciudad1 = ciudadService.add(ciudad);
+
+        if (ciudad1 != null) {
+            logger.info("Ciudad agregada con id: " + ciudad1.getId());
+            return new ResponseEntity<>(ciudad1, HttpStatus.OK);
+        } else {
+            logger.error("La ciudad ya existe o no pudo guardarse");
+            return new ResponseEntity("Ciudad existente o error al guardar", HttpStatus.CONFLICT);
+        }
     }
 
     @GetMapping("/list")
@@ -72,8 +78,19 @@ public class CiudadController {
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> delete(@PathVariable Long id) throws Exception {
-
+    try{
+        Ciudad ciudad = ciudadService.find(id);
+        if (ciudad == null) {
+            logger.error("Ciudad con id " + id + " no encontrada");
+            return new ResponseEntity("Error al intentar eliminar, ciudad con id " +id+ " no encontrada", HttpStatus.NOT_FOUND);
+        }
         return ResponseEntity.ok(ciudadService.delete(id));
+    } catch (
+    DataIntegrityViolationException ex) {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body("No se puede eliminar la ciudad porque está relacionado con otros datos");
+    } catch (Exception ex) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error inesperado: " + ex.getMessage());
+    }
     }
 
     @GetMapping("/list-{pais}")

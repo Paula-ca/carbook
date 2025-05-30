@@ -1,5 +1,6 @@
 package Grupo7.Autitos.service;
 
+import Grupo7.Autitos.entity.Producto;
 import Grupo7.Autitos.entity.Usuario;
 import Grupo7.Autitos.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,9 @@ public class UsuarioService {
         } else {
             return null;
         }
+    }
+    public Usuario find(Long id){
+        return usuarioRepository.findById(id).orElse(null);
     }
 
     public List<Usuario> list() {

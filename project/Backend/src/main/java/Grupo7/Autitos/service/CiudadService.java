@@ -1,5 +1,6 @@
 package Grupo7.Autitos.service;
 
+import Grupo7.Autitos.entity.Categoria;
 import Grupo7.Autitos.entity.Ciudad;
 import Grupo7.Autitos.repository.CiudadRepository;
 import org.apache.log4j.Logger;
@@ -18,13 +19,17 @@ public class CiudadService {
     public static final Logger logger = Logger.getLogger(CiudadService.class);
 
     public Ciudad add(Ciudad c){
-        if(c.getTitulo() != null
-                && c.getPais() != null
+        if(c.getTitulo() == null
+                || c.getPais() == null
                 ) {
-            return ciudadRepository.save(c);
-        } else {
             return null;
+        } List<Ciudad> ciudads = ciudadRepository.findAll();
+        for (Ciudad ciudad : ciudads) {
+            if (c.getTitulo().equals(ciudad.getTitulo())) {
+                return null;
+            }
         }
+        return ciudadRepository.save(c);
     }
 
     public Set<Ciudad> list() {

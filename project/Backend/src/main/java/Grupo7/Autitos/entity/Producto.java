@@ -34,13 +34,14 @@ public class Producto {
     @Column
     private int precio;
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.REMOVE)
     @JoinTable(
             name = "productos_has_caracteristica",
             joinColumns = @JoinColumn(name = "id_producto"),
             inverseJoinColumns = @JoinColumn(name = "id_caracteristica")
     )
     private List<Caracteristica> caracteristicas;
+
 
     @ManyToOne
     @JoinColumn(name = "id_ciudad", nullable = false)
@@ -59,7 +60,7 @@ public class Producto {
     @JsonIgnore
     private List<Reserva> reservas = new ArrayList<>();
 
-    @ManyToMany()
+    @ManyToMany(cascade = CascadeType.REMOVE)
     @JoinTable(name = "productos_has_politicas",
             joinColumns = {@JoinColumn(name = "id_producto")},
             inverseJoinColumns = {@JoinColumn(name = "id_politica")})

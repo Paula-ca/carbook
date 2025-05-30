@@ -1,5 +1,6 @@
 package Grupo7.Autitos.service;
 
+import Grupo7.Autitos.entity.Caracteristica;
 import Grupo7.Autitos.entity.Politica;
 import Grupo7.Autitos.repository.PoliticaRepository;
 import org.apache.log4j.Logger;
@@ -18,6 +19,16 @@ public class PoliticaService {
     public static final Logger logger = Logger.getLogger(PoliticaService.class);
 
     public Politica add(Politica p){
+
+        if(p.getTitulo() == null || p.getDescripcion() == null
+        ) {
+            return null;
+        } List<Politica> politicas = politicaRepository.findAll();
+        for (Politica politica : politicas) {
+            if (p.getTitulo().equals(politica.getTitulo()) && p.getDescripcion().equals(politica.getDescripcion())) {
+                return null;
+            }
+        }
         return politicaRepository.save(p);
     }
 
