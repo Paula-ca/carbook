@@ -27,7 +27,7 @@ const CalendarFilter = ({ date, setDate }) => {
 
     return (
       <div>
-        <button className='search-form-button select-date-search-form' type='button' onClick={_ => setShowCalendar(!showCalendar)}>📆 Desde - Hasta</button>
+        <button className='search-form-button select-date-search-form' type='button' onClick={_ => setShowCalendar(!showCalendar)}><span role="img" aria-label="calendar">📆</span> Desde - Hasta</button>
         {!showCalendar && fromDate && toDate && <div><p>Desde: {moment(fromDate).format('DD/MM/YYYY')}</p><p>Hasta: {moment(toDate).format('DD/MM/YYYY')}</p></div>}
         <Calendar
           className={showCalendar ? "" : "hide"}
@@ -56,7 +56,7 @@ const LocationFilter = ({value, setValue, getLocation, cities, setCities, cityId
             // setLoading(false)
         }
         getCities()
-    }, [])
+    }, [setCities])
 
 
     return (
@@ -82,7 +82,7 @@ const LocationFilter = ({value, setValue, getLocation, cities, setCities, cityId
 }
 
 const SearchField = props => {
-    const { location, setLocation, setDates } = props
+    const { setLocation, setDates } = props
     const { setValue, value } = useComboboxControls({ initialValue: '' })
     const [date, setDate] = useState()
     const [cities, setCities] = React.useState([{ titulo: 'Aguardá un momento...' }])
@@ -167,7 +167,7 @@ const Main = _ => {
     const recommendationsRef = useRef(null);
 
   useEffect(() => {
-    if (location || dates || category && recommendationsRef.current) {
+    if ((location || dates || category) && recommendationsRef.current) {
       recommendationsRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [location,dates,category]);

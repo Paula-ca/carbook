@@ -260,7 +260,7 @@ const Arrival = (props) => {
 };
 
 const ReservationDetail = (props) => {
-  const { product, fromDate, toDate, city, reservationTime } = props;
+  const { product, fromDate, toDate, reservationTime } = props;
   const { logout } = React.useContext(UserContext)
   const navigate = useNavigate()
   var count_days = 0

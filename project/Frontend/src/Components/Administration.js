@@ -917,6 +917,7 @@ const ProductAdministrationForm = (props) => {
                 <p key={image.id}>
                   <a
                     target={"_blank"}
+                    rel="noopener noreferrer"
                     href={image.url}
                     style={{ textDecoration: "none" }}
                   >
@@ -992,7 +993,7 @@ const ProductAdministration = (_) => {
     } else {
       setProduct(null);
     }
-  }, []);
+  }, [productId]);
 
   React.useEffect(() => {
     const getProductCategories = async (_) => {

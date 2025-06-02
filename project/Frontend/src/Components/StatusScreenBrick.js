@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { useState } from 'react';
 import { useParams } from "react-router-dom";
 
 const mercadoApiKey = process.env.REACT_APP_MERCADO_PAGO_API_KEY

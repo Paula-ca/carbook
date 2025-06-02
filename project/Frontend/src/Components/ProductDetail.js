@@ -423,7 +423,7 @@ const BookingCalendar = ({ date, setDate, disabledDates }) => {
   };
 
   if (date && date.length) {
-    const [fromDate, toDate] = date;
+    //const [fromDate, toDate] = date;
   }
 
   return (
@@ -675,7 +675,7 @@ const ProductDetail = (_) => {
       }
     };
     getProduct();
-  }, []);
+  }, [productId]);
 
   return (
     <div className="product-detail">

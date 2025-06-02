@@ -1,4 +1,4 @@
-import React,{ useEffect, useState} from 'react';
+import React,{ useEffect} from 'react';
 import { initMercadoPago} from '@mercadopago/sdk-react';
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";

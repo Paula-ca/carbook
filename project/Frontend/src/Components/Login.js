@@ -28,9 +28,7 @@ const Login = _ => {
                 alert('Por favor, ingresá una contraseña válida (al menos 8 caracteres y una mayúsucla)')
             } else {
                 const authenticatedUser = await login(email, password)
-                if (authenticatedUser) {
-                    const welcomeMessage = `Bienvenid${(authenticatedUser.pronouns && ((authenticatedUser.pronouns === 'm' && 'o') || (authenticatedUser.pronouns === 'f' && 'a'))) || 'o/a' } `
-                   
+                if (authenticatedUser) {                   
                     navigate('../')
                 } else {
                     alert('Lamentablemente no ha podido iniciar sesión. Por favor intente más tarde')
