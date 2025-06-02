@@ -340,7 +340,7 @@ const ReservationDetail = (props) => {
           navigate('/login')
         } else {
           alert('Ocurrió un error al reservar el producto, por favor vuelva a intentarlo')
-          console.log(error)
+          
         }
       }
     }
