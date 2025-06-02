@@ -165,13 +165,13 @@ body {
 .user-welcome {
   display: flex;
   align-items: center;
-  width: fit-content;
+  width: max-content;
   padding: 10px;
 }
 .user-welcome {
   display: flex;
   align-items: center;
-  width: calc(max-content + 20px);
+  width: max-content;
 }
 
 .user-welcome * {
