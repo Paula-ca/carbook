@@ -23,14 +23,16 @@ jobs:
         working-directory: project/Frontend
 
       - name: Build React app
+        env:
+          CI: false
         run: |
           export NODE_OPTIONS=--openssl-legacy-provider
           npm run build
-        working-directory: project/Frontend
-
+        working-directory: project/Frontend  
+     
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_TOKEN }}
           publish_dir: project/Frontend/build
 
