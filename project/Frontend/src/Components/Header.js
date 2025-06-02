@@ -6,7 +6,7 @@ import UserContext from "../Context/UserContext"
 const Logo = _ => {
     return (
         <Link to="/" className="logo">
-            <img className="logo-image" style={{height : '50px'}} src="/logo-carbook-footer.png" alt="logo"/><span style={{ marginLeft: '8px' }}>El servicio que estabas buscando</span>
+            <img className="logo-image" style={{height : '50px'}} src="/logo-carbook-header.png" alt="logo"/><span style={{ marginLeft: '8px' }}>El servicio que estabas buscando</span>
         </Link>
     )
 }

@@ -5,7 +5,7 @@ import React from "react";
 const FooterLeft = _ => {
     return(
         <div className="copyright" >
-            <img style={{height : '50px'}} src="/logo-carbook-footer.png" alt="logo"/><p></p>
+            <img style={{height : '50px'}} src="/logo-carbook-footer.png" alt="logo"/>
         </div>
     )
 }
