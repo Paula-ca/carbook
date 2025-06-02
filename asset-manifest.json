@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/carbook/static/css/main.34dd786c.chunk.css",
+    "main.js": "/carbook/static/js/main.62798dec.chunk.js",
+    "main.js.map": "/carbook/static/js/main.62798dec.chunk.js.map",
+    "runtime-main.js": "/carbook/static/js/runtime-main.c2dc34df.js",
+    "runtime-main.js.map": "/carbook/static/js/runtime-main.c2dc34df.js.map",
+    "static/css/2.21d60689.chunk.css": "/carbook/static/css/2.21d60689.chunk.css",
+    "static/js/2.e0b106fc.chunk.js": "/carbook/static/js/2.e0b106fc.chunk.js",
+    "static/js/2.e0b106fc.chunk.js.map": "/carbook/static/js/2.e0b106fc.chunk.js.map",
+    "static/js/3.f61cc4be.chunk.js": "/carbook/static/js/3.f61cc4be.chunk.js",
+    "static/js/3.f61cc4be.chunk.js.map": "/carbook/static/js/3.f61cc4be.chunk.js.map",
+    "index.html": "/carbook/index.html",
+    "precache-manifest.52d34f4f3c9458b3ae086e54e8649eb0.js": "/carbook/precache-manifest.52d34f4f3c9458b3ae086e54e8649eb0.js",
+    "service-worker.js": "/carbook/service-worker.js",
+    "static/css/2.21d60689.chunk.css.map": "/carbook/static/css/2.21d60689.chunk.css.map",
+    "static/css/main.34dd786c.chunk.css.map": "/carbook/static/css/main.34dd786c.chunk.css.map",
+    "static/js/2.e0b106fc.chunk.js.LICENSE.txt": "/carbook/static/js/2.e0b106fc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c2dc34df.js",
+    "static/css/2.21d60689.chunk.css",
+    "static/js/2.e0b106fc.chunk.js",
+    "static/css/main.34dd786c.chunk.css",
+    "static/js/main.62798dec.chunk.js"
+  ]
+}
