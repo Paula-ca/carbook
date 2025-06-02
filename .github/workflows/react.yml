@@ -23,6 +23,8 @@ jobs:
         working-directory: project/Frontend
 
       - name: Build React app
+        env:
+          CI: false
         run: |
           export NODE_OPTIONS=--openssl-legacy-provider
           npm run build
