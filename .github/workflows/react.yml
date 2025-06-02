@@ -28,10 +28,10 @@ jobs:
         run: |
           export NODE_OPTIONS=--openssl-legacy-provider
           npm run build
-        working-directory: project/Frontend
-
+        working-directory: project/Frontend  
+     
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: Paula-ca/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           publish_dir: project/Frontend/build
