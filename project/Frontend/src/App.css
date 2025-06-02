@@ -165,7 +165,13 @@ body {
 .user-welcome {
   display: flex;
   align-items: center;
-  width: calc(fit-content + 20px);
+  width: fit-content;
+  padding: 10px;
+}
+.user-welcome {
+  display: flex;
+  align-items: center;
+  width: calc(max-content + 20px);
 }
 
 .user-welcome * {
