@@ -1,4 +1,4 @@
-# CarBooking
+# Carbook
 
 >**Alquiler de vehiculos:** 
 >Sitio web funcional para alquilar vehiculos, desde la creación de un usuario, inicio de sesión, reserva de productos y módulo de pago implementando Mercado Pago SDK. 
