@@ -25,8 +25,4 @@ public interface ReservaRepository extends JpaRepository<Reserva, Long> {
 
     List<Reserva> findByProductoId(Long producto);
 
-    @EntityGraph(attributePaths = {"producto", "usuario"})
-    Optional<Reserva> findById(Long id);
-
-
 }

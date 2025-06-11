@@ -2,6 +2,7 @@ package Grupo7.Autitos.controller;
 
 import Grupo7.Autitos.entity.Categoria;
 import Grupo7.Autitos.entity.Ciudad;
+import Grupo7.Autitos.entity.Politica;
 import Grupo7.Autitos.entity.Producto;
 import Grupo7.Autitos.service.CiudadService;
 import org.apache.log4j.Logger;
@@ -61,19 +62,23 @@ public class CiudadController {
         return response;
     }
     @PutMapping("/update")
-    public ResponseEntity<Producto> update(@RequestBody Ciudad ciudad){
-        ResponseEntity response = null;
-
-        logger.debug("Actualizando ciudad...");
-        if(ciudad != null){
-            response = new ResponseEntity(ciudadService.update(ciudad), HttpStatus.OK);
+    public ResponseEntity<?> update(@RequestBody Ciudad ciudad){
+        try{
+            logger.debug("Actualizando ciudad...");
+            Ciudad ciudadExist = ciudadService.find(ciudad.getId());
+            if (ciudadExist == null) {
+                logger.error("Ciudad con id " + ciudad.getId() + " no encontrada");
+                return new ResponseEntity("Error al intentar actualizatar, ciudad con id " +ciudad.getId()+ " no encontrada", HttpStatus.NOT_FOUND);
+            }
             logger.info("Ciudad actualizada con id: " + ciudad.getId());
-        } else {
-            response = new ResponseEntity("No se pudo actualizar la ciudad", HttpStatus.NOT_FOUND);
-            logger.error("Error al actualizar la ciudad");
+            return ResponseEntity.ok(ciudadService.update(ciudad));
+        }catch (
+                DataIntegrityViolationException ex) {
+            logger.error("Error al actualizar ciudad");
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("No se puede actualizar la ciudad porque está relacionado con otros datos");
+        } catch (Exception ex) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error inesperado: " + ex.getMessage());
         }
-
-        return response;
     }
 
     @DeleteMapping("/delete/{id}")

@@ -67,7 +67,7 @@ public class CategoriaService {
             this.update(c);
             return "Categoria eliminada con id: " + id;
         } else if(c != null && c.getBorrado() != null){
-            return "La categoria id "+id+" fue borrada anteriormente";
+            return "La categoria id "+id+" fue eliminada anteriormente";
         }else{
             logger.error("Categoria con id " + id + " no encontrada");
             throw new Exception("Categoria con id " + id + " no encontrada");

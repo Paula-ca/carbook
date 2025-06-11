@@ -1,11 +1,13 @@
 package Grupo7.Autitos.controller;
 
 import Grupo7.Autitos.entity.Imagen;
+import Grupo7.Autitos.entity.Politica;
 import Grupo7.Autitos.entity.Producto;
 import Grupo7.Autitos.entity.Reserva;
 import Grupo7.Autitos.service.ReservaService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -50,20 +52,17 @@ public class ReservaController {
     @PreAuthorize("hasAnyRole('USER','ADMIN','SUPER_ADMIN')")
     @GetMapping("/{id}")
     public ResponseEntity<?> bookingById(@PathVariable Long id) {
-        logger.debug("Buscando reserva con id: {}" + id);
-
+        logger.debug("Buscando reserva con id: " + id);
         if (id == null) {
             logger.error("ID es nulo");
             return new ResponseEntity<>("El ID no puede ser nulo", HttpStatus.BAD_REQUEST);
         }
-
         Reserva reserva = reservaService.find(id);
-
         if (reserva != null) {
-            logger.info("Reserva encontrada con id: {}"+ id);
+            logger.info("Reserva encontrada con id: "+ id );
             return new ResponseEntity<>(reserva, HttpStatus.OK);
         } else {
-            logger.warn("No se encontró ninguna reserva con id: {}"+ id);
+            logger.warn("No se encontró ninguna reserva con id: "+ id);
             return new ResponseEntity<>("No se encontró ninguna reserva con id " + id, HttpStatus.NOT_FOUND);
         }
     }
@@ -105,16 +104,20 @@ public class ReservaController {
     @PutMapping("/update")
     public ResponseEntity<?> updateReserva(@RequestBody Reserva r) {
         try {
-            Reserva actualizada = reservaService.update(r);
-            logger.info("Reserva actualizado con id: " + r.getId());
-            return ResponseEntity.ok(actualizada);
-        } catch (EntityNotFoundException e) {
-            logger.error("Reserva no encontrada");
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
-        } catch (IllegalArgumentException e) {
-            logger.error("Error al actualizar la reserva");
-            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());
-
+            logger.debug("Actualizando reserva...");
+            Reserva reservaExist = reservaService.find(r.getId());
+            if (reservaExist==null) {
+                logger.error("Reserva con id " + r.getId() + " no encontrada");
+                return new ResponseEntity("Error al intentar actualizatar, reserva con id " +r.getId()+ " no encontrada", HttpStatus.NOT_FOUND);
+            }
+            logger.info("Reserva actualizada con id: " + r.getId());
+            return ResponseEntity.ok(reservaService.update(r));
+        } catch (
+                DataIntegrityViolationException ex) {
+            logger.error("Error al actualizar reserva");
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("No se puede actualizar la reserva porque está relacionado con otros datos");
+        } catch (Exception ex) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error inesperado: " + ex.getMessage());
         }
     }
 

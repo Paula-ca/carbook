@@ -2,6 +2,7 @@ package Grupo7.Autitos.controller;
 
 import Grupo7.Autitos.entity.Caracteristica;
 import Grupo7.Autitos.entity.Ciudad;
+import Grupo7.Autitos.entity.Politica;
 import Grupo7.Autitos.service.CaracteristicaService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,19 +60,23 @@ public class CaracteristicaController {
         return response;
     }
     @PutMapping("/update")
-    public ResponseEntity<Caracteristica> update(@RequestBody Caracteristica caracteristica){
-        ResponseEntity response = null;
-
-        logger.debug("Actualizando caracteristica...");
-        if(caracteristica != null){
-            response = new ResponseEntity(caracteristicaService.update(caracteristica), HttpStatus.OK);
+    public ResponseEntity<?> update(@RequestBody Caracteristica caracteristica){
+        try{
+            logger.debug("Actualizando caracteristica...");
+            Caracteristica caracExist = caracteristicaService.find(caracteristica.getId());
+            if (caracExist == null) {
+                logger.error("Caracteristica con id " + caracteristica.getId() + " no encontrada");
+                return new ResponseEntity("Error al intentar actualizatar, caracteristica con id " +caracteristica.getId()+ " no encontrada", HttpStatus.NOT_FOUND);
+            }
             logger.info("Caracteristica actualizada con id: " + caracteristica.getId());
-        } else {
-            response = new ResponseEntity("No se pudo actualizar la caracteristica", HttpStatus.NOT_FOUND);
-            logger.error("Error al actualizar la caracteristica");
+            return ResponseEntity.ok(caracteristicaService.update(caracteristica));
+        }catch (
+                DataIntegrityViolationException ex) {
+            logger.error("Error al actualizar caracteristica");
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("No se puede actualizar la caracteristica porque está relacionado con otros datos");
+        } catch (Exception ex) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error inesperado: " + ex.getMessage());
         }
-
-        return response;
     }
 
     @DeleteMapping("/delete/{id}")

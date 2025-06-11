@@ -30,13 +30,10 @@ public class ReservaService {
     public static final Logger logger = Logger.getLogger(ReservaService.class);
 
     public Reserva add(Reserva r) {
-        if (r.getEstado_pago() == null ||
-                r.getFecha_ingreso() == null ||
+        if (    r.getFecha_ingreso() == null ||
                 r.getFecha_final() == null ||
-                r.getEstado()== null ||
                 r.getPrecio() == 0 ||
                 r.getHora_comienzo() == null ||
-                r.getPago_id() == null ||
                 r.getProducto().getId() == null ||
                 r.getUsuario().getId() == null) {
                  return null;
@@ -68,7 +65,7 @@ public class ReservaService {
 
         List<Reserva> lista = reservaRepository.findByProductoId(reserva.getProducto().getId());
         List<Reserva> otrasReservas = lista.stream()
-                .filter(res -> !res.getId().equals(reserva.getId()))
+                .filter(res -> !res.getId().equals(reserva.getId())&&res.getProducto().getId().equals(reserva.getProducto().getId()))
                 .collect(Collectors.toList());
 
         LocalDate inicio = (r.getFecha_ingreso() != null) ? r.getFecha_ingreso() : reserva.getFecha_ingreso();

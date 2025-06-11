@@ -60,19 +60,23 @@ public class PoliticaController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<Politica> update(@RequestBody Politica politica){
-        ResponseEntity response = null;
-
-        logger.debug("Actualizando politica...");
-        if(politica != null){
-            response = new ResponseEntity(politicaService.update(politica), HttpStatus.OK);
+    public ResponseEntity<?> update(@RequestBody Politica politica){
+        try{
+            logger.debug("Actualizando politica...");
+            Politica politicaExist = politicaService.find(politica.getId());
+            if (politicaExist == null) {
+                logger.error("Politica con id " + politica.getId() + " no encontrada");
+                return new ResponseEntity("Error al intentar actualizatar, politica con id " +politica.getId()+ " no encontrada", HttpStatus.NOT_FOUND);
+            }
             logger.info("Politica actualizada con id: " + politica.getId());
-        } else {
-            response = new ResponseEntity("No se pudo actualizar politica", HttpStatus.NOT_FOUND);
+            return ResponseEntity.ok(politicaService.update(politica));
+        }catch (
+                DataIntegrityViolationException ex) {
             logger.error("Error al actualizar politica");
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("No se puede actualizar la politica porque está relacionado con otros datos");
+        } catch (Exception ex) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error inesperado: " + ex.getMessage());
         }
-
-        return response;
     }
 
     @DeleteMapping("/delete/{id}")

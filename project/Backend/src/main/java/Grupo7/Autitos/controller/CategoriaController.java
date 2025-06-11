@@ -2,6 +2,7 @@ package Grupo7.Autitos.controller;
 
 import Grupo7.Autitos.entity.Categoria;
 import Grupo7.Autitos.entity.Imagen;
+import Grupo7.Autitos.entity.Politica;
 import Grupo7.Autitos.entity.Producto;
 import Grupo7.Autitos.service.CategoriaService;
 import org.apache.log4j.Logger;
@@ -61,19 +62,23 @@ public class CategoriaController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<Categoria> update(@RequestBody Categoria categoria){
-        ResponseEntity response = null;
-
-        logger.debug("Actualizando categoria...");
-        if(categoria != null){
-            response = new ResponseEntity(categoriaService.update(categoria), HttpStatus.OK);
+    public ResponseEntity<?> update(@RequestBody Categoria categoria){
+        try{
+            logger.debug("Actualizando categoria...");
+            Categoria catExist = categoriaService.find(categoria.getId());
+            if (catExist == null) {
+                logger.error("Categoria con id " + categoria.getId() + " no encontrada");
+                return new ResponseEntity("Error al intentar actualizatar, categoria con id " +categoria.getId()+ " no encontrada", HttpStatus.NOT_FOUND);
+            }
             logger.info("Categoria actualizada con id: " + categoria.getId());
-        } else {
-            response = new ResponseEntity("No se pudo actualizar categoria", HttpStatus.NOT_FOUND);
+            return ResponseEntity.ok(categoriaService.update(categoria));
+        }catch (
+                DataIntegrityViolationException ex) {
             logger.error("Error al actualizar categoria");
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("No se puede actualizar la categoria porque está relacionado con otros datos");
+        } catch (Exception ex) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error inesperado: " + ex.getMessage());
         }
-
-        return response;
     }
 
     @DeleteMapping("/delete/{id}")

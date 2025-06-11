@@ -1,0 +1,20 @@
+# Ignorar carpetas y archivos de Maven
+target/
+*.log
+*.tmp
+
+# Ignorar archivos de configuración local e IDE
+.idea/
+.vscode/
+*.iml
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos y carpetas de control de versiones
+.git
+.gitignore
+
+loggers.txt
+hs_err_pid6384.log

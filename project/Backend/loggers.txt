@@ -33023,3 +33023,1598 @@ io.jsonwebtoken.security.SignatureException: JWT signature does not match locall
 [2025-05-28 13:45:12] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
 [2025-05-28 13:45:12] [ DEBUG] [CategoriaController:29] Agregando categoria...
 [2025-05-28 13:45:12] [ INFO ] [CategoriaController:37] Categoria agregada con id: 15
+[2025-06-02 11:04:08] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 11:04:08] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 11:04:08] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 11:04:08] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 11:04:08] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 11:04:08] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 11:04:08] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 11:04:08] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 11:04:29] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-02 11:04:30] [ INFO ] [ProductoController:100] Producto encontrado con id 3
+[2025-06-02 11:04:31] [ DEBUG] [ReservaController:74] Buscando reservas por producto id: 3
+[2025-06-02 11:04:32] [ INFO ] [ReservaController:79] Reservas del producto con id: 3
+[2025-06-02 11:04:39] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 11:04:39] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 11:04:39] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 11:04:39] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 11:04:39] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 11:04:39] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 11:04:39] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 11:04:39] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 11:14:23] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-02 11:14:24] [ INFO ] [ProductoController:100] Producto encontrado con id 3
+[2025-06-02 11:14:25] [ DEBUG] [ReservaController:74] Buscando reservas por producto id: 3
+[2025-06-02 11:14:25] [ INFO ] [ReservaController:79] Reservas del producto con id: 3
+[2025-06-02 11:14:27] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 11:14:27] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 11:14:27] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 11:14:27] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 11:14:27] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 11:14:27] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 11:14:28] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 11:14:28] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 11:35:07] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 11:35:07] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 11:35:07] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 11:35:07] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 11:35:07] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 11:35:07] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 11:35:07] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 11:35:07] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 11:36:48] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 11:36:48] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 11:36:48] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 11:36:48] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 11:36:48] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 11:36:48] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 11:36:48] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 11:36:49] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 11:38:11] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 11:38:11] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 11:38:11] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 11:38:11] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 11:38:11] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 11:38:11] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 11:38:11] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 11:38:11] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 11:41:53] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 11:41:53] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 11:41:53] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 11:41:53] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 11:41:54] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 11:41:54] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 11:41:54] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 11:41:54] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 11:54:59] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 11:54:59] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 11:54:59] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 11:54:59] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 11:54:59] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 11:54:59] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 11:54:59] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 11:54:59] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 11:57:16] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 11:57:16] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 11:57:16] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 11:57:16] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 11:57:16] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 11:57:16] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 11:57:16] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 11:57:16] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 13:21:25] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 13:21:25] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 13:21:25] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 13:21:25] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 13:21:25] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 13:21:25] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 13:21:25] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 13:21:25] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 13:28:50] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 13:28:50] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 13:28:50] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 13:28:50] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 13:28:50] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 13:28:50] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 13:28:50] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 13:28:50] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 13:32:55] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 13:32:55] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 13:32:55] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 13:32:55] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 13:32:55] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 13:32:55] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 13:32:55] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 13:32:55] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 13:33:44] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-02 13:33:48] [ INFO ] [ProductoController:100] Producto encontrado con id 5
+[2025-06-02 13:33:55] [ DEBUG] [ReservaController:74] Buscando reservas por producto id: 5
+[2025-06-02 13:33:56] [ INFO ] [ReservaController:79] Reservas del producto con id: 5
+[2025-06-02 13:38:13] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 13:38:13] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 13:38:13] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 13:38:13] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 13:38:13] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 13:38:13] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 13:38:13] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 13:38:13] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 13:41:13] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-02 13:41:14] [ INFO ] [ProductoController:100] Producto encontrado con id 3
+[2025-06-02 13:41:14] [ DEBUG] [ReservaController:74] Buscando reservas por producto id: 3
+[2025-06-02 13:41:14] [ INFO ] [ReservaController:79] Reservas del producto con id: 3
+[2025-06-02 13:41:22] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-02 13:41:22] [ INFO ] [ProductoController:100] Producto encontrado con id 3
+[2025-06-02 13:41:37] [ DEBUG] [AuthController:78] Logeando usuario...
+[2025-06-02 13:41:41] [ INFO ] [AuthController:92] Usuario logeado
+[2025-06-02 13:41:42] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 13:41:42] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 13:41:42] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 13:41:42] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 13:41:42] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 13:41:42] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 13:41:42] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 13:41:42] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 13:41:47] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-02 13:41:47] [ DEBUG] [ReservaController:91] Buscando reservas por usuario id: 8
+[2025-06-02 13:41:47] [ INFO ] [ReservaController:96] Reservas del usuario con id: 8
+[2025-06-02 13:41:47] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-02 13:41:47] [ DEBUG] [ReservaController:91] Buscando reservas por usuario id: 8
+[2025-06-02 13:41:47] [ ERROR] [ReservaController:99] No se encontraron reservas para el usuario con id  8
+[2025-06-02 13:42:27] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 13:42:27] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 13:42:27] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 13:42:27] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 13:42:27] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 13:42:27] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 13:42:27] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 13:42:27] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 13:42:31] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-02 13:42:31] [ INFO ] [ProductoController:100] Producto encontrado con id 16
+[2025-06-02 13:42:44] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 13:42:44] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 13:42:44] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 13:42:44] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 13:42:44] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 13:42:44] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 13:42:44] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 13:42:44] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 13:42:48] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-02 13:42:48] [ INFO ] [ProductoController:100] Producto encontrado con id 1
+[2025-06-02 13:42:48] [ DEBUG] [ReservaController:74] Buscando reservas por producto id: 1
+[2025-06-02 13:42:48] [ INFO ] [ReservaController:79] Reservas del producto con id: 1
+[2025-06-02 13:42:52] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-02 13:42:52] [ INFO ] [ProductoController:100] Producto encontrado con id 1
+[2025-06-02 13:42:52] [ DEBUG] [ReservaController:74] Buscando reservas por producto id: 1
+[2025-06-02 13:42:52] [ INFO ] [ReservaController:79] Reservas del producto con id: 1
+[2025-06-02 13:43:11] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-02 13:43:12] [ DEBUG] [ReservaController:32] Agregando reserva...
+[2025-06-02 13:43:12] [ ERROR] [ReservaController:45] La reserva ya existe o no pudo guardarse
+[2025-06-02 13:43:20] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-02 13:43:20] [ DEBUG] [ReservaController:32] Agregando reserva...
+[2025-06-02 13:43:20] [ ERROR] [ReservaController:45] La reserva ya existe o no pudo guardarse
+[2025-06-02 13:43:32] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-02 13:43:32] [ DEBUG] [ReservaController:32] Agregando reserva...
+[2025-06-02 13:43:32] [ ERROR] [ReservaController:45] La reserva ya existe o no pudo guardarse
+[2025-06-02 13:45:57] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 13:45:57] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 13:45:57] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 13:45:57] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 13:45:57] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 13:45:57] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 13:45:57] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 13:45:57] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 13:46:00] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-02 13:46:00] [ INFO ] [ProductoController:100] Producto encontrado con id 3
+[2025-06-02 13:46:00] [ DEBUG] [ReservaController:74] Buscando reservas por producto id: 3
+[2025-06-02 13:46:00] [ INFO ] [ReservaController:79] Reservas del producto con id: 3
+[2025-06-02 13:46:11] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-02 13:46:12] [ INFO ] [ProductoController:100] Producto encontrado con id 3
+[2025-06-02 13:46:12] [ DEBUG] [AuthController:78] Logeando usuario...
+[2025-06-02 13:46:13] [ INFO ] [AuthController:92] Usuario logeado
+[2025-06-02 13:46:13] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 13:46:13] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 13:46:13] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 13:46:13] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 13:46:13] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 13:46:13] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 13:46:13] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 13:46:13] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 13:46:17] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-02 13:46:17] [ INFO ] [ProductoController:100] Producto encontrado con id 1
+[2025-06-02 13:46:17] [ DEBUG] [ReservaController:74] Buscando reservas por producto id: 1
+[2025-06-02 13:46:17] [ INFO ] [ReservaController:79] Reservas del producto con id: 1
+[2025-06-02 13:46:18] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-02 13:46:18] [ INFO ] [ProductoController:100] Producto encontrado con id 1
+[2025-06-02 13:46:18] [ DEBUG] [ReservaController:74] Buscando reservas por producto id: 1
+[2025-06-02 13:46:18] [ INFO ] [ReservaController:79] Reservas del producto con id: 1
+[2025-06-02 13:46:32] [ INFO ] [JwtTokenFilter:41] Usuario con email: pepito@hotmail.com autenticado
+[2025-06-02 13:46:32] [ DEBUG] [ReservaController:32] Agregando reserva...
+[2025-06-02 13:46:32] [ ERROR] [ReservaController:45] La reserva ya existe o no pudo guardarse
+[2025-06-02 13:46:55] [ INFO ] [JwtTokenFilter:41] Usuario con email: pepito@hotmail.com autenticado
+[2025-06-02 13:46:55] [ DEBUG] [ReservaController:32] Agregando reserva...
+[2025-06-02 13:46:55] [ ERROR] [ReservaController:45] La reserva ya existe o no pudo guardarse
+[2025-06-02 14:50:58] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-02 14:51:00] [ INFO ] [ProductoController:100] Producto encontrado con id 1
+[2025-06-02 14:52:21] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 14:52:21] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 14:52:21] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 14:52:21] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 14:52:21] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 14:52:21] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 14:52:21] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 14:52:21] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 14:52:54] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-02 14:52:56] [ INFO ] [ProductoController:100] Producto encontrado con id 3
+[2025-06-02 14:52:57] [ DEBUG] [ReservaController:74] Buscando reservas por producto id: 3
+[2025-06-02 14:52:57] [ INFO ] [ReservaController:79] Reservas del producto con id: 3
+[2025-06-02 14:53:00] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-02 14:53:00] [ INFO ] [ProductoController:100] Producto encontrado con id 3
+[2025-06-02 14:53:01] [ DEBUG] [ReservaController:74] Buscando reservas por producto id: 3
+[2025-06-02 14:53:01] [ INFO ] [ReservaController:79] Reservas del producto con id: 3
+[2025-06-02 14:53:14] [ ERROR] [JwtProvider:51] Token expirado
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2025-06-02T12:41:40Z. Current time: 2025-06-02T12:53:14Z, a difference of 694169 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:427)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at Grupo7.Autitos.security.Jwt.JwtProvider.validateToken(JwtProvider.java:44)
+	at Grupo7.Autitos.security.Jwt.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:32)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-06-02 14:53:16] [ ERROR] [JwtEntryPoint:18] Fallo en el metodo commence
+[2025-06-02 14:53:42] [ DEBUG] [AuthController:78] Logeando usuario...
+[2025-06-02 14:53:43] [ INFO ] [AuthController:92] Usuario logeado
+[2025-06-02 14:53:43] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-02 14:53:43] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-02 14:53:43] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-02 14:53:43] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-02 14:53:43] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 14:53:44] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 14:53:44] [ DEBUG] [ProductoController:81] Listando productos...
+[2025-06-02 14:53:44] [ INFO ] [ProductoController:84] Productos listados
+[2025-06-02 14:53:49] [ DEBUG] [ProductoController:132] Listando productos...
+[2025-06-02 14:53:49] [ INFO ] [ProductoController:135] Productos filtrados por categoria
+[2025-06-02 14:53:49] [ DEBUG] [ProductoController:132] Listando productos...
+[2025-06-02 14:53:49] [ ERROR] [ProductoController:138] Error al filtrar productos
+[2025-06-02 14:53:52] [ DEBUG] [ProductoController:132] Listando productos...
+[2025-06-02 14:53:52] [ ERROR] [ProductoController:138] Error al filtrar productos
+[2025-06-02 14:53:53] [ DEBUG] [ProductoController:132] Listando productos...
+[2025-06-02 14:53:53] [ INFO ] [ProductoController:135] Productos filtrados por categoria
+[2025-06-02 14:53:55] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-02 14:53:55] [ INFO ] [ProductoController:100] Producto encontrado con id 4
+[2025-06-02 14:53:55] [ DEBUG] [ReservaController:74] Buscando reservas por producto id: 4
+[2025-06-02 14:53:55] [ INFO ] [ReservaController:79] Reservas del producto con id: 4
+[2025-06-02 14:53:57] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-02 14:53:57] [ INFO ] [ProductoController:100] Producto encontrado con id 4
+[2025-06-02 14:53:58] [ DEBUG] [ReservaController:74] Buscando reservas por producto id: 4
+[2025-06-02 14:53:58] [ INFO ] [ReservaController:79] Reservas del producto con id: 4
+[2025-06-02 14:54:13] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-02 14:54:13] [ DEBUG] [ReservaController:32] Agregando reserva...
+[2025-06-02 14:54:13] [ ERROR] [ReservaController:45] La reserva ya existe o no pudo guardarse
+[2025-06-02 14:55:01] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-02 14:55:02] [ DEBUG] [ReservaController:32] Agregando reserva...
+[2025-06-02 14:55:02] [ ERROR] [ReservaController:45] La reserva ya existe o no pudo guardarse
+[2025-06-04 10:51:07] [ ERROR] [JwtProvider:47] Token mal formado
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at Grupo7.Autitos.security.Jwt.JwtProvider.validateToken(JwtProvider.java:44)
+	at Grupo7.Autitos.security.Jwt.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:32)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-06-04 10:51:11] [ DEBUG] [CategoriaController:51] Listando categorias...
+[2025-06-04 10:51:11] [ INFO ] [CategoriaController:54] Categorias listadas
+[2025-06-04 10:55:21] [ ERROR] [JwtProvider:47] Token mal formado
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at Grupo7.Autitos.security.Jwt.JwtProvider.validateToken(JwtProvider.java:44)
+	at Grupo7.Autitos.security.Jwt.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:32)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-06-04 10:55:21] [ ERROR] [JwtEntryPoint:18] Fallo en el metodo commence
+[2025-06-04 10:56:22] [ ERROR] [JwtProvider:47] Token mal formado
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at Grupo7.Autitos.security.Jwt.JwtProvider.validateToken(JwtProvider.java:44)
+	at Grupo7.Autitos.security.Jwt.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:32)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-06-04 10:56:25] [ DEBUG] [AuthController:78] Logeando usuario...
+[2025-06-04 10:56:27] [ INFO ] [AuthController:92] Usuario logeado
+[2025-06-04 10:56:38] [ ERROR] [JwtProvider:47] Token mal formado
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at Grupo7.Autitos.security.Jwt.JwtProvider.validateToken(JwtProvider.java:44)
+	at Grupo7.Autitos.security.Jwt.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:32)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-06-04 10:56:39] [ ERROR] [JwtEntryPoint:18] Fallo en el metodo commence
+[2025-06-04 10:56:54] [ ERROR] [JwtProvider:47] Token mal formado
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at Grupo7.Autitos.security.Jwt.JwtProvider.validateToken(JwtProvider.java:44)
+	at Grupo7.Autitos.security.Jwt.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:32)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-06-04 10:56:54] [ ERROR] [JwtEntryPoint:18] Fallo en el metodo commence
+[2025-06-04 11:03:07] [ ERROR] [JwtProvider:47] Token mal formado
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at Grupo7.Autitos.security.Jwt.JwtProvider.validateToken(JwtProvider.java:44)
+	at Grupo7.Autitos.security.Jwt.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:32)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-06-04 11:03:07] [ DEBUG] [AuthController:78] Logeando usuario...
+[2025-06-04 11:03:09] [ INFO ] [AuthController:92] Usuario logeado
+[2025-06-04 11:12:16] [ ERROR] [JwtProvider:55] Fallo con la firma
+io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at Grupo7.Autitos.security.Jwt.JwtProvider.validateToken(JwtProvider.java:44)
+	at Grupo7.Autitos.security.Jwt.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:32)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-06-04 11:12:16] [ DEBUG] [AuthController:78] Logeando usuario...
+[2025-06-04 11:12:16] [ INFO ] [AuthController:92] Usuario logeado
+[2025-06-04 11:13:19] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 11:13:20] [ DEBUG] [CategoriaController:29] Agregando categoria...
+[2025-06-04 11:13:24] [ INFO ] [CategoriaController:37] Categoria agregada con id: 16
+[2025-06-04 11:14:27] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 11:14:28] [ DEBUG] [CategoriaController:62] Eliminando categoria...
+[2025-06-04 11:14:28] [ INFO ] [CategoriaController:65] Categoria eliminada con id: 16
+[2025-06-04 11:24:07] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 11:24:07] [ DEBUG] [CategoriaController:62] Eliminando categoria...
+[2025-06-04 11:24:52] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 11:24:52] [ DEBUG] [CategoriaController:62] Eliminando categoria...
+[2025-06-04 11:25:18] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 11:25:18] [ DEBUG] [CategoriaController:62] Eliminando categoria...
+[2025-06-04 11:36:13] [ ERROR] [JwtProvider:55] Fallo con la firma
+io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at Grupo7.Autitos.security.Jwt.JwtProvider.validateToken(JwtProvider.java:44)
+	at Grupo7.Autitos.security.Jwt.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:32)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-06-04 11:36:16] [ DEBUG] [AuthController:78] Logeando usuario...
+[2025-06-04 11:36:18] [ INFO ] [AuthController:92] Usuario logeado
+[2025-06-04 11:36:38] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 11:36:40] [ DEBUG] [CategoriaController:62] Eliminando categoria...
+[2025-06-04 11:44:13] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 11:44:13] [ DEBUG] [CategoriaController:78] Eliminando categoria...
+[2025-06-04 11:44:13] [ INFO ] [CategoriaController:81] Categoria eliminada con id: 16
+[2025-06-04 11:46:32] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 11:46:32] [ ERROR] [CategoriaController:100] Categoría con id 17 no encontrada
+[2025-06-04 11:48:11] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 11:48:12] [ DEBUG] [CategoriaController:67] Actualizando categoria...
+[2025-06-04 11:48:14] [ INFO ] [CategoriaController:70] Categoria actualizada con id: 1
+[2025-06-04 11:52:09] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 11:52:09] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-04 11:52:09] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-04 11:59:52] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 11:59:52] [ DEBUG] [CiudadController:67] Actualizando ciudad...
+[2025-06-04 11:59:53] [ INFO ] [CiudadController:70] Ciudad actualizada con id: 11
+[2025-06-04 12:01:36] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 12:01:36] [ ERROR] [CiudadController:84] Ciudad con id 13 no encontrada
+[2025-06-04 12:01:48] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 12:01:49] [ DEBUG] [CiudadService:56] Eliminando ciudad...
+[2025-06-04 12:01:49] [ INFO ] [CiudadService:59] Ciudad eliminada con id: 14
+[2025-06-04 12:04:23] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 12:04:24] [ DEBUG] [CiudadController:102] Buscando ciudades...
+[2025-06-04 12:04:24] [ INFO ] [CiudadController:105] Ciudades encontradas en Argentina
+[2025-06-04 12:06:58] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 12:06:58] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-04 12:06:58] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-04 12:07:20] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 12:07:21] [ DEBUG] [CiudadController:29] Agregando ciudad...
+[2025-06-04 12:07:21] [ INFO ] [CiudadController:38] Ciudad agregada con id: 15
+[2025-06-04 12:08:00] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 12:08:00] [ DEBUG] [CiudadService:56] Eliminando ciudad...
+[2025-06-04 12:08:00] [ INFO ] [CiudadService:59] Ciudad eliminada con id: 15
+[2025-06-04 12:08:38] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 12:08:38] [ ERROR] [CiudadController:84] Ciudad con id 15 no encontrada
+[2025-06-04 12:08:46] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 12:08:46] [ DEBUG] [CiudadController:29] Agregando ciudad...
+[2025-06-04 12:08:46] [ INFO ] [CiudadController:38] Ciudad agregada con id: 16
+[2025-06-04 12:08:57] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 12:08:57] [ DEBUG] [CiudadService:56] Eliminando ciudad...
+[2025-06-04 12:08:57] [ INFO ] [CiudadService:59] Ciudad eliminada con id: 16
+[2025-06-04 12:09:04] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 12:09:04] [ DEBUG] [CiudadController:52] Listando ciudades...
+[2025-06-04 12:09:04] [ INFO ] [CiudadController:55] Ciudades listadas
+[2025-06-04 12:11:52] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 12:11:54] [ DEBUG] [CaracteristicaService:50] Listando caracteristicas...
+[2025-06-04 12:11:54] [ INFO ] [CaracteristicaService:53] Caracteristicas listadas
+[2025-06-04 12:14:37] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 12:14:38] [ DEBUG] [CaracteristicaService:65] Actualizando caracteristica...
+[2025-06-04 12:14:38] [ INFO ] [CaracteristicaService:68] Caracteristica actualizada con id: 16
+[2025-06-04 12:17:22] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-04 12:17:23] [ DEBUG] [CaracteristicaService:27] Agregando caracteristica...
+[2025-06-04 12:17:23] [ INFO ] [CaracteristicaService:36] Caracteristica agregada con id: 17
+[2025-06-11 11:54:27] [ ERROR] [JwtProvider:47] Token mal formado
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at Grupo7.Autitos.security.Jwt.JwtProvider.validateToken(JwtProvider.java:44)
+	at Grupo7.Autitos.security.Jwt.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:32)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-06-11 11:54:28] [ ERROR] [JwtEntryPoint:18] Fallo en el metodo commence
+[2025-06-11 11:55:01] [ ERROR] [JwtProvider:47] Token mal formado
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at Grupo7.Autitos.security.Jwt.JwtProvider.validateToken(JwtProvider.java:44)
+	at Grupo7.Autitos.security.Jwt.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:32)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-06-11 11:55:03] [ DEBUG] [AuthController:78] Logeando usuario...
+[2025-06-11 11:55:05] [ INFO ] [AuthController:92] Usuario logeado
+[2025-06-11 11:55:13] [ ERROR] [JwtProvider:47] Token mal formado
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at Grupo7.Autitos.security.Jwt.JwtProvider.validateToken(JwtProvider.java:44)
+	at Grupo7.Autitos.security.Jwt.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:32)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-06-11 11:55:13] [ ERROR] [JwtEntryPoint:18] Fallo en el metodo commence
+[2025-06-11 11:55:18] [ ERROR] [JwtProvider:47] Token mal formado
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at Grupo7.Autitos.security.Jwt.JwtProvider.validateToken(JwtProvider.java:44)
+	at Grupo7.Autitos.security.Jwt.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:32)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-06-11 11:55:18] [ ERROR] [JwtEntryPoint:18] Fallo en el metodo commence
+[2025-06-11 11:56:03] [ ERROR] [JwtProvider:55] Fallo con la firma
+io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at Grupo7.Autitos.security.Jwt.JwtProvider.validateToken(JwtProvider.java:44)
+	at Grupo7.Autitos.security.Jwt.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:32)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-06-11 11:56:04] [ DEBUG] [AuthController:78] Logeando usuario...
+[2025-06-11 11:56:05] [ INFO ] [AuthController:92] Usuario logeado
+[2025-06-11 11:56:51] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 11:56:51] [ DEBUG] [CaracteristicaService:27] Agregando caracteristica...
+[2025-06-11 11:56:52] [ ERROR] [CaracteristicaService:39] La caracteristica ya existe o no pudo guardarse
+[2025-06-11 11:57:18] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 11:57:18] [ DEBUG] [CaracteristicaService:50] Listando caracteristicas...
+[2025-06-11 11:57:18] [ INFO ] [CaracteristicaService:53] Caracteristicas listadas
+[2025-06-11 12:00:16] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 12:00:16] [ DEBUG] [CaracteristicaService:65] Actualizando caracteristica...
+[2025-06-11 12:00:18] [ INFO ] [CaracteristicaService:68] Caracteristica actualizada con id: 16
+[2025-06-11 12:04:01] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 12:04:02] [ DEBUG] [PoliticaController:50] Listando politicas...
+[2025-06-11 12:04:02] [ INFO ] [PoliticaController:53] Politicas listadas
+[2025-06-11 12:16:06] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 12:16:07] [ DEBUG] [PoliticaController:27] Agregando politica...
+[2025-06-11 12:16:09] [ INFO ] [PoliticaController:36] Politica agregada con id: 10
+[2025-06-11 12:18:39] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 12:18:39] [ DEBUG] [PoliticaController:66] Actualizando politica...
+[2025-06-11 13:09:56] [ ERROR] [JwtProvider:55] Fallo con la firma
+io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at Grupo7.Autitos.security.Jwt.JwtProvider.validateToken(JwtProvider.java:44)
+	at Grupo7.Autitos.security.Jwt.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:32)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-06-11 13:09:56] [ DEBUG] [AuthController:78] Logeando usuario...
+[2025-06-11 13:09:57] [ INFO ] [AuthController:92] Usuario logeado
+[2025-06-11 13:10:07] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 13:10:07] [ DEBUG] [PoliticaController:65] Actualizando politica...
+[2025-06-11 13:10:07] [ ERROR] [PoliticaController:68] Politica con id 9 no encontrada
+[2025-06-11 13:11:00] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 13:11:00] [ DEBUG] [PoliticaController:65] Actualizando politica...
+[2025-06-11 13:11:00] [ INFO ] [PoliticaController:71] Politica actualizada con id: 10
+[2025-06-11 13:12:55] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 13:12:55] [ ERROR] [PoliticaController:87] Politica con id 9 no encontrada
+[2025-06-11 13:13:16] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 13:13:17] [ DEBUG] [PoliticaService:53] Eliminando politica...
+[2025-06-11 13:13:17] [ INFO ] [PoliticaService:56] Politica eliminada con id: 10
+[2025-06-11 13:14:00] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 13:14:01] [ ERROR] [PoliticaController:87] Politica con id 10 no encontrada
+[2025-06-11 13:35:18] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 13:35:20] [ DEBUG] [PoliticaController:105] Buscando politicas...
+[2025-06-11 13:35:20] [ INFO ] [PoliticaController:108] Politicas encontradas con titulo politica de cancelacion
+[2025-06-11 13:39:10] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 13:39:11] [ DEBUG] [ReservaController:74] Buscando reservas por producto id: 2
+[2025-06-11 13:39:11] [ INFO ] [ReservaController:79] Reservas del producto con id: 2
+[2025-06-11 13:45:43] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 13:45:44] [ DEBUG] [ReservaController:91] Buscando reservas por usuario id: 12
+[2025-06-11 13:45:44] [ INFO ] [ReservaController:96] Reservas del usuario con id: 12
+[2025-06-11 13:58:19] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 13:58:19] [ DEBUG] [ReservaController:53] Buscando reserva con id: {}63
+[2025-06-11 13:58:20] [ INFO ] [ReservaController:63] Reserva encontrada con id: {}63
+[2025-06-11 13:59:48] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 13:59:48] [ DEBUG] [ReservaController:91] Buscando reservas por usuario id: 12
+[2025-06-11 13:59:48] [ INFO ] [ReservaController:96] Reservas del usuario con id: 12
+[2025-06-11 14:00:08] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 14:00:09] [ DEBUG] [ReservaController:91] Buscando reservas por usuario id: 12
+[2025-06-11 14:00:09] [ INFO ] [ReservaController:96] Reservas del usuario con id: 12
+[2025-06-11 14:16:41] [ ERROR] [JwtProvider:55] Fallo con la firma
+io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at Grupo7.Autitos.security.Jwt.JwtProvider.validateToken(JwtProvider.java:44)
+	at Grupo7.Autitos.security.Jwt.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:32)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-06-11 14:16:43] [ DEBUG] [AuthController:78] Logeando usuario...
+[2025-06-11 14:16:49] [ INFO ] [AuthController:92] Usuario logeado
+[2025-06-11 14:18:02] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 14:18:02] [ DEBUG] [ReservaController:53] Buscando reserva con id: {}63
+[2025-06-11 14:18:03] [ INFO ] [ReservaController:63] Reserva encontrada con id: {}63Grupo7.Autitos.entity.Reserva@31d2eb4f
+[2025-06-11 16:10:18] [ ERROR] [JwtProvider:55] Fallo con la firma
+io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at Grupo7.Autitos.security.Jwt.JwtProvider.validateToken(JwtProvider.java:44)
+	at Grupo7.Autitos.security.Jwt.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:32)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-06-11 16:10:19] [ DEBUG] [AuthController:78] Logeando usuario...
+[2025-06-11 16:10:21] [ INFO ] [AuthController:92] Usuario logeado
+[2025-06-11 16:10:29] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:10:29] [ DEBUG] [ReservaController:55] Buscando reserva con id: 63
+[2025-06-11 16:10:31] [ INFO ] [ReservaController:62] Reserva encontrada con id: 63
+[2025-06-11 16:10:43] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:10:43] [ DEBUG] [ReservaController:55] Buscando reserva con id: 69
+[2025-06-11 16:10:43] [ INFO ] [ReservaController:62] Reserva encontrada con id: 69
+[2025-06-11 16:12:27] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:12:28] [ DEBUG] [ReservaController:34] Agregando reserva...
+[2025-06-11 16:12:29] [ ERROR] [ReservaController:47] La reserva ya existe o no pudo guardarse
+[2025-06-11 16:13:17] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:13:18] [ DEBUG] [ReservaController:107] Actualizando reserva...
+[2025-06-11 16:13:18] [ INFO ] [ReservaController:113] Reserva actualizada con id: 63
+[2025-06-11 16:13:30] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:13:30] [ DEBUG] [ReservaController:107] Actualizando reserva...
+[2025-06-11 16:13:30] [ INFO ] [ReservaController:113] Reserva actualizada con id: 64
+[2025-06-11 16:13:39] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:13:39] [ DEBUG] [ReservaController:107] Actualizando reserva...
+[2025-06-11 16:13:39] [ INFO ] [ReservaController:113] Reserva actualizada con id: 65
+[2025-06-11 16:13:44] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:13:44] [ DEBUG] [ReservaController:107] Actualizando reserva...
+[2025-06-11 16:13:44] [ INFO ] [ReservaController:113] Reserva actualizada con id: 66
+[2025-06-11 16:13:49] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:13:49] [ DEBUG] [ReservaController:107] Actualizando reserva...
+[2025-06-11 16:13:49] [ ERROR] [ReservaController:110] Reserva con id 67 no encontrada
+[2025-06-11 16:13:53] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:13:54] [ DEBUG] [ReservaController:107] Actualizando reserva...
+[2025-06-11 16:13:54] [ INFO ] [ReservaController:113] Reserva actualizada con id: 68
+[2025-06-11 16:13:59] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:13:59] [ DEBUG] [ReservaController:107] Actualizando reserva...
+[2025-06-11 16:13:59] [ INFO ] [ReservaController:113] Reserva actualizada con id: 69
+[2025-06-11 16:14:25] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:14:25] [ DEBUG] [ReservaService:112] Cancelando reserva con id: {}66
+[2025-06-11 16:14:26] [ WARN ] [ReservaService:121] La reserva con id {} ya fue cancelada previamente66
+[2025-06-11 16:14:31] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:14:31] [ DEBUG] [ReservaService:112] Cancelando reserva con id: {}63
+[2025-06-11 16:14:31] [ WARN ] [ReservaService:121] La reserva con id {} ya fue cancelada previamente63
+[2025-06-11 16:14:37] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:14:37] [ DEBUG] [ReservaService:112] Cancelando reserva con id: {}69
+[2025-06-11 16:14:38] [ INFO ] [ReservaService:128] Reserva cancelada con id: {}69
+[2025-06-11 16:15:21] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:15:21] [ DEBUG] [ReservaController:34] Agregando reserva...
+[2025-06-11 16:15:22] [ INFO ] [ReservaController:44] Reserva agregada con id: 74
+[2025-06-11 16:16:18] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:16:19] [ DEBUG] [ReservaController:107] Actualizando reserva...
+[2025-06-11 16:16:19] [ INFO ] [ReservaController:113] Reserva actualizada con id: 74
+[2025-06-11 16:17:02] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:17:02] [ DEBUG] [ReservaController:107] Actualizando reserva...
+[2025-06-11 16:17:02] [ INFO ] [ReservaController:113] Reserva actualizada con id: 74
+[2025-06-11 16:17:38] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:17:38] [ DEBUG] [ReservaController:107] Actualizando reserva...
+[2025-06-11 16:17:38] [ INFO ] [ReservaController:113] Reserva actualizada con id: 74
+[2025-06-11 16:18:47] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:18:47] [ DEBUG] [ReservaController:107] Actualizando reserva...
+[2025-06-11 16:18:48] [ INFO ] [ReservaController:113] Reserva actualizada con id: 74
+[2025-06-11 16:19:11] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:19:11] [ DEBUG] [ReservaController:55] Buscando reserva con id: 74
+[2025-06-11 16:19:12] [ INFO ] [ReservaController:62] Reserva encontrada con id: 74
+[2025-06-11 16:20:24] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:20:24] [ DEBUG] [ReservaController:34] Agregando reserva...
+[2025-06-11 16:20:25] [ INFO ] [ReservaController:44] Reserva agregada con id: 75
+[2025-06-11 16:21:10] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:21:10] [ DEBUG] [ReservaController:34] Agregando reserva...
+[2025-06-11 16:21:11] [ ERROR] [ReservaController:47] La reserva ya existe o no pudo guardarse
+[2025-06-11 16:21:25] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:21:25] [ DEBUG] [ReservaController:55] Buscando reserva con id: 75
+[2025-06-11 16:21:25] [ INFO ] [ReservaController:62] Reserva encontrada con id: 75
+[2025-06-11 16:22:15] [ INFO ] [JwtTokenFilter:41] Usuario con email: alanigodoy@hotmail.com autenticado
+[2025-06-11 16:22:15] [ DEBUG] [ReservaController:107] Actualizando reserva...
+[2025-06-11 16:22:16] [ INFO ] [ReservaController:113] Reserva actualizada con id: 75

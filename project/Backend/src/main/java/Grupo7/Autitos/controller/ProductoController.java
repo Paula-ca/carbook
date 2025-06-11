@@ -1,6 +1,7 @@
 package Grupo7.Autitos.controller;
 
 import Grupo7.Autitos.entity.Imagen;
+import Grupo7.Autitos.entity.Politica;
 import Grupo7.Autitos.entity.Producto;
 import Grupo7.Autitos.entity.Reserva;
 import Grupo7.Autitos.service.ImagenService;
@@ -143,19 +144,23 @@ public class ProductoController {
 
     @PreAuthorize("hasAnyRole('ADMIN','SUPER_ADMIN')")
     @PutMapping("/update")
-    public ResponseEntity<Producto> update(@RequestBody Producto producto){
-        ResponseEntity response = null;
-
-        logger.debug("Actualizando producto...");
-        if(producto != null){
-            response = new ResponseEntity(productoService.update(producto), HttpStatus.OK);
+    public ResponseEntity<?> update(@RequestBody Producto producto){
+        try{
+            logger.debug("Actualizando producto...");
+            Producto prodExist = productoService.find(producto.getId());
+            if (prodExist == null) {
+                logger.error("Producto con id " + producto.getId() + " no encontrado");
+                return new ResponseEntity("Error al intentar actualizatar, producto con id " +producto.getId()+ " no encontrado", HttpStatus.NOT_FOUND);
+            }
             logger.info("Producto actualizado con id: " + producto.getId());
-        } else {
-            response = new ResponseEntity("No se pudo actualizar el producto", HttpStatus.NOT_FOUND);
-            logger.error("Error al actualizar el producto");
+            return ResponseEntity.ok(productoService.update(producto));
+        }catch (
+                DataIntegrityViolationException ex) {
+            logger.error("Error al actualizar producto");
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("No se puede actualizar el producto porque está relacionado con otros datos");
+        } catch (Exception ex) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error inesperado: " + ex.getMessage());
         }
-
-        return response;
     }
 
     @PreAuthorize("hasAnyRole('ADMIN','SUPER_ADMIN')")
