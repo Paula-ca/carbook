@@ -9,7 +9,7 @@ import java.util.HashSet;
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
 
-    @Query("SELECT c FROM Categoria c WHERE c.borrado = NULL")
+    @Query("SELECT c FROM Categoria c WHERE c.borrado IS NULL")
     HashSet<Categoria> findAllCategories();
 
 }

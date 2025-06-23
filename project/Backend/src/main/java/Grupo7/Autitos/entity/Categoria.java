@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -34,6 +35,7 @@ public class Categoria {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.urlImagen = urlImagen;
+        this.borrado = borrado;
     }
     public Categoria(){
     }
@@ -82,6 +84,17 @@ public class Categoria {
         this.productos = productos;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Categoria)) return false;
+        Categoria that = (Categoria) o;
+        return id != null && id.equals(that.id);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 
 }

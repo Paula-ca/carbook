@@ -15,7 +15,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -127,8 +126,8 @@ public class ProductoTests {
         LocalDate searchEnd = LocalDate.of(2025, 6, 28);
 
         List<Producto> disponiblesByDate = productoRepository.findProductosByDate(searchStart, searchEnd);
-        //assertThat(disponiblesByDate).contains(producto2);
-        //assertThat(disponiblesByDate).doesNotContain(producto1);
+        assertThat(disponiblesByDate).contains(producto2);
+        assertThat(disponiblesByDate).doesNotContain(producto1);
 
         List<Producto> disponiblesByDatecity = productoRepository.findProductosByDateAndCity(searchStart, searchEnd,ciudad1.getId());
         assertThat(disponiblesByDatecity).contains(producto2);

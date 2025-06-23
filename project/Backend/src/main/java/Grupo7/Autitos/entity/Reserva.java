@@ -50,6 +50,11 @@ public class Reserva {
     public Reserva() {
     }
 
+    public Reserva(LocalDate fecha_ingreso,LocalDate fecha_final, LocalDate borrado){
+        this.fecha_inicial = fecha_ingreso;
+        this.fecha_final = fecha_final;
+        this.borrado = borrado;
+    }
     public Reserva(LocalTime hora_comienzo, LocalDate fecha_ingreso, LocalDate fecha_final, LocalDate borrado,Integer precio,String estado,String estado_pago,Long pago_id) {
         this.hora_comienzo = hora_comienzo;
         this.fecha_inicial = fecha_ingreso;
