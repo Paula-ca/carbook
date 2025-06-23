@@ -26,7 +26,7 @@ public class Categoria {
     @Column
     private LocalDate borrado;
 
-    @OneToMany(mappedBy = "categoria")
+    @OneToMany(mappedBy = "categoria",cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
     private Set<Producto> productos;
 

@@ -2,7 +2,6 @@ package Grupo7.Autitos.service;
 
 import Grupo7.Autitos.controller.CategoriaController;
 import Grupo7.Autitos.entity.Categoria;
-import Grupo7.Autitos.entity.Producto;
 import Grupo7.Autitos.repository.CategoriaRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

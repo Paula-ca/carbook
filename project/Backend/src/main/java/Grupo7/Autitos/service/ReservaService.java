@@ -4,14 +4,12 @@ import Grupo7.Autitos.entity.Producto;
 import Grupo7.Autitos.entity.Reserva;
 import Grupo7.Autitos.entity.Usuario;
 import Grupo7.Autitos.repository.ReservaRepository;
-import Grupo7.Autitos.repository.UsuarioRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 

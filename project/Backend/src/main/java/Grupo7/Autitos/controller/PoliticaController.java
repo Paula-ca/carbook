@@ -1,6 +1,5 @@
 package Grupo7.Autitos.controller;
 
-import Grupo7.Autitos.entity.Ciudad;
 import Grupo7.Autitos.entity.Politica;
 import Grupo7.Autitos.service.PoliticaService;
 import org.apache.log4j.Logger;

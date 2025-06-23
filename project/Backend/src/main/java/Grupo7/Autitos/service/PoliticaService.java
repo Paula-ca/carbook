@@ -1,6 +1,5 @@
 package Grupo7.Autitos.service;
 
-import Grupo7.Autitos.entity.Caracteristica;
 import Grupo7.Autitos.entity.Politica;
 import Grupo7.Autitos.repository.PoliticaRepository;
 import org.apache.log4j.Logger;

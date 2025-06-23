@@ -2,7 +2,6 @@ package Grupo7.Autitos.service;
 
 
 import Grupo7.Autitos.entity.Caracteristica;
-import Grupo7.Autitos.entity.Ciudad;
 import Grupo7.Autitos.repository.CaracteristicaRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

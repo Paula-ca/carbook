@@ -37,7 +37,7 @@ public class Reserva {
     @Column
     private Long pago_id;
 
-    @ManyToOne(cascade = CascadeType.MERGE)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_producto")
     private Producto producto;
 

@@ -34,7 +34,7 @@ public class Producto {
     @Column
     private int precio;
 
-    @ManyToMany(cascade = CascadeType.REMOVE)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinTable(
             name = "productos_has_caracteristica",
             joinColumns = @JoinColumn(name = "id_producto"),
@@ -42,12 +42,11 @@ public class Producto {
     )
     private List<Caracteristica> caracteristicas;
 
-
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "id_ciudad", nullable = false)
     private Ciudad ciudad;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "id_categoria", nullable = false)
     private Categoria categoria;
 

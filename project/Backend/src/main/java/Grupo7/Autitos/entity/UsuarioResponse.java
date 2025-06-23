@@ -1,7 +1,5 @@
 package Grupo7.Autitos.entity;
 
-import Grupo7.Autitos.security.Payload.LoginResponse;
-
 public class UsuarioResponse {
 
     private Long id;

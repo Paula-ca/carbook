@@ -18,9 +18,18 @@ public class Ciudad {
     @Column
     private String pais;
 
-    @OneToMany(mappedBy = "ciudad")
+    @OneToMany(mappedBy = "ciudad",cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
     private Set<Producto> productos;
+
+    public Ciudad(){
+
+    }
+
+    public Ciudad(String titulo, String pais) {
+        this.titulo = titulo;
+        this.pais = pais;
+    }
 
     public Long getId() {
         return id;

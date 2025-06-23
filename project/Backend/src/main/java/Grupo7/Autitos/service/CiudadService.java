@@ -1,6 +1,5 @@
 package Grupo7.Autitos.service;
 
-import Grupo7.Autitos.entity.Categoria;
 import Grupo7.Autitos.entity.Ciudad;
 import Grupo7.Autitos.repository.CiudadRepository;
 import org.apache.log4j.Logger;

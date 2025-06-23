@@ -1,7 +1,6 @@
 package Grupo7.Autitos.controller;
 
 import Grupo7.Autitos.entity.Imagen;
-import Grupo7.Autitos.entity.Politica;
 import Grupo7.Autitos.entity.Producto;
 import Grupo7.Autitos.entity.Reserva;
 import Grupo7.Autitos.service.ImagenService;

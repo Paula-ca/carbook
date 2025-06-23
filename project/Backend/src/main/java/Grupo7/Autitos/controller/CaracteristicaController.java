@@ -1,8 +1,6 @@
 package Grupo7.Autitos.controller;
 
 import Grupo7.Autitos.entity.Caracteristica;
-import Grupo7.Autitos.entity.Ciudad;
-import Grupo7.Autitos.entity.Politica;
 import Grupo7.Autitos.service.CaracteristicaService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
