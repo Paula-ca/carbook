@@ -21,6 +21,7 @@ public interface ProductoRepository extends JpaRepository<Producto, Long> {
                     " WHERE r.id_producto = p.id" +
                     " AND r.fecha_inicial <= ?2 "+
                     " AND r.fecha_final >= ?1" +
+                    " AND r.borrado IS NULL "+
                     ")",
             nativeQuery = true)
     List<Producto> findProductosByDate(LocalDate fecha_inicial, LocalDate fecha_final);
@@ -33,6 +34,7 @@ public interface ProductoRepository extends JpaRepository<Producto, Long> {
             " WHERE r.id_producto = p.id" +
             " AND r.fecha_inicial <= ?2 "+
             " AND r.fecha_final >= ?1" +
+            " AND r.borrado IS NULL "+
             ")",
             nativeQuery = true)
     List<Producto> findProductosByDateAndCity(LocalDate fecha_inicial, LocalDate fecha_final, Long id_ciudad);

@@ -108,4 +108,7 @@ public class Usuario {
         this.reservas = reservas;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

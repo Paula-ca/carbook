@@ -41,8 +41,6 @@ public class Reserva {
     @JoinColumn(name = "id_producto")
     private Producto producto;
 
-    //
-    // @JsonIncludeProperties(value = "id")
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "id_usuario")
     private Usuario usuario;
@@ -133,5 +131,9 @@ public class Reserva {
     public Long getPago_id() {return pago_id;};
 
     public void setPago_id(Long pago_id) {this.pago_id = pago_id;};
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
 }

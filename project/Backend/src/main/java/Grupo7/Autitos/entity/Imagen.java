@@ -44,4 +44,8 @@ public class Imagen {
         this.url = url;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
 }

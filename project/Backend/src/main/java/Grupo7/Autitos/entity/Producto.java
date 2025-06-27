@@ -192,4 +192,8 @@ public class Producto {
     public void setPrecio(int precio) {
         this.precio = precio;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

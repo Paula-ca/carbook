@@ -20,9 +20,9 @@ import java.util.Optional;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-public class ProductoTests {
+public class ProductoRepositoryTests {
 
-    private static final Logger logger = LoggerFactory.getLogger(ProductoTests.class);
+    private static final Logger logger = LoggerFactory.getLogger(ProductoRepositoryTests.class);
 
     @Autowired
     private ProductoRepository productoRepository;

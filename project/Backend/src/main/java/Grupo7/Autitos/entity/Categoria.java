@@ -96,5 +96,8 @@ public class Categoria {
     public int hashCode() {
         return Objects.hash(id);
     }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
 }

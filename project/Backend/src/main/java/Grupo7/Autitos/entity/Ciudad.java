@@ -58,4 +58,8 @@ public class Ciudad {
     public void setProductos(Set<Producto> productos) {
         this.productos = productos;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

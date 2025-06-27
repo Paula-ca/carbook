@@ -5,6 +5,8 @@ import Grupo7.Autitos.repository.ProductoRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.persistence.EntityNotFoundException;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -29,7 +31,6 @@ public class ProductoService {
                 p.getImagenes() == null || p.getImagenes().isEmpty()) {
             return null;
         }
-
         List<Producto> productos = productoRepository.findAll();
         for (Producto producto : productos) {
             if (p.getTitulo().equals(producto.getTitulo()) ||
@@ -37,7 +38,6 @@ public class ProductoService {
                 return null;
             }
         }
-
         return productoRepository.save(p);
     }
 
@@ -58,59 +58,39 @@ public class ProductoService {
 
 
     public Producto update(Producto p) {
-        Producto producto  = this.find(p.getId());
-        if(p.getTitulo() != null) {
-            producto.setTitulo(p.getTitulo());
+        if (p == null || p.getId() == null) {
+            throw new IllegalArgumentException("Producto or ID cannot be null");
         }
-        if(p.getDescripcion() != null){
-            producto.setDescripcion(p.getDescripcion());
-        }
-        if(p.getUbicacion() != null){
-            producto.setUbicacion(p.getUbicacion());
-        }
-        if(p.getCoordenadas() != null){
-            producto.setCoordenadas(p.getCoordenadas());
-        }
-        if(p.getRating() > 0 && p.getRating() <= 5){
-            producto.setRating(p.getRating());
-        }
-        if(p.getDisponibilidad() != null){
-            producto.setDisponibilidad(p.getDisponibilidad());
-        }
-        if(p.getPrecio()>0){
-            producto.setPrecio(p.getPrecio());
-        }
-        if(p.getCaracteristicas() != null){
-            producto.setCaracteristicas(p.getCaracteristicas());
-        }
-        if(p.getCategoria() != null){
-            producto.setCategoria(p.getCategoria());
-        }
-        if(p.getCiudad() != null){
-            producto.setCiudad(p.getCiudad());
-        }
-        if(p.getPoliticas() != null){
-            producto.setPoliticas(p.getPoliticas());
-        }
-        if(p.getImagenes() != null){
-            producto.setImagenes(p.getImagenes());
-        }
+        Producto producto  = productoRepository.findById(p.getId())
+                .orElseThrow(() -> new EntityNotFoundException("Producto no encontrado con id: " + p.getId()));
 
-        productoRepository.save(producto);
-        return producto;
+        Optional.ofNullable(p.getTitulo()).ifPresent(producto::setTitulo);
+        Optional.ofNullable(p.getDescripcion()).ifPresent(producto::setDescripcion);
+        Optional.ofNullable(p.getUbicacion()).ifPresent(producto::setUbicacion);
+        Optional.ofNullable(p.getCoordenadas()).ifPresent(producto::setCoordenadas);
+        Optional.of(p.getRating()).ifPresent(producto::setRating);
+        Optional.ofNullable(p.getDisponibilidad()).ifPresent(producto::setDisponibilidad);
+        Optional.of(p.getPrecio()).ifPresent(producto::setPrecio);
+        Optional.ofNullable(p.getCaracteristicas()).ifPresent(producto::setCaracteristicas);
+        Optional.ofNullable(p.getCategoria()).ifPresent(producto::setCategoria);
+        Optional.ofNullable(p.getCiudad()).ifPresent(producto::setCiudad);
+        Optional.ofNullable(p.getPoliticas()).ifPresent(producto::setPoliticas);
+        Optional.ofNullable(p.getImagenes()).ifPresent(producto::setImagenes);
+
+
+        return productoRepository.save(producto);
+
     }
 
     public String delete(Long id) throws Exception {
-        logger.debug("Eliminando producto...");
-        Producto p = this.find(id);
-        if(p != null){
-            logger.info("Producto eliminado con id: " + id);
-            productoRepository.deleteById(id);
-            return "Producto eliminado con id: " + id;
-        } else {
-            logger.error("Producto con id " + id + " no encontrado");
-            throw new Exception("Producto con id " + id + " no encontrado");
-        }
+        logger.debug("Eliminando producto con id: "+ id);
+
+        Producto producto = productoRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Producto con id " + id + " no encontrado"));
+
+        productoRepository.deleteById(id);
+        logger.info("Producto eliminado con id: "+ id);
+        return "Producto eliminado con id: " + id;
     }
 
     public Producto find(Long id){
@@ -118,66 +98,11 @@ public class ProductoService {
     }
 
     public List<Producto> dateFilter(LocalDate inicio, LocalDate fin) {
-        List<Producto> lista = productoRepository.findProductosByDate(inicio, fin);
-        List<Producto> listaNueva = new ArrayList<>();
-
-        for (Producto producto : lista) {
-            boolean agregable = true;
-
-            for (Reserva r : producto.getReservas()) {
-                boolean reservaActiva = r.getBorrado() == null;
-
-                // Condición de solapamiento: si hay superposición de rangos
-                boolean haySolapamiento = !(r.getFecha_final().isBefore(inicio) || r.getFecha_ingreso().isAfter(fin));
-
-                if (reservaActiva && haySolapamiento) {
-                    agregable = false;
-                    break; // Ya sabemos que no se puede agregar, salimos del loop
-                }
-            }
-
-            if (agregable) {
-                listaNueva.add(producto);
-            }
-        }
-
-        return listaNueva;
+        return productoRepository.findProductosByDate(inicio, fin);
     }
-
 
     public List<Producto> dateAndCityFilter(LocalDate inicio, LocalDate fin, Long id_ciudad) {
-        List<Producto> lista = productoRepository.findProductosByDateAndCity(inicio, fin, id_ciudad);
-        List<Producto> listaNueva = new ArrayList<>();
-
-        for (Producto producto : lista) {
-            boolean agregable = true;
-
-            for (Reserva r : producto.getReservas()) {
-                boolean reservaActiva = (r.getBorrado() == null);
-
-                boolean fechaIngresoEnRango =
-                        r.getFecha_ingreso().isEqual(inicio) ||
-                                r.getFecha_ingreso().isEqual(fin) ||
-                                (r.getFecha_ingreso().isAfter(inicio) && r.getFecha_ingreso().isBefore(fin));
-
-                boolean fechaFinalEnRango =
-                        r.getFecha_final().isEqual(inicio) ||
-                                r.getFecha_final().isEqual(fin) ||
-                                (r.getFecha_final().isAfter(inicio) && r.getFecha_final().isBefore(fin));
-
-                if (reservaActiva && !(r.getFecha_final().isBefore(inicio) || r.getFecha_ingreso().isAfter(fin))) {
-                    agregable = false;
-                    break;
-                }
-            }
-
-            if (agregable) {
-                listaNueva.add(producto);
-            }
-        }
-
-        return listaNueva;
+        return productoRepository.findProductosByDateAndCity(inicio, fin, id_ciudad);
     }
-
 
 }

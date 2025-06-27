@@ -6,6 +6,8 @@ import Grupo7.Autitos.repository.CaracteristicaRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.persistence.EntityNotFoundException;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -22,7 +24,9 @@ public class CaracteristicaService {
         if(c.getTitulo() == null
         ) {
             return null;
-        } List<Caracteristica> caracteristicas = caracteristicaRepository.findAll();
+        }
+        List<Caracteristica> caracteristicas = caracteristicaRepository.findAll();
+
         for (Caracteristica caracteristica : caracteristicas) {
             if (c.getTitulo().equals(caracteristica.getTitulo()) && c.getIcono().equals(caracteristica.getIcono())) {
                 return null;
@@ -37,7 +41,12 @@ public class CaracteristicaService {
     }
 
     public Caracteristica update(Caracteristica c) {
-        Caracteristica caracteristica  = this.find(c.getId());
+        if(c==null || c.getId()==null){
+            throw new IllegalArgumentException("Caracteristica or ID cannot be null");
+        }
+        Caracteristica caracteristica = caracteristicaRepository.findById(c.getId())
+                    .orElseThrow(() -> new EntityNotFoundException("Caracteristica not found with ID: " + c.getId()));
+
         if(c.getIcono()!= null) {
             caracteristica.setIcono(c.getIcono());
         }
@@ -53,7 +62,8 @@ public class CaracteristicaService {
 
     public String delete(Long id) throws Exception {
         logger.debug("Eliminando caracteristica...");
-        Caracteristica c = this.find(id);
+        Caracteristica c = caracteristicaRepository.findById(id)
+                .orElseThrow(() -> new Exception("Caracteristica con id " + id + " no encontrada"));
         if(c != null){
             logger.info("Caracteristica eliminada con id: " + id);
             caracteristicaRepository.deleteById(id);

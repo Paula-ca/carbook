@@ -1,12 +1,16 @@
 package Grupo7.Autitos.service;
 
+import Grupo7.Autitos.entity.Ciudad;
 import Grupo7.Autitos.entity.Politica;
 import Grupo7.Autitos.repository.PoliticaRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.persistence.EntityNotFoundException;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -36,29 +40,25 @@ public class PoliticaService {
     }
 
     public Politica update(Politica p) {
-        Politica politica  = this.find(p.getId());
-        if(p.getTitulo() != null) {
-            politica.setTitulo(p.getTitulo());
+        if(p==null || p.getId()==null){
+            throw new IllegalArgumentException("Politica or ID cannot be null");
         }
-        if(p.getDescripcion() != null){
-            politica.setDescripcion(p.getDescripcion());
-        }
+        Politica existingPolitica = politicaRepository.findById(p.getId())
+                .orElseThrow(() -> new EntityNotFoundException("Politica not found with ID: " + p.getId()));
 
-        politicaRepository.save(politica);
-        return politica;
+        Optional.ofNullable(p.getTitulo()).ifPresent(existingPolitica::setTitulo);
+        Optional.ofNullable(p.getDescripcion()).ifPresent(existingPolitica::setDescripcion);
+
+        return politicaRepository.save(existingPolitica);
     }
 
     public String delete(Long id) throws Exception {
-        logger.debug("Eliminando politica...");
-        Politica p = this.find(id);
-        if(p != null){
-            logger.info("Politica eliminada con id: " + id);
-            politicaRepository.deleteById(id);
-            return "Politica eliminada con id: " + id;
-        } else {
-            logger.error("Politica con id " + id + " no encontrada");
-            throw new Exception("Politica con id " + id + " no encontrada");
-        }
+        logger.debug("Eliminando politica con id: "+id);
+        Politica politica = politicaRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Politica con id " + id + " no encontrada"));
+        politicaRepository.deleteById(id);
+        logger.info("Politica eliminada con id: "+ id);
+        return "Politica eliminada con id: " + id;
     }
 
     public Politica find(Long id){

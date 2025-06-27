@@ -1,12 +1,16 @@
 package Grupo7.Autitos.service;
 
+import Grupo7.Autitos.entity.Categoria;
 import Grupo7.Autitos.entity.Ciudad;
 import Grupo7.Autitos.repository.CiudadRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.persistence.EntityNotFoundException;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -37,31 +41,29 @@ public class CiudadService {
     }
 
     public Ciudad update(Ciudad c) {
-        Ciudad ciudad  = this.find(c.getId());
-        if(c.getPais()!= null) {
-            ciudad.setPais(c.getPais());
+        if(c==null || c.getId()==null){
+            throw new IllegalArgumentException("Ciudad or ID cannot be null");
         }
-        if(c.getTitulo() != null){
-            ciudad.setTitulo(c.getTitulo());
-        }
+        Ciudad existingCiudad = ciudadRepository.findById(c.getId())
+                .orElseThrow(() -> new EntityNotFoundException("Ciudad not found with ID: " + c.getId()));
 
-        ciudadRepository.save(ciudad);
-        return ciudad;
+        Optional.ofNullable(c.getTitulo()).ifPresent(existingCiudad::setTitulo);
+        Optional.ofNullable(c.getPais()).ifPresent(existingCiudad::setPais);
+
+        return ciudadRepository.save(existingCiudad);
     }
 
 
 
     public String delete(Long id) throws Exception {
-        logger.debug("Eliminando ciudad...");
-        Ciudad c = this.find(id);
-        if(c != null){
-            logger.info("Ciudad eliminada con id: " + id);
-            ciudadRepository.deleteById(id);
-            return "Ciudad eliminada con id: " + id;
-        } else {
-            logger.error("Ciudad con id " + id + " no encontrada");
-            throw new Exception("Ciudad con id " + id + " no encontrada");
-        }
+        logger.debug("Eliminando ciudad con id: "+ id);
+
+        Ciudad ciudad = ciudadRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Ciudad con id " + id + " no encontrada"));
+
+        ciudadRepository.deleteById(id);
+        logger.info("Ciudad eliminada con id: "+ id);
+        return "Ciudad eliminada con id: " + id;
     }
 
     public Ciudad find(Long id){

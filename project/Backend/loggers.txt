@@ -34785,3 +34785,59 @@ io.jsonwebtoken.security.SignatureException: JWT signature does not match locall
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:840)
 [2025-06-11 16:56:30] [ ERROR] [JwtEntryPoint:18] Fallo en el metodo commence
+[2025-06-23 16:08:04] [ DEBUG] [ReservaService:110] Cancelando reserva con id: {}1
+[2025-06-23 16:08:04] [ INFO ] [ReservaService:126] Reserva cancelada con id: {}1
+[2025-06-23 16:09:39] [ DEBUG] [ReservaService:110] Cancelando reserva con id: {}1
+[2025-06-23 16:09:39] [ WARN ] [ReservaService:119] La reserva con id {} ya fue cancelada previamente1
+[2025-06-23 16:10:25] [ DEBUG] [ReservaService:110] Cancelando reserva con id: {}1
+[2025-06-23 16:10:25] [ ERROR] [ReservaService:114] Reserva con id {} no encontrada1
+[2025-06-24 12:32:38] [ DEBUG] [CaracteristicaService:64] Eliminando caracteristica...
+[2025-06-24 12:32:38] [ INFO ] [CaracteristicaService:69] Caracteristica eliminada con id: 1
+[2025-06-24 12:33:29] [ DEBUG] [CaracteristicaService:64] Eliminando caracteristica...
+[2025-06-24 12:33:29] [ INFO ] [CaracteristicaService:69] Caracteristica eliminada con id: 1
+[2025-06-24 12:33:48] [ DEBUG] [CaracteristicaService:64] Eliminando caracteristica...
+[2025-06-24 12:33:48] [ DEBUG] [CaracteristicaService:64] Eliminando caracteristica...
+[2025-06-24 12:33:48] [ INFO ] [CaracteristicaService:69] Caracteristica eliminada con id: 1
+[2025-06-24 12:39:28] [ DEBUG] [CaracteristicaService:64] Eliminando caracteristica...
+[2025-06-24 15:33:27] [ DEBUG] [CategoriaController:66] Eliminando categoria...
+[2025-06-24 15:34:33] [ DEBUG] [CategoriaController:66] Eliminando categoria...
+[2025-06-25 11:22:09] [ DEBUG] [CategoriaController:65] Eliminando categoria...
+[2025-06-25 11:22:10] [ INFO ] [CategoriaController:75] Categoria eliminada con id: 5
+[2025-06-25 11:26:38] [ DEBUG] [CategoriaController:65] Eliminando categoria...
+[2025-06-25 11:30:46] [ DEBUG] [CategoriaController:65] Eliminando categoria...
+[2025-06-25 11:39:24] [ DEBUG] [CategoriaController:84] Eliminando categoria con id: {}5
+[2025-06-25 11:39:24] [ INFO ] [CategoriaController:90] Categoria eliminada con id: {}5
+[2025-06-25 11:43:12] [ DEBUG] [CategoriaController:84] Eliminando categoria con id: {}10
+[2025-06-25 11:43:56] [ DEBUG] [CategoriaController:84] Eliminando categoria con id: {}10
+[2025-06-25 11:43:56] [ DEBUG] [CategoriaController:65] Eliminando categoria...
+[2025-06-25 11:43:57] [ DEBUG] [CategoriaController:84] Eliminando categoria con id: {}5
+[2025-06-25 11:43:57] [ INFO ] [CategoriaController:90] Categoria eliminada con id: {}5
+[2025-06-25 11:43:57] [ DEBUG] [CategoriaController:65] Eliminando categoria...
+[2025-06-25 11:43:57] [ DEBUG] [CategoriaController:65] Eliminando categoria...
+[2025-06-25 11:43:57] [ INFO ] [CategoriaController:75] Categoria eliminada con id: 5
+[2025-06-25 12:31:00] [ DEBUG] [CiudadService:59] Eliminando ciudad con id: 5
+[2025-06-25 12:31:00] [ INFO ] [CiudadService:65] Ciudad eliminada con id: 5
+[2025-06-25 12:32:42] [ DEBUG] [CiudadService:59] Eliminando ciudad con id: 5
+[2025-06-25 12:32:42] [ INFO ] [CiudadService:65] Ciudad eliminada con id: 5
+[2025-06-25 12:34:38] [ DEBUG] [CiudadService:59] Eliminando ciudad con id: 10
+[2025-06-25 12:35:22] [ DEBUG] [CiudadService:59] Eliminando ciudad con id: 5
+[2025-06-25 12:35:22] [ INFO ] [CiudadService:65] Ciudad eliminada con id: 5
+[2025-06-25 12:35:22] [ DEBUG] [CiudadService:59] Eliminando ciudad con id: 10
+[2025-06-25 13:33:20] [ DEBUG] [ImagenService:42] Eliminando imagen con id: 10
+[2025-06-25 13:33:20] [ DEBUG] [ImagenService:42] Eliminando imagen con id: 5
+[2025-06-25 13:33:20] [ INFO ] [ImagenService:45] Imagen eliminada con id: 5
+[2025-06-26 16:34:48] [ DEBUG] [PoliticaService:56] Eliminando politica con id: 5
+[2025-06-26 16:34:48] [ INFO ] [PoliticaService:60] Politica eliminada con id: 5
+[2025-06-26 16:34:48] [ DEBUG] [PoliticaService:56] Eliminando politica con id: 10
+[2025-06-26 16:36:00] [ DEBUG] [PoliticaService:56] Eliminando politica con id: 5
+[2025-06-26 16:36:00] [ INFO ] [PoliticaService:60] Politica eliminada con id: 5
+[2025-06-26 16:36:00] [ DEBUG] [PoliticaService:56] Eliminando politica con id: 10
+[2025-06-26 16:38:16] [ DEBUG] [PoliticaService:56] Eliminando politica con id: 5
+[2025-06-26 16:38:16] [ INFO ] [PoliticaService:60] Politica eliminada con id: 5
+[2025-06-26 16:38:16] [ DEBUG] [PoliticaService:56] Eliminando politica con id: 10
+[2025-06-27 11:46:42] [ DEBUG] [ProductoService:88] Eliminando producto con id: 2
+[2025-06-27 11:46:42] [ INFO ] [ProductoService:94] Producto eliminada con id: 2
+[2025-06-27 11:46:42] [ DEBUG] [ProductoService:88] Eliminando producto con id: 99
+[2025-06-27 11:50:30] [ DEBUG] [ProductoService:88] Eliminando producto con id: 2
+[2025-06-27 11:50:31] [ INFO ] [ProductoService:94] Producto eliminado con id: 2
+[2025-06-27 11:50:31] [ DEBUG] [ProductoService:88] Eliminando producto con id: 99

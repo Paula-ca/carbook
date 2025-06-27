@@ -3,12 +3,16 @@ package Grupo7.Autitos.service;
 import Grupo7.Autitos.controller.CategoriaController;
 import Grupo7.Autitos.entity.Categoria;
 import Grupo7.Autitos.repository.CategoriaRepository;
+import org.apache.commons.lang.SystemUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.persistence.EntityNotFoundException;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -43,47 +47,48 @@ public class CategoriaService {
     }
 
     public Categoria update(Categoria c) {
-        Categoria categoria  = this.find(c.getId());
-        if(c.getTitulo() != null) {
-            categoria.setTitulo(c.getTitulo());
+        if (c == null || c.getId() == null) {
+            throw new IllegalArgumentException("Categoria or ID cannot be null");
         }
-        if(c.getDescripcion() != null){
-            categoria.setDescripcion(c.getDescripcion());
-        }
-        if(c.getUrlImagen() != null){
-            categoria.setUrlImagen(c.getUrlImagen());
-        }
-        categoriaRepository.save(categoria);
-        return categoria;
+
+        Categoria existingCategoria = categoriaRepository.findById(c.getId())
+                .orElseThrow(() -> new EntityNotFoundException("Categoria not found with ID: " + c.getId()));
+
+        Optional.ofNullable(c.getTitulo()).ifPresent(existingCategoria::setTitulo);
+        Optional.ofNullable(c.getDescripcion()).ifPresent(existingCategoria::setDescripcion);
+        Optional.ofNullable(c.getUrlImagen()).ifPresent(existingCategoria::setUrlImagen);
+
+        return categoriaRepository.save(existingCategoria);
     }
 
     public String delete(Long id) throws Exception {
         logger.debug("Eliminando categoria...");
-        Categoria c = this.find(id);
-        if(c != null && c.getBorrado() == null){
-            logger.info("Categoria eliminada con id: " + id);
-            c.setBorrado(LocalDate.now());
-            this.update(c);
-            return "Categoria eliminada con id: " + id;
-        } else if(c != null && c.getBorrado() != null){
-            return "La categoria id "+id+" fue eliminada anteriormente";
-        }else{
-            logger.error("Categoria con id " + id + " no encontrada");
-            throw new Exception("Categoria con id " + id + " no encontrada");
+
+        Categoria categoria = categoriaRepository.findById(id)
+                .orElseThrow(() -> new Exception("Categoria con id " + id + " no encontrada"));
+
+        if (Boolean.TRUE.equals(categoria.getBorrado() != null)) {
+            return "La categoria id " + id + " fue eliminada anteriormente";
         }
+
+        categoria.setBorrado(LocalDate.now());
+        logger.info("Categoria eliminada con id: " + id);
+        System.out.println("Categoria id " + categoria.getId() + " Categoria titulo " + categoria.getTitulo());
+
+        this.update(categoria);
+
+        return "Categoria eliminada con id: " + id;
     }
 
     public String hardDelete(Long id) throws Exception {
-        logger.debug("Eliminando categoria...");
-        Categoria c = this.find(id);
-        if(c != null){
-            logger.info("Categoria eliminada con id: " + id);
-            categoriaRepository.deleteById(id);
-            return "Categoria eliminada con id: " + id;
-        } else {
-            logger.error("Categoria con id " + id + " no encontrada");
-            throw new Exception("Categoria con id " + id + " no encontrada");
-        }
+        logger.debug("Eliminando categoria con id: "+ id);
+
+        Categoria categoria = categoriaRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Categoria con id " + id + " no encontrada"));
+
+        categoriaRepository.deleteById(id);
+        logger.info("Categoria eliminada con id: {}"+ id);
+        return "Categoria eliminada con id: " + id;
     }
 
     public Categoria find(Long id){

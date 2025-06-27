@@ -36,7 +36,6 @@ public class ReservaService {
                 r.getUsuario().getId() == null) {
                  return null;
         }
-        // Cargar entidades completas
         Producto productoCompleto = productoService.find(r.getProducto().getId());
         Usuario usuarioCompleto = usuarioService.find(r.getUsuario().getId());
         r.setProducto(productoCompleto);
@@ -126,6 +125,5 @@ public class ReservaService {
         logger.info("Reserva cancelada con id: {}"+ id);
         return "Reserva cancelada con id: " + id;
     }
-
 
 }

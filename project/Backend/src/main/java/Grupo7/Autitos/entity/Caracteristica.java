@@ -43,4 +43,8 @@ public class Caracteristica {
     public void setIcono(String icono) {
         this.icono = icono;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
