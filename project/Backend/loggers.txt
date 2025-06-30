@@ -34841,3 +34841,10 @@ io.jsonwebtoken.security.SignatureException: JWT signature does not match locall
 [2025-06-27 11:50:30] [ DEBUG] [ProductoService:88] Eliminando producto con id: 2
 [2025-06-27 11:50:31] [ INFO ] [ProductoService:94] Producto eliminado con id: 2
 [2025-06-27 11:50:31] [ DEBUG] [ProductoService:88] Eliminando producto con id: 99
+[2025-06-27 15:12:42] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-27 15:12:44] [ INFO ] [ProductoController:100] Producto encontrado con id 1
+[2025-06-27 15:13:38] [ ERROR] [JwtEntryPoint:18] Fallo en el metodo commence
+[2025-06-27 15:16:17] [ ERROR] [JwtEntryPoint:18] Fallo en el metodo commence
+[2025-06-27 15:16:31] [ ERROR] [JwtEntryPoint:18] Fallo en el metodo commence
+[2025-06-27 15:51:10] [ DEBUG] [ProductoController:97] Buscando producto...
+[2025-06-27 15:51:11] [ INFO ] [ProductoController:100] Producto encontrado con id 1

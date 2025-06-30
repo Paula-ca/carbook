@@ -8,3 +8,7 @@ Como administrador es posible crear nuevos productos o editar productos existent
 
 ## API Testing
 [Link a Postman Collection](https://documenter.getpostman.com/view/18629048/2s8YekQEjs)
+
+## Swagger Documentation
+
+>Copy the swagger_docs.json into [Swagger Editor](https://editor.swagger.io/) to see the end points of this project. 
