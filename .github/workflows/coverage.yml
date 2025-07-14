@@ -15,7 +15,7 @@ jobs:
           java-version: '17'
 
       - name: Build and test with Maven
-        run: cd project/backend && mvn clean verify
+        run: cd project/Backend && mvn clean verify
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
