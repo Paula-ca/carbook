@@ -67,12 +67,16 @@ public class CiudadControllerTests {
     @WithMockUser(roles = {"USER"})
     void shouldReturnListOfCitiesByCountry()throws Exception{
         List<Ciudad> ciudades = List.of(createValidCiudad());
-        Mockito.when(ciudadService.findByPais("Brasil")).thenReturn(ciudades);
+        Mockito.when(ciudadService.findByPais("Argentina")).thenReturn(ciudades);
+
+        mockMvc.perform(get("/cities/list-Argentina")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].titulo").value("Mendoza"));
 
         mockMvc.perform(get("/cities/list-Brasil")
                         .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isNotFound())
-                ;
+                .andExpect(status().isNotFound());
     }
     @Test
     @WithMockUser(roles = {"ADMIN"})
