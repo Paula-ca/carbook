@@ -1,8 +1,10 @@
 package Grupo7.Autitos.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 @Entity
@@ -56,5 +58,6 @@ public class Rol {
     public void setUsers(Set<Usuario> users) {
         this.users = users;
     }
+
 
 }

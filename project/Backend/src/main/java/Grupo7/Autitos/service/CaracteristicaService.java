@@ -3,11 +3,12 @@ package Grupo7.Autitos.service;
 
 import Grupo7.Autitos.entity.Caracteristica;
 import Grupo7.Autitos.repository.CaracteristicaRepository;
+import jakarta.persistence.EntityNotFoundException;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityNotFoundException;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;

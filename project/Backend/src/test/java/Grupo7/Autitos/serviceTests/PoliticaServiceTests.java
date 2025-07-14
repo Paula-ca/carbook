@@ -3,6 +3,7 @@ package Grupo7.Autitos.serviceTests;
 import Grupo7.Autitos.entity.Politica;
 import Grupo7.Autitos.repository.PoliticaRepository;
 import Grupo7.Autitos.service.PoliticaService;
+import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,7 +13,7 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import javax.persistence.EntityNotFoundException;
+
 import java.util.List;
 import java.util.Optional;
 

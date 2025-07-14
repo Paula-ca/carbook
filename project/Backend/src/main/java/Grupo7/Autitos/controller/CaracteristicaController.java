@@ -85,7 +85,8 @@ public class CaracteristicaController {
             logger.error("Caracteristica con id " + id + " no encontrada");
             return new ResponseEntity("Error al intentar eliminar, caracteristica con id " +id+ " no encontrada", HttpStatus.NOT_FOUND);
         }
-        return ResponseEntity.ok(caracteristicaService.delete(id));
+        caracteristicaService.delete(id);
+        return ResponseEntity.ok("Caracteristica eliminada con id: "+id);
     } catch (
     DataIntegrityViolationException ex) {
         return ResponseEntity.status(HttpStatus.CONFLICT).body("No se puede eliminar la caracteristica porque está relacionado con otros datos");

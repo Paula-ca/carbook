@@ -8,7 +8,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityNotFoundException;
+import jakarta.persistence.EntityNotFoundException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -120,8 +120,10 @@ public class ReservaService {
         }
 
         r.setBorrado(LocalDate.now());
-        reservaRepository.save(r);
-
+        Reserva reserva = reservaRepository.save(r);
+        if(reserva == null){
+            logger.error("La reserva id "+id+" no pudo cancelarse exitosamente");
+        }
         logger.info("Reserva cancelada con id: {}"+ id);
         return "Reserva cancelada con id: " + id;
     }

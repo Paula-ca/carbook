@@ -8,6 +8,7 @@ import Grupo7.Autitos.security.Payload.LoginRequest;
 import Grupo7.Autitos.security.Payload.LoginResponse;
 import Grupo7.Autitos.security.Payload.RegisterRequest;
 import Grupo7.Autitos.service.UsuarioService;
+import jakarta.validation.Valid;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,7 +20,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import javax.validation.Valid;
+
+import java.util.Optional;
+
 
 @CrossOrigin
 @RestController
@@ -90,15 +93,15 @@ public class AuthController {
 
         logger.info("Usuario logeado");
 
-        Usuario usuarioLogin = usuarioService.userByEmail(loginRequest.getEmail());
+        Optional<Usuario> usuarioLogin = usuarioService.userByEmail(loginRequest.getEmail());
 
         UsuarioResponse usuario = new UsuarioResponse();
-        usuario.setId(usuarioLogin.getId());
-        usuario.setNombre(usuarioLogin.getNombre());
-        usuario.setApellido(usuarioLogin.getApellido());
-        usuario.setEmail(usuarioLogin.getEmail());
-        usuario.setCiudad(usuarioLogin.getCiudad());
-        usuario.setRol(usuarioLogin.getRol().getNombre().name());
+        usuario.setId(usuarioLogin.get().getId());
+        usuario.setNombre(usuarioLogin.get().getNombre());
+        usuario.setApellido(usuarioLogin.get().getApellido());
+        usuario.setEmail(usuarioLogin.get().getEmail());
+        usuario.setCiudad(usuarioLogin.get().getCiudad());
+        usuario.setRol(usuarioLogin.get().getRol().getNombre().name());
         usuario.setToken(token.getToken());
 
         return new ResponseEntity<>(usuario, HttpStatus.OK);

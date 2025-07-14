@@ -2,6 +2,8 @@ package Grupo7.Autitos.controller;
 
 import Grupo7.Autitos.entity.Reserva;
 import Grupo7.Autitos.service.ReservaService;
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.validation.Valid;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -10,8 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.EntityNotFoundException;
-import javax.validation.Valid;
+
 import java.util.List;
 
 @CrossOrigin
@@ -123,7 +124,7 @@ public class ReservaController {
     public ResponseEntity<String> cancel(@PathVariable Long id) {
         try {
             String mensaje = reservaService.cancel(id);
-            return ResponseEntity.ok(mensaje);
+            return ResponseEntity.ok("Reserva cancelada con id: "+id);
         } catch (EntityNotFoundException e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         } catch (IllegalStateException e) {

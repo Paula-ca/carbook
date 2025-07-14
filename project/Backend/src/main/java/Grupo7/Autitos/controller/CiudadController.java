@@ -86,7 +86,8 @@ public class CiudadController {
             logger.error("Ciudad con id " + id + " no encontrada");
             return new ResponseEntity("Error al intentar eliminar, ciudad con id " +id+ " no encontrada", HttpStatus.NOT_FOUND);
         }
-        return ResponseEntity.ok(ciudadService.delete(id));
+        ciudadService.delete(id);
+        return ResponseEntity.ok("Ciudad eliminada con id: "+id);
     } catch (
     DataIntegrityViolationException ex) {
         return ResponseEntity.status(HttpStatus.CONFLICT).body("No se puede eliminar la ciudad porque está relacionado con otros datos");

@@ -1,11 +1,11 @@
 package Grupo7.Autitos.service;
 
-import Grupo7.Autitos.entity.Producto;
 import Grupo7.Autitos.entity.Usuario;
 import Grupo7.Autitos.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UsuarioService {
@@ -37,7 +37,7 @@ public class UsuarioService {
         return usuarioRepository.findAll();
     }
 
-    public Usuario userByEmail(String email) {
+    public Optional<Usuario> userByEmail(String email) {
         return usuarioRepository.findByEmail(email);
     }
 

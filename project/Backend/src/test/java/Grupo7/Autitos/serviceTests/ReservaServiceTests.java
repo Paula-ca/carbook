@@ -7,13 +7,14 @@ import Grupo7.Autitos.repository.ReservaRepository;
 import Grupo7.Autitos.service.ProductoService;
 import Grupo7.Autitos.service.ReservaService;
 import Grupo7.Autitos.service.UsuarioService;
+import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import javax.persistence.EntityNotFoundException;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;

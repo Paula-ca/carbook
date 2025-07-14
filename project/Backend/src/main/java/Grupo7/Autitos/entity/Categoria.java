@@ -1,8 +1,9 @@
 package Grupo7.Autitos.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 import java.util.Objects;
 import java.util.Set;

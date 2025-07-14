@@ -1,6 +1,7 @@
 package Grupo7.Autitos.entity;
 
-import javax.persistence.*;
+
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "imagenes")

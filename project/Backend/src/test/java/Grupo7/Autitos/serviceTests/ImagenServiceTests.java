@@ -4,6 +4,7 @@ import Grupo7.Autitos.entity.Ciudad;
 import Grupo7.Autitos.entity.Imagen;
 import Grupo7.Autitos.repository.ImagenRepository;
 import Grupo7.Autitos.service.ImagenService;
+import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -13,7 +14,7 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import javax.persistence.EntityNotFoundException;
+
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

@@ -86,7 +86,8 @@ public class CategoriaController {
             logger.error("Categoría con id " + id + " no encontrada");
             return new ResponseEntity("Error al intentar eliminar, categoría con id " +id+ " no encontrada", HttpStatus.NOT_FOUND);
         }
-        return ResponseEntity.ok(categoriaService.delete(id));
+        categoriaService.delete(id);
+        return ResponseEntity.ok("Categoria eliminada con id: "+id);
     } catch (
     DataIntegrityViolationException ex) {
         return ResponseEntity.status(HttpStatus.CONFLICT).body("No se puede eliminar el producto porque está relacionado con otros datos");
@@ -102,7 +103,8 @@ public class CategoriaController {
             logger.error("Categoría con id " + id + " no encontrada");
             return new ResponseEntity("Error al intentar eliminar, categoría con id " +id+ " no encontrada", HttpStatus.NOT_FOUND);
         }
-        return ResponseEntity.ok(categoriaService.hardDelete(id));
+        categoriaService.hardDelete(id);
+        return ResponseEntity.ok("Categoria eliminada con id: "+id);
     }
 
 }

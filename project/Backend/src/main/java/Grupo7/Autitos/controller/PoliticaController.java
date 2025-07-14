@@ -86,6 +86,7 @@ public class PoliticaController {
                 logger.error("Politica con id " + id + " no encontrada");
                 return new ResponseEntity("Error al intentar eliminar, politica con id " +id+ " no encontrada", HttpStatus.NOT_FOUND);
             }
+
             return ResponseEntity.ok(politicaService.delete(id));
     } catch (
     DataIntegrityViolationException ex) {

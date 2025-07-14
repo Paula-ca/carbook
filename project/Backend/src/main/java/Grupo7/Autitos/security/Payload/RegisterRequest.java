@@ -1,7 +1,8 @@
 package Grupo7.Autitos.security.Payload;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 
 public class RegisterRequest {
 
