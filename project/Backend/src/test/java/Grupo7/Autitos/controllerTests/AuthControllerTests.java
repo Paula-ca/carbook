@@ -1,5 +1,6 @@
 package Grupo7.Autitos.controllerTests;
 
+import Grupo7.Autitos.controller.AuthController;
 import Grupo7.Autitos.entity.Rol;
 import Grupo7.Autitos.entity.TipoRol;
 import Grupo7.Autitos.entity.Usuario;
@@ -10,6 +11,7 @@ import Grupo7.Autitos.security.Payload.LoginRequest;
 import Grupo7.Autitos.security.Payload.RegisterRequest;
 import Grupo7.Autitos.service.UsuarioService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.core.Authentication;
 
@@ -32,8 +34,8 @@ import static org.springframework.security.test.web.servlet.request.SecurityMock
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@SpringBootTest
-@AutoConfigureMockMvc
+@WebMvcTest(AuthController.class)
+@AutoConfigureMockMvc(addFilters = false)
 public class AuthControllerTests {
 
     @Autowired

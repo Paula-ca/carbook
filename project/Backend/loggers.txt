@@ -35134,3 +35134,9 @@ io.jsonwebtoken.security.SignatureException: JWT signature does not match locall
 [2025-07-14 15:22:11] [ INFO ] [ReservaService:127] Reserva cancelada con id: {}1
 [2025-07-14 15:22:11] [ DEBUG] [ReservaService:109] Cancelando reserva con id: {}1
 [2025-07-14 15:22:11] [ WARN ] [ReservaService:118] La reserva con id {} ya fue cancelada previamente1
+[2025-07-14 15:40:48] [ DEBUG] [AuthController:49] Registrando usuario...
+[2025-07-14 15:40:48] [ ERROR] [AuthController:56] Correo ya registrado
+[2025-07-14 15:40:49] [ DEBUG] [AuthController:80] Logeando usuario...
+[2025-07-14 15:40:49] [ INFO ] [AuthController:94] Usuario logeado
+[2025-07-14 15:40:49] [ DEBUG] [AuthController:49] Registrando usuario...
+[2025-07-14 15:40:49] [ INFO ] [AuthController:72] Usuario registrado: juan@example.com
