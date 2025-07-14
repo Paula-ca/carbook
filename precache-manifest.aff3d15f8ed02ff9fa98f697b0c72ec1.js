@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f17239dde33355be0c96e5ee0101c292",
+    "revision": "d6b9f8adfbc7aa55ccb569644d06df87",
     "url": "/carbook/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/carbook/static/css/2.21d60689.chunk.css"
   },
   {
-    "revision": "4b8a2442b3be0942d459",
+    "revision": "63c84bb350502855708d",
     "url": "/carbook/static/css/main.34dd786c.chunk.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/carbook/static/js/3.f61cc4be.chunk.js"
   },
   {
-    "revision": "4b8a2442b3be0942d459",
-    "url": "/carbook/static/js/main.b10fd5b9.chunk.js"
+    "revision": "63c84bb350502855708d",
+    "url": "/carbook/static/js/main.2a1e0b34.chunk.js"
   },
   {
     "revision": "d5def58c4b7658fec466",
