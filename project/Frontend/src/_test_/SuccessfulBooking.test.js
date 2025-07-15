@@ -2,10 +2,10 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import StatusBooking from "../Components/StatusBooking";
-import { UserContext } from "../Context/UserContext";
+import UserContext from "../Context/UserContext"; 
 import axios from "axios";
 
-// Mocks
+// Mock router and axios
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
   useParams: () => ({ reservaId: "123" }),
@@ -39,7 +39,6 @@ describe("SuccessfulBooking", () => {
       { wrapper: BrowserRouter }
     );
 
-    // Wait for elements to appear (async render after axios call)
     expect(await screen.findByText(/Su reserva se ha realizado con éxito/i)).toBeInTheDocument();
     expect(screen.getByText(/¡Muchas Gracias!/i)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /OK/i })).toBeInTheDocument();
