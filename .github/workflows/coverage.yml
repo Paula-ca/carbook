@@ -15,11 +15,13 @@ jobs:
           java-version: '17'
 
       - name: Build and test with Maven
-        run: cd project/Backend && mvn clean verify
+        run: mvn clean verify
+        working-directory: project/Backend
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
-          files: target/site/jacoco/jacoco.xml
+          files: project/Backend/target/site/jacoco/jacoco.xml
           fail_ci_if_error: true
+
 
