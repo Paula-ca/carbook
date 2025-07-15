@@ -37,3 +37,8 @@ To explore the RESTful API for this project:
 2. Copy and paste the contents of the `swagger_docs.json` file into the editor
 
 ---
+
+## 📊 Test Coverage
+Check it out the test coverage with CODECOV!
+
+## [![codecov](https://codecov.io/gh/Paula-ca/carbook/branch/main/graph/badge.svg)](https://codecov.io/gh/Paula-ca/carbook)
