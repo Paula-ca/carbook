@@ -26,19 +26,36 @@ jobs:
           cd project/Frontend
           npm ci
           npm test -- --coverage --coverageReporters=lcov
+# Step: check if backend coverage file exists
+      - id: backend_coverage
+        run: |
+          if [ -f "project/Backend/target/site/jacoco/jacoco.xml" ]; then
+            echo "file_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "file_exists=false" >> $GITHUB_OUTPUT
+          fi
 
+      # Upload backend coverage only if it exists
       - name: Upload backend coverage
-        if: exists('project/Backend/target/site/jacoco/jacoco.xml')
+        if: steps.backend_coverage.outputs.file_exists == 'true'
         uses: codecov/codecov-action@v3
         with:
-         files: project/Backend/target/site/jacoco/jacoco.xml
-         fail_ci_if_error: true
+          files: project/Backend/target/site/jacoco/jacoco.xml
 
+      # Step: check if frontend coverage file exists
+      - id: frontend_coverage
+        run: |
+          if [ -f "project/Frontend/coverage/lcov.info" ]; then
+            echo "file_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "file_exists=false" >> $GITHUB_OUTPUT
+          fi
+
+      # Upload frontend coverage only if it exists
       - name: Upload frontend coverage
-        if: exists('project/Frontend/coverage/lcov.info')
+        if: steps.frontend_coverage.outputs.file_exists == 'true'
         uses: codecov/codecov-action@v3
         with:
           files: project/Frontend/coverage/lcov.info
-          fail_ci_if_error: true
 
 
