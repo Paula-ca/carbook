@@ -21,8 +21,11 @@ jobs:
       - name: Install frontend dependencies
         run: cd project/Frontend && npm install
 
-      - name: Run frontend tests and coverage
-        run: cd project/Frontend && npm test -- --coverage
+      - name: Run frontend tests with coverage
+        run: |
+          cd project/Frontend
+          npm ci
+          npm test -- --coverage --coverageReporters=lcov
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
