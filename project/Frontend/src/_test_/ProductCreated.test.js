@@ -10,7 +10,7 @@ describe("Product created", () => {
     render(<ProductCreated />, { wrapper: BrowserRouter });
     expect(screen.getByText(/tu producto se ha creado con éxito/i)).toBeInTheDocument();
 
-    expect(screen.getByText(/Volver al inicio/i)).toBeInTheDocument();
+    expect(screen.getByText(/OK/i)).toBeInTheDocument();
 
     expect(screen.getByRole("button")).toBeInTheDocument();
   });
