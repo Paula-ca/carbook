@@ -41,6 +41,8 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
           files: project/Backend/target/site/jacoco/jacoco.xml
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: backend
 
       # Step: check if frontend coverage file exists
       - id: frontend_coverage
@@ -57,5 +59,7 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
           files: project/Frontend/coverage/lcov.info
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: frontend
 
 
