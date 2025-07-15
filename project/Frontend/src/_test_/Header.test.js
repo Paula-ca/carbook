@@ -8,7 +8,7 @@ import Header from '../Components/Header'
 describe("Header", () => {
     test("parts header", () => {
       render(<Header />, { wrapper: BrowserRouter });
-      expect(screen.getByText(/sentite como en tu hogar/i)).toBeInTheDocument();
+      expect(screen.getByText(/El servicio que estabas buscando/i)).toBeInTheDocument();
       expect(screen.getByText(/registrarse/i)).toBeInTheDocument();
 
       expect(screen.getByRole("img")).toBeInTheDocument();

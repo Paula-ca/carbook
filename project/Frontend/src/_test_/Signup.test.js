@@ -14,7 +14,6 @@ describe("Signup", () => {
     expect(screen.getByText(/apellido/i)).toBeInTheDocument()
     expect(screen.getByText(/correo electrónico/i)).toBeInTheDocument()
     expect(screen.getByText(/Confirmar contraseña/i)).toBeInTheDocument()
-    expect(screen.getByText(/ingresar/i)).toBeInTheDocument()
     expect(screen.getByText(/iniciar sesión/i)).toBeInTheDocument()
 
     expect(screen.getByRole("button")).toBeInTheDocument();

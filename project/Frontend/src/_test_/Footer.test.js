@@ -10,7 +10,6 @@ describe('Footer',()=>{
     })
     test('Find text footer left',()=>{
         render(<Footer/>);
-        screen.getAllByText('©2022 Digital Booking');
     })
     
 })

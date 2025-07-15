@@ -8,9 +8,8 @@ import ProductCreated from "../Components/ProductCreated";
 describe("Product created", () => {
   test("product created page", () => {
     render(<ProductCreated />, { wrapper: BrowserRouter });
-    expect(
-      screen.getByText(/No se han encontrado reservas./i)
-    ).toBeInTheDocument();
+    expect(screen.getByText(/tu producto se ha creado con éxito/i)).toBeInTheDocument();
+
     expect(screen.getByText(/Volver al inicio/i)).toBeInTheDocument();
 
     expect(screen.getByRole("button")).toBeInTheDocument();
