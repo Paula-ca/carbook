@@ -27,12 +27,18 @@ jobs:
           npm ci
           npm test -- --coverage --coverageReporters=lcov
 
-      - name: Upload coverage to Codecov
+      - name: Upload backend coverage
+        if: exists('project/Backend/target/site/jacoco/jacoco.xml')
         uses: codecov/codecov-action@v3
         with:
-          files: |
-            project/Backend/target/site/jacoco/jacoco.xml
-            project/Frontend/coverage/lcov.info
+         files: project/Backend/target/site/jacoco/jacoco.xml
+         fail_ci_if_error: true
+
+      - name: Upload frontend coverage
+        if: exists('project/Frontend/coverage/lcov.info')
+        uses: codecov/codecov-action@v3
+        with:
+          files: project/Frontend/coverage/lcov.info
           fail_ci_if_error: true
 
 
