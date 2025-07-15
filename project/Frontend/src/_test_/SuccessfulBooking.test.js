@@ -5,7 +5,12 @@ import StatusBooking from "../Components/StatusBooking";
 import UserContext from "../Context/UserContext"; 
 import axios from "axios";
 
-// Mock router and axios
+global.MutationObserver = class {
+  constructor(callback) {}
+  disconnect() {}
+  observe(element, initObject) {}
+};
+
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
   useParams: () => ({ reservaId: "123" }),
