@@ -1,18 +1,47 @@
 import React from "react";
-import "@testing-library/jest-dom/extend-expect";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import "@testing-library/jest-dom";
 import StatusBooking from "../Components/StatusBooking";
+import { UserContext } from "../Context/UserContext";
+import axios from "axios";
+
+// Mocks
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
+  useParams: () => ({ reservaId: "123" }),
+  useNavigate: () => jest.fn(),
+}));
+
+jest.mock("axios");
 
 describe("SuccessfulBooking", () => {
-  test("SuccessfulBooking page", () => {
-    render(<StatusBooking />, { wrapper: BrowserRouter });
-    expect(
-      screen.getByText(/Su reserva se ha realizado con exito/i)
-    ).toBeInTheDocument();
-    expect(screen.getByText(/¡Muchas Gracias!/i)).toBeInTheDocument();
+  beforeEach(() => {
+    localStorage.setItem("token", "mock-token");
 
-    expect(screen.getByRole("button")).toBeInTheDocument();
+    axios.get.mockResolvedValue({
+      data: {
+        id: 123,
+        estado: "Confirmada",
+      },
+    });
+  });
+
+  afterEach(() => {
+    localStorage.clear();
+    jest.clearAllMocks();
+  });
+
+  test("renders confirmation message for successful booking", async () => {
+    render(
+      <UserContext.Provider value={{ user: { id: 1 } }}>
+        <StatusBooking />
+      </UserContext.Provider>,
+      { wrapper: BrowserRouter }
+    );
+
+    // Wait for elements to appear (async render after axios call)
+    expect(await screen.findByText(/Su reserva se ha realizado con éxito/i)).toBeInTheDocument();
+    expect(screen.getByText(/¡Muchas Gracias!/i)).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /OK/i })).toBeInTheDocument();
   });
 });
