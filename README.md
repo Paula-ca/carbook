@@ -38,4 +38,7 @@ To explore the RESTful API for this project:
 
 ---
 
+## 📊 Test Coverage
+Check it out the test coverage with CODECOV!
+
 ## [![codecov](https://codecov.io/gh/Paula-ca/carbook/branch/main/graph/badge.svg)](https://codecov.io/gh/Paula-ca/carbook)
