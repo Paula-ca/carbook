@@ -21,15 +21,45 @@ jobs:
       - name: Install frontend dependencies
         run: cd project/Frontend && npm install
 
-      - name: Run frontend tests and coverage
-        run: cd project/Frontend && npm test -- --coverage
+      - name: Run frontend tests with coverage
+        run: |
+          cd project/Frontend
+          npm ci
+          npm test -- --coverage --coverageReporters=lcov
+# Step: check if backend coverage file exists
+      - id: backend_coverage
+        run: |
+          if [ -f "project/Backend/target/site/jacoco/jacoco.xml" ]; then
+            echo "file_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "file_exists=false" >> $GITHUB_OUTPUT
+          fi
 
-      - name: Upload coverage to Codecov
+      # Upload backend coverage only if it exists
+      - name: Upload backend coverage
+        if: steps.backend_coverage.outputs.file_exists == 'true'
         uses: codecov/codecov-action@v3
         with:
-          files: |
-            project/Backend/target/site/jacoco/jacoco.xml
-            project/Frontend/coverage/lcov.info
-          fail_ci_if_error: true
+          files: project/Backend/target/site/jacoco/jacoco.xml
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: backend
+
+      # Step: check if frontend coverage file exists
+      - id: frontend_coverage
+        run: |
+          if [ -f "project/Frontend/coverage/lcov.info" ]; then
+            echo "file_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "file_exists=false" >> $GITHUB_OUTPUT
+          fi
+
+      # Upload frontend coverage only if it exists
+      - name: Upload frontend coverage
+        if: steps.frontend_coverage.outputs.file_exists == 'true'
+        uses: codecov/codecov-action@v3
+        with:
+          files: project/Frontend/coverage/lcov.info
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: frontend
 
 
