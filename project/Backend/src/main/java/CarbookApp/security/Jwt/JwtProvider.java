@@ -1,6 +1,6 @@
-package Grupo7.Autitos.security.Jwt;
+package CarbookApp.security.Jwt;
 
-import Grupo7.Autitos.security.AppUser;
+import CarbookApp.security.AppUser;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import org.apache.log4j.Logger;

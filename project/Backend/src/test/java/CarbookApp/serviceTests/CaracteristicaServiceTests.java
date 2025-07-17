@@ -1,8 +1,8 @@
-package Grupo7.Autitos.serviceTests;
+package CarbookApp.serviceTests;
 
-import Grupo7.Autitos.entity.Caracteristica;
-import Grupo7.Autitos.repository.CaracteristicaRepository;
-import Grupo7.Autitos.service.CaracteristicaService;
+import CarbookApp.entity.Caracteristica;
+import CarbookApp.repository.CaracteristicaRepository;
+import CarbookApp.service.CaracteristicaService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

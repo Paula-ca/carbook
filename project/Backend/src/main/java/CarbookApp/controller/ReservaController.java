@@ -1,7 +1,7 @@
-package Grupo7.Autitos.controller;
+package CarbookApp.controller;
 
-import Grupo7.Autitos.entity.Reserva;
-import Grupo7.Autitos.service.ReservaService;
+import CarbookApp.entity.Reserva;
+import CarbookApp.service.ReservaService;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import org.apache.log4j.Logger;

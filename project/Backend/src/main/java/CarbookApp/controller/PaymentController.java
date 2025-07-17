@@ -1,4 +1,5 @@
-package Grupo7.Autitos.controller;
+package CarbookApp.controller;
+
 import com.mercadopago.*;
 import com.mercadopago.client.common.IdentificationRequest;
 import com.mercadopago.client.payment.PaymentClient;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import Grupo7.Autitos.entity.PaymentFormData;
+import CarbookApp.entity.PaymentFormData;
 
 import java.util.HashMap;
 import java.util.Map;

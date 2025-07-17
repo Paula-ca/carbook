@@ -1,7 +1,7 @@
-package Grupo7.Autitos.repositoryTests;
+package CarbookApp.repositoryTests;
 
-import Grupo7.Autitos.entity.Usuario;
-import Grupo7.Autitos.repository.UsuarioRepository;
+import CarbookApp.entity.Usuario;
+import CarbookApp.repository.UsuarioRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;

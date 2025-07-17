@@ -1,11 +1,11 @@
-package Grupo7.Autitos.controllerTests;
+package CarbookApp.controllerTests;
 
-import Grupo7.Autitos.controller.ReservaController;
-import Grupo7.Autitos.entity.*;
-import Grupo7.Autitos.security.AppUserService;
-import Grupo7.Autitos.security.Jwt.JwtEntryPoint;
-import Grupo7.Autitos.security.Jwt.JwtProvider;
-import Grupo7.Autitos.service.ReservaService;
+import CarbookApp.controller.ReservaController;
+import CarbookApp.entity.*;
+import CarbookApp.security.AppUserService;
+import CarbookApp.security.Jwt.JwtEntryPoint;
+import CarbookApp.security.Jwt.JwtProvider;
+import CarbookApp.service.ReservaService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;

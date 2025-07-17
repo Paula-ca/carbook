@@ -1,7 +1,7 @@
-package Grupo7.Autitos.controller;
+package CarbookApp.controller;
 
-import Grupo7.Autitos.entity.Politica;
-import Grupo7.Autitos.service.PoliticaService;
+import CarbookApp.entity.Politica;
+import CarbookApp.service.PoliticaService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;

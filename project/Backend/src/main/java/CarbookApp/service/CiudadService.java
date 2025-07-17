@@ -1,8 +1,8 @@
-package Grupo7.Autitos.service;
+package CarbookApp.service;
 
 
-import Grupo7.Autitos.entity.Ciudad;
-import Grupo7.Autitos.repository.CiudadRepository;
+import CarbookApp.entity.Ciudad;
+import CarbookApp.repository.CiudadRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

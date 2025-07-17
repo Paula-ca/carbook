@@ -1,6 +1,6 @@
-package Grupo7.Autitos.repository;
+package CarbookApp.repository;
 
-import Grupo7.Autitos.entity.Usuario;
+import CarbookApp.entity.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

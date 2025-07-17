@@ -1,13 +1,13 @@
-package Grupo7.Autitos.controller;
+package CarbookApp.controller;
 
-import Grupo7.Autitos.entity.Rol;
-import Grupo7.Autitos.entity.Usuario;
-import Grupo7.Autitos.entity.UsuarioResponse;
-import Grupo7.Autitos.security.Jwt.JwtProvider;
-import Grupo7.Autitos.security.Payload.LoginRequest;
-import Grupo7.Autitos.security.Payload.LoginResponse;
-import Grupo7.Autitos.security.Payload.RegisterRequest;
-import Grupo7.Autitos.service.UsuarioService;
+import CarbookApp.entity.Rol;
+import CarbookApp.entity.Usuario;
+import CarbookApp.entity.UsuarioResponse;
+import CarbookApp.security.Jwt.JwtProvider;
+import CarbookApp.security.Payload.LoginRequest;
+import CarbookApp.security.Payload.LoginResponse;
+import CarbookApp.security.Payload.RegisterRequest;
+import CarbookApp.service.UsuarioService;
 import jakarta.validation.Valid;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,12 +1,11 @@
-package Grupo7.Autitos.serviceTests;
+package CarbookApp.serviceTests;
 
-import Grupo7.Autitos.entity.Producto;
-import Grupo7.Autitos.entity.Reserva;
-import Grupo7.Autitos.entity.Usuario;
-import Grupo7.Autitos.repository.ReservaRepository;
-import Grupo7.Autitos.service.ProductoService;
-import Grupo7.Autitos.service.ReservaService;
-import Grupo7.Autitos.service.UsuarioService;
+import CarbookApp.entity.*;
+
+import CarbookApp.repository.ReservaRepository;
+import CarbookApp.service.ProductoService;
+import CarbookApp.service.ReservaService;
+import CarbookApp.service.UsuarioService;
 import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

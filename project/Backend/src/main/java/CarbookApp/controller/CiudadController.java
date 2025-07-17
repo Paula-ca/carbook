@@ -1,7 +1,7 @@
-package Grupo7.Autitos.controller;
+package CarbookApp.controller;
 
-import Grupo7.Autitos.entity.Ciudad;
-import Grupo7.Autitos.service.CiudadService;
+import CarbookApp.entity.Ciudad;
+import CarbookApp.service.CiudadService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;

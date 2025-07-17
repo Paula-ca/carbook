@@ -9,7 +9,7 @@
 		<relativePath/>
 	</parent>
 
-	<groupId>grupo7</groupId>
+	<groupId>CarbookApp</groupId>
 	<artifactId>CarBook</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>CarBook</name>

@@ -1,6 +1,6 @@
-package Grupo7.Autitos.security;
+package CarbookApp.security;
 
-import Grupo7.Autitos.entity.Usuario;
+import CarbookApp.entity.Usuario;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

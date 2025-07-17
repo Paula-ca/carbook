@@ -1,4 +1,4 @@
-package Grupo7.Autitos.security.Payload;
+package CarbookApp.security.Payload;
 
 
 import jakarta.validation.constraints.Email;

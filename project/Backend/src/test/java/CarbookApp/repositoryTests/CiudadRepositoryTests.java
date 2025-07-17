@@ -1,7 +1,7 @@
-package Grupo7.Autitos.repositoryTests;
+package CarbookApp.repositoryTests;
 
-import Grupo7.Autitos.entity.Ciudad;
-import Grupo7.Autitos.repository.CiudadRepository;
+import CarbookApp.entity.Ciudad;
+import CarbookApp.repository.CiudadRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;

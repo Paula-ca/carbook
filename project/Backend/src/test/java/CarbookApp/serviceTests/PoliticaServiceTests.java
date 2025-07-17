@@ -1,8 +1,8 @@
-package Grupo7.Autitos.serviceTests;
+package CarbookApp.serviceTests;
 
-import Grupo7.Autitos.entity.Politica;
-import Grupo7.Autitos.repository.PoliticaRepository;
-import Grupo7.Autitos.service.PoliticaService;
+import CarbookApp.entity.Politica;
+import CarbookApp.repository.PoliticaRepository;
+import CarbookApp.service.PoliticaService;
 import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

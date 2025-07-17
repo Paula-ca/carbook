@@ -1,6 +1,5 @@
-package Grupo7.Autitos;
+package CarbookApp;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest

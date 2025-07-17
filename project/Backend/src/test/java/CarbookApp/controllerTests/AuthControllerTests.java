@@ -1,18 +1,17 @@
-package Grupo7.Autitos.controllerTests;
+package CarbookApp.controllerTests;
 
-import Grupo7.Autitos.controller.AuthController;
-import Grupo7.Autitos.entity.Rol;
-import Grupo7.Autitos.entity.TipoRol;
-import Grupo7.Autitos.entity.Usuario;
-import Grupo7.Autitos.security.AppUserService;
-import Grupo7.Autitos.security.Jwt.JwtEntryPoint;
-import Grupo7.Autitos.security.Jwt.JwtProvider;
-import Grupo7.Autitos.security.Payload.LoginRequest;
-import Grupo7.Autitos.security.Payload.RegisterRequest;
-import Grupo7.Autitos.service.UsuarioService;
+import CarbookApp.controller.AuthController;
+import CarbookApp.entity.Rol;
+import CarbookApp.entity.TipoRol;
+import CarbookApp.entity.Usuario;
+import CarbookApp.security.AppUserService;
+import CarbookApp.security.Jwt.JwtEntryPoint;
+import CarbookApp.security.Jwt.JwtProvider;
+import CarbookApp.security.Payload.LoginRequest;
+import CarbookApp.security.Payload.RegisterRequest;
+import CarbookApp.service.UsuarioService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.core.Authentication;
 
 

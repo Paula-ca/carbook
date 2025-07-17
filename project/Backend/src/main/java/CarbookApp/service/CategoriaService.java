@@ -1,8 +1,8 @@
-package Grupo7.Autitos.service;
+package CarbookApp.service;
 
-import Grupo7.Autitos.controller.CategoriaController;
-import Grupo7.Autitos.entity.Categoria;
-import Grupo7.Autitos.repository.CategoriaRepository;
+import CarbookApp.controller.CategoriaController;
+import CarbookApp.entity.Categoria;
+import CarbookApp.repository.CategoriaRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

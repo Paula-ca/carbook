@@ -1,7 +1,7 @@
-package Grupo7.Autitos.service;
+package CarbookApp.service;
 
-import Grupo7.Autitos.entity.Imagen;
-import Grupo7.Autitos.repository.ImagenRepository;
+import CarbookApp.entity.Imagen;
+import CarbookApp.repository.ImagenRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

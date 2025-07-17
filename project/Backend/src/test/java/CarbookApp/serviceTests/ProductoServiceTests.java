@@ -1,8 +1,8 @@
-package Grupo7.Autitos.serviceTests;
+package CarbookApp.serviceTests;
 
-import Grupo7.Autitos.entity.*;
-import Grupo7.Autitos.repository.ProductoRepository;
-import Grupo7.Autitos.service.ProductoService;
+import CarbookApp.entity.*;
+import CarbookApp.repository.ProductoRepository;
+import CarbookApp.service.ProductoService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

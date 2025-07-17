@@ -1,4 +1,4 @@
-package Grupo7.Autitos.entity;
+package CarbookApp.entity;
 
 public class UsuarioResponse {
 

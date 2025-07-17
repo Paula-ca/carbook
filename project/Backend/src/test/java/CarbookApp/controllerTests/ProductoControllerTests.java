@@ -1,12 +1,12 @@
-package Grupo7.Autitos.controllerTests;
+package CarbookApp.controllerTests;
 
-import Grupo7.Autitos.controller.ProductoController;
-import Grupo7.Autitos.entity.*;
-import Grupo7.Autitos.security.AppUserService;
-import Grupo7.Autitos.security.Jwt.JwtEntryPoint;
-import Grupo7.Autitos.security.Jwt.JwtProvider;
-import Grupo7.Autitos.service.ImagenService;
-import Grupo7.Autitos.service.ProductoService;
+import CarbookApp.controller.ProductoController;
+import CarbookApp.entity.*;
+import CarbookApp.security.AppUserService;
+import CarbookApp.security.Jwt.JwtEntryPoint;
+import CarbookApp.security.Jwt.JwtProvider;
+import CarbookApp.service.ImagenService;
+import CarbookApp.service.ProductoService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;

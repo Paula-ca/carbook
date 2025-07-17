@@ -1,4 +1,4 @@
-package Grupo7.Autitos.security.Jwt;
+package CarbookApp.security.Jwt;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

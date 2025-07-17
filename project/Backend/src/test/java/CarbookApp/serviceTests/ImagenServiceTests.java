@@ -1,9 +1,9 @@
-package Grupo7.Autitos.serviceTests;
+package CarbookApp.serviceTests;
 
-import Grupo7.Autitos.entity.Ciudad;
-import Grupo7.Autitos.entity.Imagen;
-import Grupo7.Autitos.repository.ImagenRepository;
-import Grupo7.Autitos.service.ImagenService;
+import CarbookApp.entity.Ciudad;
+import CarbookApp.entity.Imagen;
+import CarbookApp.repository.ImagenRepository;
+import CarbookApp.service.ImagenService;
 import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

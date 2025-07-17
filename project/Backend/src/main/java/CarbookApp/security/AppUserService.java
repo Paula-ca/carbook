@@ -1,8 +1,7 @@
-package Grupo7.Autitos.security;
+package CarbookApp.security;
 
-import Grupo7.Autitos.entity.Usuario;
-import Grupo7.Autitos.repository.UsuarioRepository;
-import Grupo7.Autitos.service.UsuarioService;
+import CarbookApp.entity.Usuario;
+import CarbookApp.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -12,7 +11,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class AppUserService implements UserDetailsService {

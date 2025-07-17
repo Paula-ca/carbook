@@ -1,10 +1,9 @@
-package Grupo7.Autitos.entity;
+package CarbookApp.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
-import java.util.Optional;
 import java.util.Set;
 
 @Entity

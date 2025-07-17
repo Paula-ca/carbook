@@ -1,6 +1,6 @@
-package Grupo7.Autitos.security.Jwt;
+package CarbookApp.security.Jwt;
 
-import Grupo7.Autitos.security.AppUserService;
+import CarbookApp.security.AppUserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

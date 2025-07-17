@@ -1,11 +1,11 @@
-package Grupo7.Autitos.repositoryTests;
+package CarbookApp.repositoryTests;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import Grupo7.Autitos.entity.*;
-import Grupo7.Autitos.repository.CategoriaRepository;
-import Grupo7.Autitos.repository.CiudadRepository;
-import Grupo7.Autitos.repository.ProductoRepository;
-import Grupo7.Autitos.repository.ReservaRepository;
+import CarbookApp.entity.*;
+import CarbookApp.repository.CategoriaRepository;
+import CarbookApp.repository.CiudadRepository;
+import CarbookApp.repository.ProductoRepository;
+import CarbookApp.repository.ReservaRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.logging.Logger;
 import org.junit.platform.commons.logging.LoggerFactory;

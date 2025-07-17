@@ -1,6 +1,6 @@
-package Grupo7.Autitos.security;
-import Grupo7.Autitos.security.Jwt.JwtEntryPoint;
-import Grupo7.Autitos.security.Jwt.JwtTokenFilter;
+package CarbookApp.security;
+import CarbookApp.security.Jwt.JwtEntryPoint;
+import CarbookApp.security.Jwt.JwtTokenFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;

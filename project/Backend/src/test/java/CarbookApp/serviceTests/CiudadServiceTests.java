@@ -1,8 +1,8 @@
-package Grupo7.Autitos.serviceTests;
+package CarbookApp.serviceTests;
 
-import Grupo7.Autitos.entity.Ciudad;
-import Grupo7.Autitos.repository.CiudadRepository;
-import Grupo7.Autitos.service.CiudadService;
+import CarbookApp.entity.Ciudad;
+import CarbookApp.repository.CiudadRepository;
+import CarbookApp.service.CiudadService;
 import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
