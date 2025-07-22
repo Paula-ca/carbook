@@ -1,6 +1,6 @@
 package CarbookApp.serviceTests;
 
-import CarbookApp.entity.Ciudad;
+
 import CarbookApp.entity.Imagen;
 import CarbookApp.repository.ImagenRepository;
 import CarbookApp.service.ImagenService;
@@ -13,6 +13,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.test.context.ActiveProfiles;
 
 
 import java.util.Optional;
@@ -23,6 +24,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
+@ActiveProfiles("test")
 public class ImagenServiceTests {
 
     @Spy

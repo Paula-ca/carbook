@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-const mercadoApiKey = ""
+const mercadoApiKey = process.env.REACT_APP_MERCADO_PAGO_API_KEY
 const CardPaymentBrick = () => {
   useEffect(() => {
     const script = document.createElement('script');

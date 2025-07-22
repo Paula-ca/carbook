@@ -8,7 +8,6 @@ RUN mvn clean package -DskipTests && ls -lh target
 # Etapa final
 FROM openjdk:17-jdk-slim
 WORKDIR /app
-COPY --from=build /app/target/carbook-1.0.0.jar app.jar
-ENV PORT=8080
+COPY --from=build /app/target/carbook.jar app.jar
 EXPOSE 8080
 CMD ["java", "-jar", "app.jar"]

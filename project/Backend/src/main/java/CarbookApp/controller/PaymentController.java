@@ -28,7 +28,7 @@ import java.util.UUID;
 @RestController
 public class PaymentController {
     public static final org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(PaymentController.class);
-    @Value("${mercado.api.token}")
+    @Value("${MERCADO_API_TOKEN}")
     private String token;
 
     @PostMapping("/process_payment")
@@ -77,7 +77,7 @@ public class PaymentController {
                 MPResponse apiResponse = apiEx.getApiResponse();
 
                 logger.error("HTTP Status: " + apiResponse.getStatusCode());
-                logger.error("Response body: " + apiResponse.getContent());  // <-- Aquí está el detalle del error real
+                logger.error("Response body: " + apiResponse.getContent());
             }
 
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
