@@ -1,8 +1,0 @@
-CREATE TABLE IF NOT EXISTS logs (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    log_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    level VARCHAR(10),
-    logger VARCHAR(255),
-    message TEXT,
-    thread VARCHAR(255)
-);

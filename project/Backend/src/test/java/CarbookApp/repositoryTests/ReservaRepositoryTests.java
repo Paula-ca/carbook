@@ -1,5 +1,6 @@
 package CarbookApp.repositoryTests;
 
+import CarbookApp.dto.ReservaDTO;
 import CarbookApp.entity.*;
 import CarbookApp.repository.*;
 import org.junit.jupiter.api.Test;
@@ -9,6 +10,7 @@ import org.springframework.test.context.ActiveProfiles;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -44,13 +46,13 @@ public class ReservaRepositoryTests {
         reservaRepository.save(activa);
         reservaRepository.save(cancelada);
 
-        List<Reserva> canceladas = reservaRepository.findCancelBookingsForUser(user.getId());
+        List<ReservaDTO> canceladas = reservaRepository.findCancelBookingsForUser(user.getId());
 
         assertThat(canceladas).hasSize(1);
         assertThat(canceladas.get(0).getBorrado()).isNotNull();
         assertThat(canceladas.get(0).getUsuario().getEmail()).isEqualTo("juan@gmail.com");
 
-        List<Reserva> activas = reservaRepository.findBookingsForUser(user.getId());
+        List<ReservaDTO> activas = reservaRepository.findBookingsForUser(user.getId());
         assertThat(activas).hasSize(1);
         assertThat(activas.get(0).getBorrado()).isNull();
         assertThat(activas.get(0).getUsuario().getEmail()).isEqualTo("juan@gmail.com");
@@ -89,20 +91,20 @@ public class ReservaRepositoryTests {
         reservaRepository.save(reservaCancelada);
         reservaRepository.save(reservaActiva);
 
-        List<Reserva> canceladas = reservaRepository.findCancelBookingsForProduct(product.getId());
+        List<ReservaDTO> canceladas = reservaRepository.findCancelBookingsForProduct(product.getId());
 
         assertThat(canceladas).hasSize(1);
         assertThat(canceladas.get(0).getBorrado()).isNotNull();
         assertThat(canceladas.get(0).getProducto().getId()).isEqualTo(product.getId());
 
-        List<Reserva> activas = reservaRepository.findBookingsForProduct(product.getId());
+        List<ReservaDTO> activas = reservaRepository.findBookingsForProduct(product.getId());
 
         assertThat(activas).hasSize(1);
         assertThat(activas.get(0).getBorrado()).isNull();
         assertThat(activas.get(0).getProducto().getId()).isEqualTo(product.getId());
     }
     @Test
-    public void testFindByProductoId() {
+    public void testFindById() {
         List<Caracteristica> caracList = List.of(
                 new Caracteristica("Motor electrico", "icono_motor_electrico"),
                 new Caracteristica("A/C", "icono_a/c")
@@ -134,12 +136,10 @@ public class ReservaRepositoryTests {
         reservaRepository.save(reservaCancelada);
         reservaRepository.save(reservaActiva);
 
-        List<Reserva> reservas = reservaRepository.findByProductoId(product.getId());
+        Optional<Reserva> reserva = reservaRepository.findById(reservaActiva.getId());
 
-        assertThat(reservas).hasSize(2);
-        assertThat(reservas)
-                .extracting(r -> r.getProducto().getId())
-                .containsOnly(product.getId());
+        assertThat(reserva.get().getBorrado()).isNull();
+        assertThat(reserva.get().getProducto().getId()).isEqualTo(product.getId());
     }
 
     }

@@ -1,5 +1,7 @@
 package CarbookApp.serviceTests;
 
+import CarbookApp.Interface.ReservaMapper;
+import CarbookApp.dto.ReservaDTO;
 import CarbookApp.entity.*;
 
 import CarbookApp.repository.ReservaRepository;
@@ -9,6 +11,7 @@ import CarbookApp.service.UsuarioService;
 import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mapstruct.factory.Mappers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -40,6 +43,8 @@ public class ReservaServiceTests {
     @Mock
     private UsuarioService usuarioService;
 
+    private ReservaMapper reservaMapper = Mappers.getMapper(ReservaMapper.class);
+
     @Test
     public void testAddReservaValida() {
 
@@ -66,7 +71,7 @@ public class ReservaServiceTests {
         });
         when(reservaRepository.findById(10L)).thenReturn(Optional.of(reserva));
 
-        Reserva result = reservaService.add(reserva);
+        ReservaDTO result = reservaService.add(reserva);
 
         assertNotNull(result);
         assertEquals(10L, result.getId());
@@ -76,7 +81,7 @@ public class ReservaServiceTests {
     public void testAddReservaConCamposFaltantes() {
         Reserva reserva = new Reserva();
 
-        Reserva result = reservaService.add(reserva);
+        ReservaDTO result = reservaService.add(reserva);
 
         assertNull(result);
     }
@@ -104,7 +109,7 @@ public class ReservaServiceTests {
         when(usuarioService.find(1L)).thenReturn(usuario);
         when(reservaRepository.findAll()).thenReturn(List.of(existente));
 
-        Reserva result = reservaService.add(reserva);
+        ReservaDTO result = reservaService.add(reserva);
 
         assertNull(result);
     }
@@ -121,7 +126,9 @@ public class ReservaServiceTests {
         existing.setFecha_final(LocalDate.of(2025, 6, 25));
         existing.setBorrado(null);
 
-        List<Reserva> reservasProducto = List.of(existing);
+        ReservaDTO dto1 = reservaMapper.toDto(existing);
+
+        List<ReservaDTO> reservasProducto = List.of(dto1);
 
         Reserva updateData = new Reserva();
         updateData.setId(reservaId);
@@ -133,17 +140,14 @@ public class ReservaServiceTests {
         updateData.setPago_id(35574L);
 
         when(reservaRepository.findById(reservaId)).thenReturn(Optional.of(existing));
-        when(reservaRepository.findByProductoId(producto.getId())).thenReturn(reservasProducto);
+        when(reservaRepository.findBookingsForProduct(producto.getId())).thenReturn(reservasProducto);
         when(reservaRepository.save(any(Reserva.class))).thenAnswer(i -> i.getArgument(0));
 
-        Reserva updated = reservaService.update(updateData);
+        ReservaDTO updated = reservaService.update(updateData);
 
-        assertEquals(updateData.getFecha_ingreso(), updated.getFecha_ingreso());
-        assertEquals(updateData.getFecha_final(), updated.getFecha_final());
-        assertEquals(updateData.getHora_comienzo(), updated.getHora_comienzo());
+        assertEquals(updateData.getFecha_ingreso(), updated.getFechaIngreso());
+        assertEquals(updateData.getFecha_final(), updated.getFechaFinal());
         assertEquals(updateData.getEstado(), updated.getEstado());
-        assertEquals(updateData.getEstado_pago(), updated.getEstado_pago());
-        assertEquals(updateData.getPago_id(), updated.getPago_id());
     }
     @Test
     public void testUpdate_ThrowsExceptionWhenConflict() {
@@ -165,7 +169,10 @@ public class ReservaServiceTests {
         otraReserva.setFecha_final(LocalDate.of(2025, 6, 28));
         otraReserva.setBorrado(null);
 
-        List<Reserva> reservasProducto = List.of(existing, otraReserva);
+        ReservaDTO dto1 = reservaMapper.toDto(existing);
+        ReservaDTO dto2 = reservaMapper.toDto(otraReserva);
+
+        List<ReservaDTO> reservasProducto = List.of(dto1, dto2);
 
         Reserva updateData = new Reserva();
         updateData.setId(reservaId);
@@ -173,7 +180,7 @@ public class ReservaServiceTests {
         updateData.setFecha_final(LocalDate.of(2025, 6, 26));
 
         when(reservaRepository.findById(reservaId)).thenReturn(Optional.of(existing));
-        when(reservaRepository.findByProductoId(producto.getId())).thenReturn(reservasProducto);
+        when(reservaRepository.findBookingsForProduct(producto.getId())).thenReturn(reservasProducto);
 
         IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
             reservaService.update(updateData);

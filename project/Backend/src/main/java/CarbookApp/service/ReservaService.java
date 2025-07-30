@@ -1,5 +1,7 @@
 package CarbookApp.service;
 
+import CarbookApp.Interface.ReservaMapper;
+import CarbookApp.dto.ReservaDTO;
 import CarbookApp.entity.Producto;
 import CarbookApp.entity.Reserva;
 import CarbookApp.entity.Usuario;
@@ -11,10 +13,18 @@ import org.springframework.stereotype.Service;
 import jakarta.persistence.EntityNotFoundException;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
 public class ReservaService {
+
+    private final ReservaMapper reservaMapper;
+
+    @Autowired
+    public ReservaService(ReservaMapper reservaMapper) {
+        this.reservaMapper = reservaMapper;
+    }
 
     @Autowired
     private ReservaRepository reservaRepository;
@@ -27,7 +37,7 @@ public class ReservaService {
 
     public static final Logger logger = Logger.getLogger(ReservaService.class);
 
-    public Reserva add(Reserva r) {
+    public ReservaDTO add(Reserva r) {
         if (    r.getFecha_ingreso() == null ||
                 r.getFecha_final() == null ||
                 r.getPrecio() == 0 ||
@@ -51,17 +61,15 @@ public class ReservaService {
             }
         }
 
-        Reserva reservaGuardada =  reservaRepository.save(r);
-
-        return find(reservaGuardada.getId());
+        return reservaMapper.toDto(reservaRepository.save(r));
     }
 
-    public Reserva update(Reserva r) {
+    public ReservaDTO update(Reserva r) {
         Reserva reserva = reservaRepository.findById(r.getId())
                 .orElseThrow(() -> new EntityNotFoundException("Reserva no encontrada con id: " + r.getId()));
 
-        List<Reserva> lista = reservaRepository.findByProductoId(reserva.getProducto().getId());
-        List<Reserva> otrasReservas = lista.stream()
+        List<ReservaDTO> lista = reservaRepository.findBookingsForProduct(reserva.getProducto().getId());
+        List<ReservaDTO> otrasReservas = lista.stream()
                 .filter(res -> !res.getId().equals(reserva.getId())&&res.getProducto().getId().equals(reserva.getProducto().getId()))
                 .collect(Collectors.toList());
 
@@ -70,8 +78,8 @@ public class ReservaService {
 
         boolean hayConflicto = otrasReservas.stream().anyMatch(resExistente ->
                 resExistente.getBorrado() == null &&
-                        resExistente.getFecha_ingreso().isBefore(fin) &&
-                        resExistente.getFecha_final().isAfter(inicio)
+                        resExistente.getFechaIngreso().isBefore(fin) &&
+                        resExistente.getFechaFinal().isAfter(inicio)
         );
 
         if (hayConflicto) {
@@ -81,30 +89,29 @@ public class ReservaService {
         if (r.getHora_comienzo() != null) reserva.setHora_comienzo(r.getHora_comienzo());
         reserva.setFecha_ingreso(inicio);
         reserva.setFecha_final(fin);
-        if (r.getEstado() != null) reserva.setEstado(r.getEstado());
-        if (r.getEstado_pago() != null) reserva.setEstado_pago(r.getEstado_pago());
-        if (r.getPago_id() != null) reserva.setPago_id(r.getPago_id());
 
-        return reservaRepository.save(reserva);
+        return reservaMapper.toDto(reservaRepository.save(reserva));
     }
 
 
-    public List<Reserva> filterByProductId(Long id, Boolean borrada) {
+    public List<ReservaDTO> filterByProductId(Long id, Boolean borrada) {
         if (borrada){
             return reservaRepository.findCancelBookingsForProduct(id);
         } else return reservaRepository.findBookingsForProduct(id);
     }
 
-    public List<Reserva> filterByUserId(Long id, Boolean borrada) {
+    public List<ReservaDTO> filterByUserId(Long id, Boolean borrada) {
         if (borrada){
             return reservaRepository.findCancelBookingsForUser(id);
         } else return reservaRepository.findBookingsForUser(id);
     }
 
-    public Reserva find(Long id){
-        return reservaRepository.findById(id).orElse(null);
+    public ReservaDTO findDtoById(Long id){
+        return reservaRepository.findDtoById(id);
     }
-
+    public Optional<Reserva> findById(Long id){
+        return reservaRepository.findById(id);
+    }
     public String cancel(Long id) {
         logger.debug("Cancelando reserva con id: {}"+ id);
 
@@ -127,5 +134,4 @@ public class ReservaService {
         logger.info("Reserva cancelada con id: {}"+ id);
         return "Reserva cancelada con id: " + id;
     }
-
 }

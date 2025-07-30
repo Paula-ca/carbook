@@ -1,5 +1,6 @@
 package CarbookApp.controller;
 
+import CarbookApp.dto.ReservaDTO;
 import CarbookApp.entity.Reserva;
 import CarbookApp.service.ReservaService;
 import jakarta.persistence.EntityNotFoundException;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin
 @RestController
@@ -35,7 +37,7 @@ public class ReservaController {
             logger.error("La reserva es nulo");
             return new ResponseEntity("Reserva nulo", HttpStatus.BAD_REQUEST);
         }
-        Reserva reserva1 = reservaService.add(reserva);
+        ReservaDTO reserva1 = reservaService.add(reserva);
 
         if (reserva1 != null) {
 
@@ -55,7 +57,7 @@ public class ReservaController {
             logger.error("ID es nulo");
             return new ResponseEntity<>("El ID no puede ser nulo", HttpStatus.BAD_REQUEST);
         }
-        Reserva reserva = reservaService.find(id);
+        ReservaDTO reserva = reservaService.findDtoById(id);
         if (reserva != null) {
             logger.info("Reserva encontrada con id: "+ id );
             return new ResponseEntity<>(reserva, HttpStatus.OK);
@@ -70,7 +72,7 @@ public class ReservaController {
     public ResponseEntity<List<?>> listBookingsByProductId(@PathVariable Long id, @PathVariable Boolean cancelada) {
         logger.debug("Buscando reservas por producto id: "+id);
 
-        List<Reserva> lista = reservaService.filterByProductId(id, cancelada);
+        List<ReservaDTO> lista = reservaService.filterByProductId(id, cancelada);
 
         if(!lista.isEmpty()){
             logger.info("Reservas del producto con id: "+ id);
@@ -87,7 +89,7 @@ public class ReservaController {
     public ResponseEntity<List<?>> listBookingsByUserId(@PathVariable Long id, @PathVariable Boolean borrada) {
         logger.debug("Buscando reservas por usuario id: "+id);
 
-        List<Reserva> lista = reservaService.filterByUserId(id, borrada);
+        List<ReservaDTO> lista = reservaService.filterByUserId(id, borrada);
 
         if(!lista.isEmpty()){
             logger.info("Reservas del usuario con id: "+ id);
@@ -103,7 +105,7 @@ public class ReservaController {
     public ResponseEntity<?> updateReserva(@RequestBody Reserva r) {
         try {
             logger.debug("Actualizando reserva...");
-            Reserva reservaExist = reservaService.find(r.getId());
+            Optional<Reserva> reservaExist = reservaService.findById(r.getId());
             if (reservaExist==null) {
                 logger.error("Reserva con id " + r.getId() + " no encontrada");
                 return new ResponseEntity("Error al intentar actualizatar, reserva con id " +r.getId()+ " no encontrada", HttpStatus.NOT_FOUND);

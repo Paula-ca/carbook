@@ -36,7 +36,7 @@ public class Producto {
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinTable(
-            name = "productos_has_caracteristica",
+            name = "productos_has_caracteristicas",
             joinColumns = @JoinColumn(name = "id_producto"),
             inverseJoinColumns = @JoinColumn(name = "id_caracteristica")
     )

@@ -1,6 +1,9 @@
 package CarbookApp.controllerTests;
 
 import CarbookApp.controller.ReservaController;
+import CarbookApp.dto.ProductoDTO;
+import CarbookApp.dto.ReservaDTO;
+import CarbookApp.dto.UsuarioDTO;
 import CarbookApp.entity.*;
 import CarbookApp.security.AppUserService;
 import CarbookApp.security.Jwt.JwtEntryPoint;
@@ -20,7 +23,6 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.security.test.context.support.WithMockUser;
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.List;
 
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
@@ -44,17 +46,16 @@ public class ReservaControllerTests {
     @MockBean
     private JwtProvider jwtProvider;
 
-    private Reserva createValidReservation() {
-        Producto producto = new Producto();
+    private ReservaDTO createValidReservationDTO() {
+        ProductoDTO producto = new ProductoDTO();
         producto.setId(1L);
-        Usuario usuario = new Usuario();
+        UsuarioDTO usuario = new UsuarioDTO();
         usuario.setId(1L);
 
-        Reserva reserva = new Reserva();
-        reserva.setFecha_ingreso(LocalDate.of(2025, 07, 01));
-        reserva.setFecha_final(LocalDate.of(2025, 07, 05));
-        reserva.setPrecio(1000);
-        reserva.setHora_comienzo(LocalTime.of(12,00,00));
+        ReservaDTO reserva = new ReservaDTO();
+        reserva.setFechaIngreso(LocalDate.of(2025, 07, 01));
+        reserva.setFechaFinal(LocalDate.of(2025, 07, 05));
+        reserva.setEstado("Confirmada");
         reserva.setProducto(producto);
         reserva.setUsuario(usuario);
 
@@ -63,46 +64,46 @@ public class ReservaControllerTests {
     @Test
     @WithMockUser(roles = {"USER"})
     void shouldReturnListOfReservationsByProduct()throws Exception{
-        List<Reserva> reservasxproducto = List.of(createValidReservation());
+        List<ReservaDTO> reservasxproducto = List.of(createValidReservationDTO());
         Mockito.when(reservaService.filterByProductId(1L,false)).thenReturn(reservasxproducto);
 
         mockMvc.perform(get("/bookings/product/1/false")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].fecha_ingreso").value("2025-07-01"))
-                .andExpect(jsonPath("$[0].fecha_final").value("2025-07-0" +
+                .andExpect(jsonPath("$[0].fechaIngreso").value("2025-07-01"))
+                .andExpect(jsonPath("$[0].fechaFinal").value("2025-07-0" +
                         "5"))
-                .andExpect(jsonPath("$[0].precio").value(1000));
+                .andExpect(jsonPath("$[0].estado").value("Confirmada"));
     }
     @Test
     @WithMockUser(roles = {"USER"})
     void shouldReturnListOfReservationsByUser()throws Exception{
-        List<Reserva> reservasxusuario = List.of(createValidReservation());
+        List<ReservaDTO> reservasxusuario = List.of(createValidReservationDTO());
         Mockito.when(reservaService.filterByUserId(1L,false)).thenReturn(reservasxusuario);
 
         mockMvc.perform(get("/bookings/user/1/false")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].fecha_ingreso").value("2025-07-01"))
-                .andExpect(jsonPath("$[0].fecha_final").value("2025-07-05"))
-                .andExpect(jsonPath("$[0].precio").value(1000));
+                .andExpect(jsonPath("$[0].fechaIngreso").value("2025-07-01"))
+                .andExpect(jsonPath("$[0].fechaFinal").value("2025-07-05"))
+                .andExpect(jsonPath("$[0].estado").value("Confirmada"));
     }
     @Test
     @WithMockUser(roles = {"USER"})
     void shouldReturnReservationById()throws Exception{
-        Reserva reserva = createValidReservation();
-        Mockito.when(reservaService.find(1L)).thenReturn(reserva);
+        ReservaDTO reserva = createValidReservationDTO();
+        Mockito.when(reservaService.findDtoById(1L)).thenReturn(reserva);
 
         mockMvc.perform(get("/bookings/1")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.fecha_ingreso").value("2025-07-01"));
+                .andExpect(jsonPath("$.fechaIngreso").value("2025-07-01"));
     }
 
     @Test
     @WithMockUser(roles = {"ADMIN"})
     void shouldAddNewReservation()throws Exception{
-        Reserva reserva = createValidReservation();
+        ReservaDTO reserva = createValidReservationDTO();
         Mockito.when(reservaService.add(Mockito.any(Reserva.class))).thenReturn(reserva);
 
         ObjectMapper objectMapper = new ObjectMapper();
@@ -118,8 +119,8 @@ public class ReservaControllerTests {
     @Test
     @WithMockUser(roles = {"ADMIN"})
     void shouldUpdateReservation()throws Exception {
-        Reserva reserva = createValidReservation();
-        Mockito.when(reservaService.find(reserva.getId())).thenReturn(reserva);
+        ReservaDTO reserva = createValidReservationDTO();
+        Mockito.when(reservaService.findDtoById(reserva.getId())).thenReturn(reserva);
         Mockito.when(reservaService.update(Mockito.any())).thenReturn(reserva);
 
         ObjectMapper objectMapper = new ObjectMapper();
@@ -135,8 +136,8 @@ public class ReservaControllerTests {
     @Test
     @WithMockUser(roles = {"ADMIN"})
     void shouldDeleteReservation()throws Exception{
-        Reserva reserva = createValidReservation();
-        Mockito.when(reservaService.find(1L)).thenReturn(reserva);
+        ReservaDTO reserva = createValidReservationDTO();
+        Mockito.when(reservaService.findDtoById(1L)).thenReturn(reserva);
 
         mockMvc.perform(delete("/bookings/cancel/1")
                         .with(csrf()))

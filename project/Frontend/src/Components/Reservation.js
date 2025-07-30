@@ -124,8 +124,13 @@ const BookingCalendar = (props) => {
         if (disabledDatesResponse && disabledDatesResponse.data) {
           await setDisabledDates(disabledDatesResponse.data.map(dates => { return { from: moment(dates.fecha_ingreso).utcOffset(0).set({ hour: 0, minute: 0, second: 0}).toDate(), to: moment(dates.fecha_final).utcOffset(0).set({ hour: 23, minute: 59, second: 59}).toDate() }}))
         }
-      } catch (_) {
-        // Do nothing
+      } catch (error) {
+          // Si es 404, simplemente no hay reservas → fechas 100% disponibles
+        if (error.response && error.response.status === 404) {
+         setDisabledDates([]); // No hay fechas deshabilitadas
+        } else {
+          console.error("Error al obtener fechas deshabilitadas", error);
+        }
       }
     }
     getDisabledDates()

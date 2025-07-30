@@ -34,7 +34,7 @@ export const BasicLayout = (_) => {
 function App() {
   return (
     <UserProvider>
-      <BrowserRouter basename="/carbook">
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<BasicLayout />}>
             <Route index element={<Main />} />
